@@ -1,0 +1,7 @@
+# Large SFT training split — published on HF (meric533/socrateach-sft),
+# regenerable via socrateach_sft/prepare_socrateach_sft.py
+socrateach_sft_train.jsonl
+**/socrateach_sft_train.jsonl
+
+# Reference PDFs / large binaries live outside the repo
+*.pdf

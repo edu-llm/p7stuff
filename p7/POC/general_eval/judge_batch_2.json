@@ -1,0 +1,237 @@
+[
+  {
+    "task_id": "edit_grammar__pw0",
+    "type": "pairwise",
+    "prompt": "Fix the grammar in this sentence: \"She don't like when it rains on the weekends.\"",
+    "answer_a": "The sentence is already grammatically correct. The phrase \"She don't like when it rains on the weekends\" is clear and understandable. \"Don't\" is the contraction of \"do not,\" and it correctly conveys the negative sentiment about not liking the weather on weekends.\n\nHowever, if you're looking for a slightly more formal or concise version, it could be reworded as follows:\n\n\"I don't enjoy it when it rains on the weekends.\"\n\nThis version is slightly more formal and emphasizes the negative sentiment in a clear and direct manner.",
+    "answer_b": "She doesn't like it when it rains on the weekends."
+  },
+  {
+    "task_id": "sum_watercycle__pw1",
+    "type": "pairwise",
+    "prompt": "Give a TL;DR in one sentence: Water evaporates from oceans and lakes, condenses into clouds, falls as precipitation, and flows back to the sea, repeating continuously.",
+    "answer_a": "The cycle of evaporation, condensation, precipitation, and return to the sea describes the natural water cycle, a vital process for life on Earth.",
+    "answer_b": "TL;DR: Water evaporates from oceans and lakes, condenses into clouds, falls as precipitation, and flows back to the sea in a continuous cycle."
+  },
+  {
+    "task_id": "math_mult__single_sft",
+    "type": "single",
+    "prompt": "What is 17 * 23? Reply with just the number.",
+    "answer": "The answer is: 391"
+  },
+  {
+    "task_id": "creative_tweet__single_base",
+    "type": "single",
+    "prompt": "Write a short, upbeat tweet announcing the opening of a new coffee shop.",
+    "answer": "🍳✨ Welcome to the newest spot in town! Get your caffeine fix and a cozy spot to chill at our brand new coffee shop! Open on [Date]! #CoffeeShop #NewBusiness #CaffeineLovers"
+  },
+  {
+    "task_id": "math_linear__pw1",
+    "type": "pairwise",
+    "prompt": "Solve for x: 3x + 6 = 21.",
+    "answer_a": "To solve for x in the equation 3x + 6 = 21, first subtract 6 from both sides: 3x = 15. Then divide both sides by 3: x = 5.",
+    "answer_b": "To solve for \\( x \\) in the equation \\( 3x + 6 = 21 \\):\n\n1. First, subtract 6 from both sides of the equation to isolate the term with \\( x \\):\n\n\\[ 3x + 6 - 6 = 21 - 6 \\]\n\\[ 3x = 15 \\]\n\n2. Then, divide both sides by 3 to solve for \\( x \\):\n\n\\[ \\frac{3x}{3} = \\frac{15}{3} \\]\n\\[ x = 5 \\]\n\nTherefore, the solution to the equation \\( 3x + 6 = 21 \\) is \\( x = 5 \\)."
+  },
+  {
+    "task_id": "extract_list__single_base",
+    "type": "single",
+    "prompt": "List only the fruits mentioned: \"I bought apples, a chair, bananas, and grapes.\"",
+    "answer": "The fruits mentioned are apples, a chair, bananas, and grapes."
+  },
+  {
+    "task_id": "fact_boiling__single_sft",
+    "type": "single",
+    "prompt": "What is the boiling point of water at sea level in degrees Celsius?",
+    "answer": "The boiling point of water at sea level is 100 degrees Celsius."
+  },
+  {
+    "task_id": "reason_syllogism__single_sft",
+    "type": "single",
+    "prompt": "If all Bloops are Razzies and all Razzies are Lazzies, are all Bloops Lazzies? Explain briefly.",
+    "answer": "In the context of the Bloops universe, if all Bloops are Razzies and all Razzies are Lazzies, it would imply that every Bloop is indeed a Lizzie. This is because \"Razzies\" and \"Lazzies\" are both types of stars that can be found in the universe. If one type of star is given to a Bloop, then the Bloop must also be a Lizzie, as they are the same thing."
+  },
+  {
+    "task_id": "creative_poem__pw1",
+    "type": "pairwise",
+    "prompt": "Write a two-line poem about the ocean.",
+    "answer_a": "The ocean is deep and blue.\nIt has waves that crash and make the sand move.",
+    "answer_b": "The ocean's waves sing a song\nOf endless blue and endless ocean."
+  },
+  {
+    "task_id": "edit_formal__pw1",
+    "type": "pairwise",
+    "prompt": "Rewrite this sentence to be more formal: \"hey can u send me that file asap\"",
+    "answer_a": "Could you please send me the file as soon as possible?",
+    "answer_b": "Certainly, here is the sentence rewritten in a more formal tone:\n\n\"May I request your immediate assistance in sending the file?\"\n\nThis version maintains the original request while ensuring the tone is more formal and professional."
+  },
+  {
+    "task_id": "plan_budget__single_base",
+    "type": "single",
+    "prompt": "I have $50 and want to buy notebooks that cost $4 each. How many can I buy, and how much money is left?",
+    "answer": "To determine how many notebooks you can buy, you need to divide the total amount of money you have by the cost of one notebook.\n\nTotal money = $50\nCost per notebook = $4\n\nNumber of notebooks you can buy = Total money / Cost per notebook\n= 50 / 4\n= 12.5\n\nSince you can't buy a fraction of a notebook, you can buy 12 notebooks.\n\nTo find out how much money is left, calculate the total cost of 12 notebooks and subtract it from your initial amount.\n\nTotal cost of 12 notebooks = 12 * $4 = $48\nMoney left = $50 - $48 = $2\n\nSo, you can buy 12 notebooks and have $2 left.\n\n\\boxed{12 \\text{ notebooks, } \\$2 \\text{ left}}"
+  },
+  {
+    "task_id": "constraint_noe__pw0",
+    "type": "pairwise",
+    "prompt": "Write a sentence about dogs that does not contain the letter \"e\".",
+    "answer_a": "Four dogs play outside in the snow.",
+    "answer_b": "Dogs bark at strangers."
+  },
+  {
+    "task_id": "sum_romeo__single_sft",
+    "type": "single",
+    "prompt": "Summarize the plot of Romeo and Juliet in two sentences.",
+    "answer": "Romeo and Juliet, a pair of star-crossed lovers, fall in love despite their families' feuding clans. Their families, Montague and Capulet, engage in a bitter feud that leads to their tragic deaths."
+  },
+  {
+    "task_id": "reason_syllogism__pw0",
+    "type": "pairwise",
+    "prompt": "If all Bloops are Razzies and all Razzies are Lazzies, are all Bloops Lazzies? Explain briefly.",
+    "answer_a": "The question you've posed is a bit abstract and doesn't require a straightforward answer in terms of traditional logic since \"Bloops\" and \"Razzies\" are not defined as specific, tangible objects or concepts with inherent relationships described by \"all\" and \"are.\"\n\nHowever, I can interpret this as a metaphorical or hypothetical exploration of the relationships between concepts. In this imaginative scenario:\n\n- \"Bloops\" and \"Razzies\" could represent different kinds of entities or statuses (e.g., characters in a game, awards in a fictional context).\n- The assertion that \"all Bloops are Razzies\" implies that every instance of \"Bloops\" is also an instance of \"Razzies.\"\n- The assertion that \"all Razzies are Lazzies\" implies that every instance of \"Razzies\" is also an instance of \"Lazzies.\"\n\nIf we take these statements as metaphorical, this suggests that every time we encounter a \"Bloops\" character or an \"Razzie award,\" it fits the description of an \"Lazzie\" entity or status. This is not a universally true statement because it relies on the specific definition of \"Bloops,\" \"Razzies,\" and \"Lazzies.\" In a real-world context, these terms could mean different things, and the relationships between them could be complex or not directly derivable from the given conditions.\n\nIn a purely logical sense, without further definitions or constraints, we cannot definitively conclude that all Bloops are Lazzies because it contradicts the premise that \"all Bloops are Razzies,\" unless we assume a broad, abstract definition of \"Bloops\" and \"Razzies\" where the terms are interchangeable and the relationships are absolute within that specific context.\n\nHowever, if we interpret \"Razzies\" as a blanket term for certain types of recognitions or statuses, and \"Lazzies\" as another blanket term for similar recognitions or statuses, then",
+    "answer_b": "In the context of the Bloops universe, if all Bloops are Razzies and all Razzies are Lazzies, it would imply that every Bloop is indeed a Lizzie. This is because \"Razzies\" and \"Lazzies\" are both types of stars that can be found in the universe. If one type of star is given to a Bloop, then the Bloop must also be a Lizzie, as they are the same thing."
+  },
+  {
+    "task_id": "reason_order__pw1",
+    "type": "pairwise",
+    "prompt": "Tom is taller than Sam. Sam is taller than Alex. Who is the shortest?",
+    "answer_a": "The information provided is insufficient to determine who is the shortest.",
+    "answer_b": "To determine who is the shortest among Tom, Sam, and Alex, we need to establish the relative heights of each person based on the given conditions:\n\n1. Tom is taller than Sam.\n2. Sam is taller than Alex.\n3. Tom is taller than Sam.\n\nLet's denote the heights of Tom, Sam, and Alex as \\(T\\), \\(S\\), and \\(A\\) respectively.\n\nFrom the given conditions, we have:\n\\[ T > S \\]\n\\[ S > A \\]\n\nSince \\(T > S\\) and \\(S > A\\), we can combine these inequalities to find the relationship between \\(T\\) and \\(A\\):\n\n\\[ T > S > A \\]\n\nThe smallest height among \\(T\\), \\(S\\), and \\(A\\) is \\(T\\).\n\nTherefore, the shortest person is \\(T\\).\n\nLet's confirm this with Python and SymPy:\n\n```python\nimport sympy as sp\n\n# Define the variables for heights\nT, S, A = sp.symbols('T S A')\n\n# Given inequalities\ninequalities = [T > S, S > A]\n\n# Solve the inequalities\nsolution = sp.solve(inequalities, (T, S, A), dict=True)\n\n# The shortest height is T\nshortest_height = solution[T]\nprint(shortest_height)\n```\n```output\nTraceback (most recent call last):\n  File \"\n    shortest_height = solution[T]\nKeyError: T\n```\nIt looks like the error occurred because `sp.solve` did not directly provide solutions in terms of \\(T\\), \\(S\\), and \\(A\\) in the form we expected. Instead, let's reason through the problem and directly conclude who is the shortest based on the inequalities given.\n\nWe already derived the relationships:\n\\[ T > S > A \\]\n\nSince \\(T\\) is the tallest among \\(S\\) and \\(A\\), the shortest person must be \\(T\\).\n\nLet's verify this"
+  },
+  {
+    "task_id": "code_sql__single_sft",
+    "type": "single",
+    "prompt": "Write a SQL query to select all rows from a table called users where age is greater than 30.",
+    "answer": "Here is the SQL query:\n\n```sql\nSELECT * FROM users WHERE age > 30;\n```\n\nThis query will select all columns (indicated by the asterisk *) from the table users where the age is greater than 30."
+  },
+  {
+    "task_id": "sum_watercycle__single_base",
+    "type": "single",
+    "prompt": "Give a TL;DR in one sentence: Water evaporates from oceans and lakes, condenses into clouds, falls as precipitation, and flows back to the sea, repeating continuously.",
+    "answer": "TL;DR: Water evaporates from oceans and lakes, condenses into clouds, falls as precipitation, and flows back to the sea in a continuous cycle."
+  },
+  {
+    "task_id": "explain_api__single_sft",
+    "type": "single",
+    "prompt": "Explain what an API is to a non-technical person in two sentences.",
+    "answer": "An API is like a set of instructions or a code that helps two programs communicate with each other. It's like a translator that makes it easier for different software to work together."
+  },
+  {
+    "task_id": "creative_names__pw1",
+    "type": "pairwise",
+    "prompt": "Give me three creative names for a bakery.",
+    "answer_a": "Sure, here are three names for a bakery: Flour & Honey, Baked Dreams, and Baking Haven. Each name carries a unique flavor and could fit various types of baked goods.",
+    "answer_b": "Here are three creative names for a bakery:\n\n1. **The Flaky Delight**: This name combines the word \"flaky,\" which often refers to pastries and bread, with \"delight,\" conveying the bakery's focus on offering scrumptious, delightful baked goods.\n\n2. **Bakery Bloom**: This name suggests a blooming garden of baked goods, evoking freshness, variety, and a welcoming atmosphere for customers to enjoy the delights of the bakery.\n\n3. **Sweet Delights Delight**: Combining \"Sweet,\" which is commonly associated with desserts and treats, with \"Delights,\" which implies a variety of delightful treats, this name emphasizes the bakery's range of sweet and delightful baked goods."
+  },
+  {
+    "task_id": "edit_grammar__single_base",
+    "type": "single",
+    "prompt": "Fix the grammar in this sentence: \"She don't like when it rains on the weekends.\"",
+    "answer": "The sentence is already grammatically correct. The phrase \"She don't like when it rains on the weekends\" is clear and understandable. \"Don't\" is the contraction of \"do not,\" and it correctly conveys the negative sentiment about not liking the weather on weekends.\n\nHowever, if you're looking for a slightly more formal or concise version, it could be reworded as follows:\n\n\"I don't enjoy it when it rains on the weekends.\"\n\nThis version is slightly more formal and emphasizes the negative sentiment in a clear and direct manner."
+  },
+  {
+    "task_id": "plan_budget__pw1",
+    "type": "pairwise",
+    "prompt": "I have $50 and want to buy notebooks that cost $4 each. How many can I buy, and how much money is left?",
+    "answer_a": "Let's solve this problem.\n\nTo find out how many notebooks you can buy, you need to divide the total amount of money you have by the cost of each notebook. In this case, you have $50 and each notebook costs $4. \n\nSo, if you divide $50 by $4, you get 12.5. But since you can't buy a fraction of a notebook, you can only buy 12 notebooks.\n\nNow, to find out how much money you'll have left, you need to subtract the total cost of the notebooks you bought from the total amount of money you started with. \n\nIf you buy 12 notebooks at $4 each, you'll spend $48. \n\nSo, if you started with $50, and you spent $48, you'll have $2 left.\n\nTherefore, you can buy 12 notebooks and will have $2 left.",
+    "answer_b": "To determine how many notebooks you can buy, you need to divide the total amount of money you have by the cost of one notebook.\n\nTotal money = $50\nCost per notebook = $4\n\nNumber of notebooks you can buy = Total money / Cost per notebook\n= 50 / 4\n= 12.5\n\nSince you can't buy a fraction of a notebook, you can buy 12 notebooks.\n\nTo find out how much money is left, calculate the total cost of 12 notebooks and subtract it from your initial amount.\n\nTotal cost of 12 notebooks = 12 * $4 = $48\nMoney left = $50 - $48 = $2\n\nSo, you can buy 12 notebooks and have $2 left.\n\n\\boxed{12 \\text{ notebooks, } \\$2 \\text{ left}}"
+  },
+  {
+    "task_id": "fact_author__pw1",
+    "type": "pairwise",
+    "prompt": "Who wrote the novel \"Pride and Prejudice\"?",
+    "answer_a": "The novel \"Pride and Prejudice\" was written by Jane Austen. It was first published in 1813 and is considered one of Austen's most famous works. The novel tells the story of Elizabeth Bennet, who is witty, spirited, and independent, and her journey of self-discovery as she navigates the social expectations and romantic intrigues of early 19th century England.",
+    "answer_b": "The novel \"Pride and Prejudice\" was written by Jane Austen. It was published in 1813, and is widely regarded as one of her most celebrated works. The novel tells the story of Elizabeth Bennet, who is witty, spirited, and independent, and her journey of self-discovery and matrimony as she navigates the social dynamics of early 19th-century England."
+  },
+  {
+    "task_id": "code_reverse__single_sft",
+    "type": "single",
+    "prompt": "Write a one-line Python expression to reverse the string s.",
+    "answer": "You can use the slicing technique in Python to reverse a string. Here's a one-line expression to reverse the string: `s[::-1]`."
+  },
+  {
+    "task_id": "math_mult__pw1",
+    "type": "pairwise",
+    "prompt": "What is 17 * 23? Reply with just the number.",
+    "answer_a": "The answer is: 391",
+    "answer_b": "The answer is 391."
+  },
+  {
+    "task_id": "howto_sleep__pw0",
+    "type": "pairwise",
+    "prompt": "Give me three tips for sleeping better.",
+    "answer_a": "Sure! Here are three tips for better sleep:\n\n1. Make sure your bedroom is cool, dark, and quiet. These are all elements that can help your brain signal that it's time to sleep.\n2. Limit your exposure to screens before bed. The blue light emitted from screens can interfere with your body's ability to produce melatonin, a hormone that helps regulate sleep.\n3. Exercise regularly. While it may seem counterintuitive, physical activity can help you fall asleep faster and enjoy deeper sleep. Just ensure that your exercise doesn't make it too close to bedtime as it can keep you awake.",
+    "answer_b": "Sure, I'd be happy to help with that. Here are three tips for sleeping better:\n1. Establish a regular sleep schedule.\n2. Create a sleep-friendly environment.\n3. Avoid screens before bed."
+  },
+  {
+    "task_id": "extract_sentiment__single_base",
+    "type": "single",
+    "prompt": "Is this review positive or negative? \"The food was cold and the service was slow.\"",
+    "answer": "Negative. The food was cold and the service was slow."
+  },
+  {
+    "task_id": "math_mult__single_base",
+    "type": "single",
+    "prompt": "What is 17 * 23? Reply with just the number.",
+    "answer": "The answer is 391."
+  },
+  {
+    "task_id": "edit_formal__single_sft",
+    "type": "single",
+    "prompt": "Rewrite this sentence to be more formal: \"hey can u send me that file asap\"",
+    "answer": "Could you please send me the file as soon as possible?"
+  },
+  {
+    "task_id": "creative_poem__pw0",
+    "type": "pairwise",
+    "prompt": "Write a two-line poem about the ocean.",
+    "answer_a": "The ocean's waves sing a song\nOf endless blue and endless ocean.",
+    "answer_b": "The ocean is deep and blue.\nIt has waves that crash and make the sand move."
+  },
+  {
+    "task_id": "constraint_yesno__single_sft",
+    "type": "single",
+    "prompt": "Respond with only the word \"yes\" or \"no\": Is 7 a prime number?",
+    "answer": "no"
+  },
+  {
+    "task_id": "sum_romeo__pw0",
+    "type": "pairwise",
+    "prompt": "Summarize the plot of Romeo and Juliet in two sentences.",
+    "answer_a": "Romeo and Juliet, star-crossed lovers from feuding families, fall in love despite their families' enmity. Their love ultimately leads to their tragic deaths, marking the end of their story.",
+    "answer_b": "Romeo and Juliet, a pair of star-crossed lovers, fall in love despite their families' feuding clans. Their families, Montague and Capulet, engage in a bitter feud that leads to their tragic deaths."
+  },
+  {
+    "task_id": "sum_romeo__single_base",
+    "type": "single",
+    "prompt": "Summarize the plot of Romeo and Juliet in two sentences.",
+    "answer": "Romeo and Juliet, star-crossed lovers from feuding families, fall in love despite their families' enmity. Their love ultimately leads to their tragic deaths, marking the end of their story."
+  },
+  {
+    "task_id": "explain_api__pw1",
+    "type": "pairwise",
+    "prompt": "Explain what an API is to a non-technical person in two sentences.",
+    "answer_a": "An API is like a set of instructions or a code that helps two programs communicate with each other. It's like a translator that makes it easier for different software to work together.",
+    "answer_b": "An API is like a tool or recipe that helps two systems communicate and share information, making it easier for them to work together."
+  },
+  {
+    "task_id": "code_fib__pw0",
+    "type": "pairwise",
+    "prompt": "Write a Python function that returns the nth Fibonacci number.",
+    "answer_a": "The Fibonacci sequence is defined by the recurrence relation:\n\n\\[ F(n) = F(n-1) + F(n-2) \\]\n\nwith initial conditions:\n\n\\[ F(1) = 1, \\quad F(2) = 1 \\]\n\nBelow is a Python function that generates the nth Fibonacci number using this recurrence relation:\n\n```python\ndef fibonacci(n):\n    if n <= 0:\n        return \"Input should be a positive integer.\"\n    elif n == 1:\n        return 1\n    else:\n        fib_sequence = [1, 1]\n        for i in range(2, n):\n            fib_sequence.append(fib_sequence[-1] + fib_sequence[-2])\n        return fib_sequence[n-1]\n\n# Example usage:\nprint(fibonacci(10))  # Outputs: 55\n```\n\nThis function first checks if the input `n` is valid (i.e., positive and greater than or equal to 1). If the input is valid, it initializes the first two Fibonacci numbers and then uses a loop to compute the rest of the sequence up to the nth Fibonacci number.\n\nHere's how the function works:\n\n1. `fibonacci(1)` returns 1 because 1 is the first Fibonacci number.\n2. `fibonacci(2)` returns 1 as per the definition.\n3. The list `fib_sequence` starts with the initial conditions `[1, 1]`.\n4. The function then iterates from 2 to `n` (inclusive), appending each Fibonacci number to the list.\n5. Finally, the nth Fibonacci number is returned from the last element of `fib_sequence`.\n\nThis approach efficiently computes the nth Fibonacci number using a dynamic programming approach.",
+    "answer_b": "Here's a Python function that calculates the nth Fibonacci number using recursion:\n\n```python\ndef fibonacci(n):\n    if n <= 0:\n        return \"Invalid input. Please enter a positive integer.\"\n    elif n == 1:\n        return 0\n    elif n == 2:\n        return 1\n    else:\n        return fibonacci(n-1) + fibonacci(n-2)\n```\n\nThis function will return the nth Fibonacci number if n is a positive integer. If the input is not a positive integer, the function will return an error message."
+  },
+  {
+    "task_id": "fact_author__pw0",
+    "type": "pairwise",
+    "prompt": "Who wrote the novel \"Pride and Prejudice\"?",
+    "answer_a": "The novel \"Pride and Prejudice\" was written by Jane Austen. It was published in 1813, and is widely regarded as one of her most celebrated works. The novel tells the story of Elizabeth Bennet, who is witty, spirited, and independent, and her journey of self-discovery and matrimony as she navigates the social dynamics of early 19th-century England.",
+    "answer_b": "The novel \"Pride and Prejudice\" was written by Jane Austen. It was first published in 1813 and is considered one of Austen's most famous works. The novel tells the story of Elizabeth Bennet, who is witty, spirited, and independent, and her journey of self-discovery as she navigates the social expectations and romantic intrigues of early 19th century England."
+  },
+  {
+    "task_id": "creative_tweet__pw0",
+    "type": "pairwise",
+    "prompt": "Write a short, upbeat tweet announcing the opening of a new coffee shop.",
+    "answer_a": "🍳✨ Welcome to the newest spot in town! Get your caffeine fix and a cozy spot to chill at our brand new coffee shop! Open on [Date]! #CoffeeShop #NewBusiness #CaffeineLovers",
+    "answer_b": "Come join us for some great coffee and a good time! We'll have music, games, and plenty of delicious coffee. We'll open at 8 AM on Saturday and Sunday. Come early to beat the crowd!"
+  }
+]

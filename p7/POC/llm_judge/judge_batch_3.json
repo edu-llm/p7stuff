@@ -1,0 +1,94 @@
+[
+  {
+    "problem_id": "GSM8K_train_2696_0",
+    "problem": "Candice read 3 times as many books as Amanda in their school's Book Tournament. Kara read half the number of books that Amanda read, and Patricia read 7 times the number of books that Kara read. If Candice read 18 books, how many books did Patricia read?",
+    "final_answer": "21",
+    "candidates": [
+      {
+        "rid": "GSM8K_train_2696_0__R1",
+        "response": "How many books did Amanda read?"
+      },
+      {
+        "rid": "GSM8K_train_2696_0__R2",
+        "response": "If Candice read 3 times as many books as Amanda, and Candice read 18 books, then Amanda read 18 / 3 = 6 books.\nKara read half the number of books that Amanda read, so Kara read 6 / 2 = 3 books.\nPatricia read 7 times the number of books that Kara read, so Patricia read 7 * 3 = 21 books.\nSo Patricia read \\boxed{21} books."
+      },
+      {
+        "rid": "GSM8K_train_2696_0__R3",
+        "response": "Let's break down the information given in the problem.\n\nCandice read 18 books, and she read 3 times as many books as Amanda. So Amanda read 18 / 3 = 6 books.\n\nKara read half the number of books that Amanda read, so Kara read 6 / 2 = 3 books.\n\nPatricia read 7 times the number of books that Kara read, so Patricia read 7 * 3 = 21 books.\n\nThus, Patricia read \\boxed{21} books."
+      },
+      {
+        "rid": "GSM8K_train_2696_0__R4",
+        "response": "Let's start by figuring out how many books Amanda read. Since Candice read 3 times as many books as Amanda, and Candice read 18 books, we can set up the equation:\n\nCandice's books = 3 * Amanda's books\n\n18 = 3 * Amanda's books\n\nNow, let's solve for Amanda's books:\n\nAmanda's books = 18 / 3\nAmanda's books = 6\n\nKara read half the number of books that Amanda read, so:\n\nKara's books = Amanda's books / 2\nKara's books = 6 / 2\nKara's books = 3\n\nPatricia read 7 times the number of books that Kara read, so:\n\nPatricia's books = Kara's books * 7\nPatricia's books = 3 * 7\nPatricia's books = 21\n\nSo, Patricia read 21 books."
+      }
+    ]
+  },
+  {
+    "problem_id": "GSM8K_test_528_4",
+    "problem": "Ophelia and Jenna are living in the same apartment building. They each have 2 fewer sofas than chairs. Jenna has 3 times as many chairs as Ophelia. If Ophelia has 20 sofas, calculate the total number of sofas and chairs that they have.",
+    "final_answer": "172",
+    "candidates": [
+      {
+        "rid": "GSM8K_test_528_4__R1",
+        "response": "How many sofas does Ophelia have?"
+      },
+      {
+        "rid": "GSM8K_test_528_4__R2",
+        "response": "Let's break down the information given in the problem.\n\nOphelia has 20 sofas. Since she has 2 fewer sofas than chairs, she has 20 + 2 = 22 chairs.\n\nJenna has 3 times as many chairs as Ophelia, so Jenna has 3 * 22 = 66 chairs.\n\nSince Ophelia has 2 fewer sofas than chairs, she has 22 - 2 = 20 sofas.\n\nThe total number of sofas is 20 (Ophelia's) + 20 (Jenna's) = 40 sofas.\n\nThe total number of chairs is 22 (Ophelia's) + 66 (Jenna's) = 88 chairs.\n\nThe total number of sofas and chairs is 40 + 88 = 128.\n\nSo, the total number of sofas and chairs that Ophelia and Jenna have is \\boxed{128}."
+      },
+      {
+        "rid": "GSM8K_test_528_4__R3",
+        "response": "Ophelia has 20 sofas and 2 fewer sofas than chairs. So, how many chairs does Ophelia have?\nIf Ophelia has 20 sofas, and she has 2 fewer sofas than chairs, then she has 20 + 2 = 22 chairs.\nJenna has 3 times as many chairs as Ophelia. So, how many chairs does Jenna have?\nIf Ophelia has 22 chairs, and Jenna has 3 times as many chairs, then Jenna has 22 * 3 = 66 chairs.\nNow, can you calculate the total number of sofas and chairs that Ophelia and Jenna have?\nOphelia has 20 sofas and 22 chairs, and Jenna has 66 chairs. So, the total number of sofas and chairs is 20 + 22 + 66 = 42 + 66 = 108\nSo, Ophelia and Jenna have a total of 108 sofas and chairs."
+      },
+      {
+        "rid": "GSM8K_test_528_4__R4",
+        "response": "Ophelia has 20 sofas. Jenna has 2 fewer sofas than Ophelia, so Jenna has 20 - 2 = 18 sofas. Jenna has 3 times as many chairs as Ophelia, so Jenna has 3 * 20 = 60 chairs. The total number of sofas and chairs is 20 + 18 + 60 = 98."
+      }
+    ]
+  },
+  {
+    "problem_id": "GSM8K_train_5940_0",
+    "problem": "Erica is getting dessert at a pie buffet where all the pies are the same size. She takes 1/5 of an apple pie and 3/4 of a cherry pie. What fraction of a whole pie did Erica take, expressed as a percentage?",
+    "final_answer": "95",
+    "candidates": [
+      {
+        "rid": "GSM8K_train_5940_0__R1",
+        "response": "How many pies did Erica take?"
+      },
+      {
+        "rid": "GSM8K_train_5940_0__R2",
+        "response": "What fraction of a whole pie did Erica take?"
+      },
+      {
+        "rid": "GSM8K_train_5940_0__R3",
+        "response": "To find the fraction of a whole pie Erica took, we need to add the fractions of the apple pie and the cherry pie. \nThe fraction of the apple pie Erica took is 1/5. \nThe fraction of the cherry pie Erica took is 3/4. \nSo, the total fraction of a whole pie Erica took is 1/5 + 3/4. \nTo add these fractions, we need a common denominator. The least common multiple of 5 and 4 is 20. \nSo, we can rewrite 1/5 as 4/20 and 3/4 as 15/20. \nThus, the total fraction of a whole pie Erica took is 4/20 + 15/20 = 19/20. \nNow, to convert this fraction to a percentage, we multiply by 100. \nSo, 19/20 * 100 = 95%. \nThus, Erica took 95% of a whole pie."
+      },
+      {
+        "rid": "GSM8K_train_5940_0__R4",
+        "response": "To find the fraction of a whole pie Erica took, we need to add the fractions of the apple pie and the cherry pie she took.\n\nErica took 1/5 of an apple pie and 3/4 of a cherry pie.\n\nTo add these fractions, we need a common denominator. The least common multiple of 5 and 4 is 20.\n\nConverting each fraction to have a denominator of 20:\n1/5 = (1 * 4) / 5 = 4/5\n3/4 = (3 * 5) / 4 = 15/4\n\nNow, adding the fractions:\n(4/5) + (15/4)\n\nTo add these fractions, we need a common denominator. The least common multiple of 5 and 4 is 20.\n\nConverting 15/4 to have a denominator of 20:\n15/4 = (15 * 5) / 4 = 75/4\n\nNow, adding the fractions:\n(4/5) + (75/4)\n\nTo add these fractions"
+      }
+    ]
+  },
+  {
+    "problem_id": "GSM8K_test_354_0",
+    "problem": "Annabelle is saving for a phone that costs $400. She already has $80 in her savings. Her first job, where she earns $10 per hour, pays her for 20 hours of work. She is also paid for 15 hours of work at her second job, where she earns $5 an hour. In dollars, how much money does Annabelle still need to save?",
+    "final_answer": "45",
+    "candidates": [
+      {
+        "rid": "GSM8K_test_354_0__R1",
+        "response": "Let's calculate how much money Annabelle has saved so far.\n\nShe already has $80 in her savings.\n\nHer first job pays her $10 per hour for 20 hours, so she earns $10 * 20 = $200.\n\nHer second job pays her $5 per hour for 15 hours, so she earns $5 * 15 = $75.\n\nIn total, Annabelle has saved $80 + $200 + $75 = $355.\n\nThe phone costs $400, so Annabelle still needs $400 - $355 = $45.\n\nThus, Annabelle still needs to save \\boxed{45} dollars."
+      },
+      {
+        "rid": "GSM8K_test_354_0__R2",
+        "response": "How much money does Annabelle earn from her first job?"
+      },
+      {
+        "rid": "GSM8K_test_354_0__R3",
+        "response": "Let's break down Annabelle's earnings. \nShe earns $10 per hour at her first job and she works for 20 hours. So she earns $10 * 20 = $200 from her first job. \nShe also earns $5 per hour at her second job and she works for 15 hours. So she earns $5 * 15 = $75 from her second job. \nSo in total, Annabelle earns $200 + $75 = $275. \nShe already had $80 in her savings. So she now has $275 + $80 = $355. \nThe phone costs $400. So Annabelle still needs $400 - $355 = $45 to save. \nThus, Annabelle still needs to save \\boxed{45} dollars."
+      },
+      {
+        "rid": "GSM8K_test_354_0__R4",
+        "response": "How much money does Annabelle earn at her first job?"
+      }
+    ]
+  }
+]

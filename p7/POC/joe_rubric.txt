@@ -1,0 +1,23 @@
+P7 — The Tutor Layer ("Rosenshine at the interface")
+Mission: The actual teaching behavior, at inference time. The strongest replicated finding in tutoring research is that step-level guidance (d = 0.76) roughly doubles answer-based help (d = 0.31) (VanLehn). Build the inference layer that gets our tutor from today's ~0.3 SD LLM-tutor results toward that 0.76, with Bloom's two sigma as the north star.
+
+What you will build and measure:
+
+Step-level guidance: hint at the step, don't hand over the answer.
+ZPD hint ladders: graduated hints that keep the student in the zone where they can succeed with help.
+Load-aware formatting: presentation that respects cognitive load theory (Mayer's multimedia principles).
+Spaced-review scheduling for the student: the tutor brings material back at the right intervals.
+Grading: rubric-graded win rate vs answer-supplying baselines, on P5's rubric bank (this project depends on P5).
+Field anchors: best current LLM-tutor RCTs are +0.26 SD in Sierra Leone (pre-registered) and +0.31 SD in Nigeria.
+
+Month-end deliverable: rubric-graded win rate with confidence intervals vs answer-supplying baselines.
+
+Evidence grade going in: Strong (human side) — the most replicated literature in the entire plan; the best-evidenced bet in the portfolio.
+
+Study in the next 48 hours: VanLehn 2011 ("The Relative Effectiveness of Human Tutoring, Intelligent Tutoring Systems, and Other Tutoring Systems"); Rosenshine's Principles of Instruction; Mayer's multimedia learning principles; Bloom's 2-sigma paper (1984); the Sierra Leone/Nigeria LLM-tutor RCTs; scaffolding-and-fading literature (Wood, Bruner & Ross).
+
+Self-select if: you want the most product-shaped research project — prompt/inference engineering grounded in the deepest human-evidence base we have.
+
+Our goal for now is to develop a PRD based on the above, and hand the PRD to implementation teams.
+
+For now, we will fine-tune or do RL for OLMo 2 370M.

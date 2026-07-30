@@ -1,0 +1,1122 @@
+[
+  {
+    "id": "gsm8k_663",
+    "model": "base",
+    "source": "GSM8K",
+    "gold": "193",
+    "extracted": "193",
+    "correct": true
+  },
+  {
+    "id": "gsm8k_663",
+    "model": "sft",
+    "source": "GSM8K",
+    "gold": "193",
+    "extracted": "193",
+    "correct": true
+  },
+  {
+    "id": "gsm8k_308",
+    "model": "base",
+    "source": "GSM8K",
+    "gold": "6",
+    "extracted": "26",
+    "correct": false
+  },
+  {
+    "id": "gsm8k_308",
+    "model": "sft",
+    "source": "GSM8K",
+    "gold": "6",
+    "extracted": "4",
+    "correct": false
+  },
+  {
+    "id": "gsm8k_808",
+    "model": "base",
+    "source": "GSM8K",
+    "gold": "12",
+    "extracted": "12",
+    "correct": true
+  },
+  {
+    "id": "gsm8k_808",
+    "model": "sft",
+    "source": "GSM8K",
+    "gold": "12",
+    "extracted": "12",
+    "correct": true
+  },
+  {
+    "id": "gsm8k_98",
+    "model": "base",
+    "source": "GSM8K",
+    "gold": "5",
+    "extracted": "5",
+    "correct": true
+  },
+  {
+    "id": "gsm8k_98",
+    "model": "sft",
+    "source": "GSM8K",
+    "gold": "5",
+    "extracted": "15",
+    "correct": false
+  },
+  {
+    "id": "gsm8k_148",
+    "model": "base",
+    "source": "GSM8K",
+    "gold": "30",
+    "extracted": "14",
+    "correct": false
+  },
+  {
+    "id": "gsm8k_148",
+    "model": "sft",
+    "source": "GSM8K",
+    "gold": "30",
+    "extracted": "14",
+    "correct": false
+  },
+  {
+    "id": "gsm8k_1097",
+    "model": "base",
+    "source": "GSM8K",
+    "gold": "480",
+    "extracted": "480",
+    "correct": true
+  },
+  {
+    "id": "gsm8k_1097",
+    "model": "sft",
+    "source": "GSM8K",
+    "gold": "480",
+    "extracted": "480",
+    "correct": true
+  },
+  {
+    "id": "gsm8k_192",
+    "model": "base",
+    "source": "GSM8K",
+    "gold": "91",
+    "extracted": "91",
+    "correct": true
+  },
+  {
+    "id": "gsm8k_192",
+    "model": "sft",
+    "source": "GSM8K",
+    "gold": "91",
+    "extracted": "10",
+    "correct": false
+  },
+  {
+    "id": "gsm8k_748",
+    "model": "base",
+    "source": "GSM8K",
+    "gold": "336",
+    "extracted": "238",
+    "correct": false
+  },
+  {
+    "id": "gsm8k_748",
+    "model": "sft",
+    "source": "GSM8K",
+    "gold": "336",
+    "extracted": "336",
+    "correct": true
+  },
+  {
+    "id": "gsm8k_1193",
+    "model": "base",
+    "source": "GSM8K",
+    "gold": "9",
+    "extracted": "10",
+    "correct": false
+  },
+  {
+    "id": "gsm8k_1193",
+    "model": "sft",
+    "source": "GSM8K",
+    "gold": "9",
+    "extracted": "8",
+    "correct": false
+  },
+  {
+    "id": "gsm8k_118",
+    "model": "base",
+    "source": "GSM8K",
+    "gold": "4",
+    "extracted": "6",
+    "correct": false
+  },
+  {
+    "id": "gsm8k_118",
+    "model": "sft",
+    "source": "GSM8K",
+    "gold": "4",
+    "extracted": "6",
+    "correct": false
+  },
+  {
+    "id": "gsm8k_1039",
+    "model": "base",
+    "source": "GSM8K",
+    "gold": "160",
+    "extracted": "160",
+    "correct": true
+  },
+  {
+    "id": "gsm8k_1039",
+    "model": "sft",
+    "source": "GSM8K",
+    "gold": "160",
+    "extracted": "80",
+    "correct": false
+  },
+  {
+    "id": "gsm8k_439",
+    "model": "base",
+    "source": "GSM8K",
+    "gold": "17",
+    "extracted": "12",
+    "correct": false
+  },
+  {
+    "id": "gsm8k_439",
+    "model": "sft",
+    "source": "GSM8K",
+    "gold": "17",
+    "extracted": "12",
+    "correct": false
+  },
+  {
+    "id": "gsm8k_76",
+    "model": "base",
+    "source": "GSM8K",
+    "gold": "5",
+    "extracted": "5",
+    "correct": true
+  },
+  {
+    "id": "gsm8k_76",
+    "model": "sft",
+    "source": "GSM8K",
+    "gold": "5",
+    "extracted": "5",
+    "correct": true
+  },
+  {
+    "id": "gsm8k_176",
+    "model": "base",
+    "source": "GSM8K",
+    "gold": "100",
+    "extracted": "100",
+    "correct": true
+  },
+  {
+    "id": "gsm8k_176",
+    "model": "sft",
+    "source": "GSM8K",
+    "gold": "100",
+    "extracted": "100",
+    "correct": true
+  },
+  {
+    "id": "gsm8k_888",
+    "model": "base",
+    "source": "GSM8K",
+    "gold": "10",
+    "extracted": "10",
+    "correct": true
+  },
+  {
+    "id": "gsm8k_888",
+    "model": "sft",
+    "source": "GSM8K",
+    "gold": "10",
+    "extracted": "10",
+    "correct": true
+  },
+  {
+    "id": "math500_test_prealgebra_1423.json",
+    "model": "base",
+    "source": "MATH-500",
+    "gold": "12\\pi",
+    "extracted": "12\\pi",
+    "correct": true
+  },
+  {
+    "id": "math500_test_prealgebra_1423.json",
+    "model": "sft",
+    "source": "MATH-500",
+    "gold": "12\\pi",
+    "extracted": "2\\pi",
+    "correct": false
+  },
+  {
+    "id": "math500_test_geometry_817.json",
+    "model": "base",
+    "source": "MATH-500",
+    "gold": "\\frac{14}{3}",
+    "extracted": null,
+    "correct": false
+  },
+  {
+    "id": "math500_test_geometry_817.json",
+    "model": "sft",
+    "source": "MATH-500",
+    "gold": "\\frac{14}{3}",
+    "extracted": null,
+    "correct": false
+  },
+  {
+    "id": "math500_test_algebra_733.json",
+    "model": "base",
+    "source": "MATH-500",
+    "gold": "6",
+    "extracted": null,
+    "correct": false
+  },
+  {
+    "id": "math500_test_algebra_733.json",
+    "model": "sft",
+    "source": "MATH-500",
+    "gold": "6",
+    "extracted": null,
+    "correct": false
+  },
+  {
+    "id": "math500_test_intermediate_algebra_964.json",
+    "model": "base",
+    "source": "MATH-500",
+    "gold": "1",
+    "extracted": null,
+    "correct": false
+  },
+  {
+    "id": "math500_test_intermediate_algebra_964.json",
+    "model": "sft",
+    "source": "MATH-500",
+    "gold": "1",
+    "extracted": "3",
+    "correct": false
+  },
+  {
+    "id": "math500_test_geometry_686.json",
+    "model": "base",
+    "source": "MATH-500",
+    "gold": "18+2\\pi",
+    "extracted": null,
+    "correct": false
+  },
+  {
+    "id": "math500_test_geometry_686.json",
+    "model": "sft",
+    "source": "MATH-500",
+    "gold": "18+2\\pi",
+    "extracted": "24.28",
+    "correct": false
+  },
+  {
+    "id": "math500_test_intermediate_algebra_558.json",
+    "model": "base",
+    "source": "MATH-500",
+    "gold": "(3,4]",
+    "extracted": null,
+    "correct": false
+  },
+  {
+    "id": "math500_test_intermediate_algebra_558.json",
+    "model": "sft",
+    "source": "MATH-500",
+    "gold": "(3,4]",
+    "extracted": null,
+    "correct": false
+  },
+  {
+    "id": "math500_test_intermediate_algebra_232.json",
+    "model": "base",
+    "source": "MATH-500",
+    "gold": "81",
+    "extracted": null,
+    "correct": false
+  },
+  {
+    "id": "math500_test_intermediate_algebra_232.json",
+    "model": "sft",
+    "source": "MATH-500",
+    "gold": "81",
+    "extracted": "6",
+    "correct": false
+  },
+  {
+    "id": "math500_test_algebra_2277.json",
+    "model": "base",
+    "source": "MATH-500",
+    "gold": "0",
+    "extracted": null,
+    "correct": false
+  },
+  {
+    "id": "math500_test_algebra_2277.json",
+    "model": "sft",
+    "source": "MATH-500",
+    "gold": "0",
+    "extracted": "-123",
+    "correct": false
+  },
+  {
+    "id": "math500_test_algebra_776.json",
+    "model": "base",
+    "source": "MATH-500",
+    "gold": "-2",
+    "extracted": null,
+    "correct": false
+  },
+  {
+    "id": "math500_test_algebra_776.json",
+    "model": "sft",
+    "source": "MATH-500",
+    "gold": "-2",
+    "extracted": null,
+    "correct": false
+  },
+  {
+    "id": "math500_test_algebra_975.json",
+    "model": "base",
+    "source": "MATH-500",
+    "gold": "-4",
+    "extracted": null,
+    "correct": false
+  },
+  {
+    "id": "math500_test_algebra_975.json",
+    "model": "sft",
+    "source": "MATH-500",
+    "gold": "-4",
+    "extracted": "-2, 1",
+    "correct": false
+  },
+  {
+    "id": "math500_test_number_theory_838.json",
+    "model": "base",
+    "source": "MATH-500",
+    "gold": "6",
+    "extracted": "17",
+    "correct": false
+  },
+  {
+    "id": "math500_test_number_theory_838.json",
+    "model": "sft",
+    "source": "MATH-500",
+    "gold": "6",
+    "extracted": null,
+    "correct": false
+  },
+  {
+    "id": "math500_test_counting_and_probability_188.json",
+    "model": "base",
+    "source": "MATH-500",
+    "gold": "\\frac{1}{2}",
+    "extracted": null,
+    "correct": false
+  },
+  {
+    "id": "math500_test_counting_and_probability_188.json",
+    "model": "sft",
+    "source": "MATH-500",
+    "gold": "\\frac{1}{2}",
+    "extracted": null,
+    "correct": false
+  },
+  {
+    "id": "math500_test_algebra_1031.json",
+    "model": "base",
+    "source": "MATH-500",
+    "gold": "\\frac{11}{2}",
+    "extracted": "0",
+    "correct": false
+  },
+  {
+    "id": "math500_test_algebra_1031.json",
+    "model": "sft",
+    "source": "MATH-500",
+    "gold": "\\frac{11}{2}",
+    "extracted": "\\frac{1}{2}",
+    "correct": false
+  },
+  {
+    "id": "math500_test_intermediate_algebra_1166.json",
+    "model": "base",
+    "source": "MATH-500",
+    "gold": "100",
+    "extracted": null,
+    "correct": false
+  },
+  {
+    "id": "math500_test_intermediate_algebra_1166.json",
+    "model": "sft",
+    "source": "MATH-500",
+    "gold": "100",
+    "extracted": null,
+    "correct": false
+  },
+  {
+    "id": "math500_test_precalculus_675.json",
+    "model": "base",
+    "source": "MATH-500",
+    "gold": "4",
+    "extracted": null,
+    "correct": false
+  },
+  {
+    "id": "math500_test_precalculus_675.json",
+    "model": "sft",
+    "source": "MATH-500",
+    "gold": "4",
+    "extracted": null,
+    "correct": false
+  },
+  {
+    "id": "math500_test_geometry_229.json",
+    "model": "base",
+    "source": "MATH-500",
+    "gold": "16",
+    "extracted": null,
+    "correct": false
+  },
+  {
+    "id": "math500_test_geometry_229.json",
+    "model": "sft",
+    "source": "MATH-500",
+    "gold": "16",
+    "extracted": null,
+    "correct": false
+  },
+  {
+    "id": "math500_test_intermediate_algebra_1408.json",
+    "model": "base",
+    "source": "MATH-500",
+    "gold": "-2",
+    "extracted": null,
+    "correct": false
+  },
+  {
+    "id": "math500_test_intermediate_algebra_1408.json",
+    "model": "sft",
+    "source": "MATH-500",
+    "gold": "-2",
+    "extracted": ".",
+    "correct": false
+  },
+  {
+    "id": "math500_test_intermediate_algebra_966.json",
+    "model": "base",
+    "source": "MATH-500",
+    "gold": "16",
+    "extracted": null,
+    "correct": false
+  },
+  {
+    "id": "math500_test_intermediate_algebra_966.json",
+    "model": "sft",
+    "source": "MATH-500",
+    "gold": "16",
+    "extracted": "-2",
+    "correct": false
+  },
+  {
+    "id": "math500_test_prealgebra_2066.json",
+    "model": "base",
+    "source": "MATH-500",
+    "gold": "22",
+    "extracted": "50",
+    "correct": false
+  },
+  {
+    "id": "math500_test_prealgebra_2066.json",
+    "model": "sft",
+    "source": "MATH-500",
+    "gold": "22",
+    "extracted": "150",
+    "correct": false
+  },
+  {
+    "id": "math500_test_intermediate_algebra_955.json",
+    "model": "base",
+    "source": "MATH-500",
+    "gold": "17",
+    "extracted": null,
+    "correct": false
+  },
+  {
+    "id": "math500_test_intermediate_algebra_955.json",
+    "model": "sft",
+    "source": "MATH-500",
+    "gold": "17",
+    "extracted": "-2",
+    "correct": false
+  },
+  {
+    "id": "math500_test_intermediate_algebra_1508.json",
+    "model": "base",
+    "source": "MATH-500",
+    "gold": "-1",
+    "extracted": null,
+    "correct": false
+  },
+  {
+    "id": "math500_test_intermediate_algebra_1508.json",
+    "model": "sft",
+    "source": "MATH-500",
+    "gold": "-1",
+    "extracted": null,
+    "correct": false
+  },
+  {
+    "id": "math500_test_counting_and_probability_894.json",
+    "model": "base",
+    "source": "MATH-500",
+    "gold": "540",
+    "extracted": "12",
+    "correct": false
+  },
+  {
+    "id": "math500_test_counting_and_probability_894.json",
+    "model": "sft",
+    "source": "MATH-500",
+    "gold": "540",
+    "extracted": "6",
+    "correct": false
+  },
+  {
+    "id": "math500_test_number_theory_13.json",
+    "model": "base",
+    "source": "MATH-500",
+    "gold": "64",
+    "extracted": "5",
+    "correct": false
+  },
+  {
+    "id": "math500_test_number_theory_13.json",
+    "model": "sft",
+    "source": "MATH-500",
+    "gold": "64",
+    "extracted": null,
+    "correct": false
+  },
+  {
+    "id": "math500_test_prealgebra_1139.json",
+    "model": "base",
+    "source": "MATH-500",
+    "gold": "4",
+    "extracted": "120",
+    "correct": false
+  },
+  {
+    "id": "math500_test_prealgebra_1139.json",
+    "model": "sft",
+    "source": "MATH-500",
+    "gold": "4",
+    "extracted": "4",
+    "correct": true
+  },
+  {
+    "id": "math500_test_algebra_1282.json",
+    "model": "base",
+    "source": "MATH-500",
+    "gold": "11",
+    "extracted": null,
+    "correct": false
+  },
+  {
+    "id": "math500_test_algebra_1282.json",
+    "model": "sft",
+    "source": "MATH-500",
+    "gold": "11",
+    "extracted": "10",
+    "correct": false
+  },
+  {
+    "id": "bbh_ld7_21",
+    "model": "base",
+    "source": "BBH-logical_deduction",
+    "gold": "(C)",
+    "extracted": "G",
+    "correct": false
+  },
+  {
+    "id": "bbh_ld7_21",
+    "model": "sft",
+    "source": "BBH-logical_deduction",
+    "gold": "(C)",
+    "extracted": null,
+    "correct": false
+  },
+  {
+    "id": "bbh_ld7_45",
+    "model": "base",
+    "source": "BBH-logical_deduction",
+    "gold": "(B)",
+    "extracted": "B",
+    "correct": true
+  },
+  {
+    "id": "bbh_ld7_45",
+    "model": "sft",
+    "source": "BBH-logical_deduction",
+    "gold": "(B)",
+    "extracted": null,
+    "correct": false
+  },
+  {
+    "id": "bbh_ld7_38",
+    "model": "base",
+    "source": "BBH-logical_deduction",
+    "gold": "(A)",
+    "extracted": null,
+    "correct": false
+  },
+  {
+    "id": "bbh_ld7_38",
+    "model": "sft",
+    "source": "BBH-logical_deduction",
+    "gold": "(A)",
+    "extracted": null,
+    "correct": false
+  },
+  {
+    "id": "bbh_ld7_59",
+    "model": "base",
+    "source": "BBH-logical_deduction",
+    "gold": "(D)",
+    "extracted": "D",
+    "correct": true
+  },
+  {
+    "id": "bbh_ld7_59",
+    "model": "sft",
+    "source": "BBH-logical_deduction",
+    "gold": "(D)",
+    "extracted": null,
+    "correct": false
+  },
+  {
+    "id": "bbh_ld7_168",
+    "model": "base",
+    "source": "BBH-logical_deduction",
+    "gold": "(F)",
+    "extracted": null,
+    "correct": false
+  },
+  {
+    "id": "bbh_ld7_168",
+    "model": "sft",
+    "source": "BBH-logical_deduction",
+    "gold": "(F)",
+    "extracted": null,
+    "correct": false
+  },
+  {
+    "id": "bbh_ld7_3",
+    "model": "base",
+    "source": "BBH-logical_deduction",
+    "gold": "(A)",
+    "extracted": "C",
+    "correct": false
+  },
+  {
+    "id": "bbh_ld7_3",
+    "model": "sft",
+    "source": "BBH-logical_deduction",
+    "gold": "(A)",
+    "extracted": null,
+    "correct": false
+  },
+  {
+    "id": "bbh_ld7_124",
+    "model": "base",
+    "source": "BBH-logical_deduction",
+    "gold": "(A)",
+    "extracted": "D",
+    "correct": false
+  },
+  {
+    "id": "bbh_ld7_124",
+    "model": "sft",
+    "source": "BBH-logical_deduction",
+    "gold": "(A)",
+    "extracted": "A",
+    "correct": true
+  },
+  {
+    "id": "bbh_ld7_212",
+    "model": "base",
+    "source": "BBH-logical_deduction",
+    "gold": "(G)",
+    "extracted": "E",
+    "correct": false
+  },
+  {
+    "id": "bbh_ld7_212",
+    "model": "sft",
+    "source": "BBH-logical_deduction",
+    "gold": "(G)",
+    "extracted": "F",
+    "correct": false
+  },
+  {
+    "id": "bbh_ld7_150",
+    "model": "base",
+    "source": "BBH-logical_deduction",
+    "gold": "(D)",
+    "extracted": null,
+    "correct": false
+  },
+  {
+    "id": "bbh_ld7_150",
+    "model": "sft",
+    "source": "BBH-logical_deduction",
+    "gold": "(D)",
+    "extracted": null,
+    "correct": false
+  },
+  {
+    "id": "bbh_ld7_46",
+    "model": "base",
+    "source": "BBH-logical_deduction",
+    "gold": "(D)",
+    "extracted": null,
+    "correct": false
+  },
+  {
+    "id": "bbh_ld7_46",
+    "model": "sft",
+    "source": "BBH-logical_deduction",
+    "gold": "(D)",
+    "extracted": null,
+    "correct": false
+  },
+  {
+    "id": "bbh_ld7_67",
+    "model": "base",
+    "source": "BBH-logical_deduction",
+    "gold": "(C)",
+    "extracted": "C",
+    "correct": true
+  },
+  {
+    "id": "bbh_ld7_67",
+    "model": "sft",
+    "source": "BBH-logical_deduction",
+    "gold": "(C)",
+    "extracted": "F",
+    "correct": false
+  },
+  {
+    "id": "bbh_ld7_72",
+    "model": "base",
+    "source": "BBH-logical_deduction",
+    "gold": "(F)",
+    "extracted": null,
+    "correct": false
+  },
+  {
+    "id": "bbh_ld7_72",
+    "model": "sft",
+    "source": "BBH-logical_deduction",
+    "gold": "(F)",
+    "extracted": null,
+    "correct": false
+  },
+  {
+    "id": "bbh_ld7_1",
+    "model": "base",
+    "source": "BBH-logical_deduction",
+    "gold": "(B)",
+    "extracted": "D",
+    "correct": false
+  },
+  {
+    "id": "bbh_ld7_1",
+    "model": "sft",
+    "source": "BBH-logical_deduction",
+    "gold": "(B)",
+    "extracted": null,
+    "correct": false
+  },
+  {
+    "id": "bbh_ld7_37",
+    "model": "base",
+    "source": "BBH-logical_deduction",
+    "gold": "(C)",
+    "extracted": null,
+    "correct": false
+  },
+  {
+    "id": "bbh_ld7_37",
+    "model": "sft",
+    "source": "BBH-logical_deduction",
+    "gold": "(C)",
+    "extracted": null,
+    "correct": false
+  },
+  {
+    "id": "bbh_ld7_107",
+    "model": "base",
+    "source": "BBH-logical_deduction",
+    "gold": "(C)",
+    "extracted": null,
+    "correct": false
+  },
+  {
+    "id": "bbh_ld7_107",
+    "model": "sft",
+    "source": "BBH-logical_deduction",
+    "gold": "(C)",
+    "extracted": null,
+    "correct": false
+  },
+  {
+    "id": "aime2024_2024-II-4",
+    "model": "base",
+    "source": "AIME-2024",
+    "gold": "33",
+    "extracted": "4",
+    "correct": false
+  },
+  {
+    "id": "aime2024_2024-II-4",
+    "model": "sft",
+    "source": "AIME-2024",
+    "gold": "33",
+    "extracted": "3",
+    "correct": false
+  },
+  {
+    "id": "aime2024_2024-II-12",
+    "model": "base",
+    "source": "AIME-2024",
+    "gold": "23",
+    "extracted": "1",
+    "correct": false
+  },
+  {
+    "id": "aime2024_2024-II-12",
+    "model": "sft",
+    "source": "AIME-2024",
+    "gold": "23",
+    "extracted": "0",
+    "correct": false
+  },
+  {
+    "id": "aime2024_2024-I-4",
+    "model": "base",
+    "source": "AIME-2024",
+    "gold": "116",
+    "extracted": "6",
+    "correct": false
+  },
+  {
+    "id": "aime2024_2024-I-4",
+    "model": "sft",
+    "source": "AIME-2024",
+    "gold": "116",
+    "extracted": "4",
+    "correct": false
+  },
+  {
+    "id": "aime2024_2024-I-3",
+    "model": "base",
+    "source": "AIME-2024",
+    "gold": "809",
+    "extracted": "4",
+    "correct": false
+  },
+  {
+    "id": "aime2024_2024-I-3",
+    "model": "sft",
+    "source": "AIME-2024",
+    "gold": "809",
+    "extracted": "2023",
+    "correct": false
+  },
+  {
+    "id": "aime2024_2024-I-8",
+    "model": "base",
+    "source": "AIME-2024",
+    "gold": "197",
+    "extracted": "2",
+    "correct": false
+  },
+  {
+    "id": "aime2024_2024-I-8",
+    "model": "sft",
+    "source": "AIME-2024",
+    "gold": "197",
+    "extracted": "2",
+    "correct": false
+  },
+  {
+    "id": "aime2024_2024-I-12",
+    "model": "base",
+    "source": "AIME-2024",
+    "gold": "385",
+    "extracted": "2",
+    "correct": false
+  },
+  {
+    "id": "aime2024_2024-I-12",
+    "model": "sft",
+    "source": "AIME-2024",
+    "gold": "385",
+    "extracted": "4",
+    "correct": false
+  },
+  {
+    "id": "aime2024_2024-I-11",
+    "model": "base",
+    "source": "AIME-2024",
+    "gold": "371",
+    "extracted": "8",
+    "correct": false
+  },
+  {
+    "id": "aime2024_2024-I-11",
+    "model": "sft",
+    "source": "AIME-2024",
+    "gold": "371",
+    "extracted": "256",
+    "correct": false
+  },
+  {
+    "id": "aime2024_2024-II-11",
+    "model": "base",
+    "source": "AIME-2024",
+    "gold": "601",
+    "extracted": "6000000",
+    "correct": false
+  },
+  {
+    "id": "aime2024_2024-II-11",
+    "model": "sft",
+    "source": "AIME-2024",
+    "gold": "601",
+    "extracted": "5",
+    "correct": false
+  },
+  {
+    "id": "aime2024_2024-I-2",
+    "model": "base",
+    "source": "AIME-2024",
+    "gold": "25",
+    "extracted": "5",
+    "correct": false
+  },
+  {
+    "id": "aime2024_2024-I-2",
+    "model": "sft",
+    "source": "AIME-2024",
+    "gold": "25",
+    "extracted": "100",
+    "correct": false
+  },
+  {
+    "id": "aime2024_2024-II-6",
+    "model": "base",
+    "source": "AIME-2024",
+    "gold": "55",
+    "extracted": "2025205",
+    "correct": false
+  },
+  {
+    "id": "aime2024_2024-II-6",
+    "model": "sft",
+    "source": "AIME-2024",
+    "gold": "55",
+    "extracted": "2024",
+    "correct": false
+  },
+  {
+    "id": "aime2024_2024-I-7",
+    "model": "base",
+    "source": "AIME-2024",
+    "gold": "540",
+    "extracted": "2",
+    "correct": false
+  },
+  {
+    "id": "aime2024_2024-I-7",
+    "model": "sft",
+    "source": "AIME-2024",
+    "gold": "540",
+    "extracted": "14",
+    "correct": false
+  },
+  {
+    "id": "aime2024_2024-II-3",
+    "model": "base",
+    "source": "AIME-2024",
+    "gold": "45",
+    "extracted": "45",
+    "correct": true
+  },
+  {
+    "id": "aime2024_2024-II-3",
+    "model": "sft",
+    "source": "AIME-2024",
+    "gold": "45",
+    "extracted": "19",
+    "correct": false
+  },
+  {
+    "id": "aime2024_2024-I-1",
+    "model": "base",
+    "source": "AIME-2024",
+    "gold": "204",
+    "extracted": "60",
+    "correct": false
+  },
+  {
+    "id": "aime2024_2024-I-1",
+    "model": "sft",
+    "source": "AIME-2024",
+    "gold": "204",
+    "extracted": "240",
+    "correct": false
+  },
+  {
+    "id": "aime2024_2024-II-7",
+    "model": "base",
+    "source": "AIME-2024",
+    "gold": "699",
+    "extracted": "9876",
+    "correct": false
+  },
+  {
+    "id": "aime2024_2024-II-7",
+    "model": "sft",
+    "source": "AIME-2024",
+    "gold": "699",
+    "extracted": "6",
+    "correct": false
+  },
+  {
+    "id": "aime2024_2024-I-6",
+    "model": "base",
+    "source": "AIME-2024",
+    "gold": "294",
+    "extracted": "8",
+    "correct": false
+  },
+  {
+    "id": "aime2024_2024-I-6",
+    "model": "sft",
+    "source": "AIME-2024",
+    "gold": "294",
+    "extracted": "70",
+    "correct": false
+  }
+]

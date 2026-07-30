@@ -1,0 +1,36 @@
+{"id": "fact_capital", "category": "factual_qa", "prompt": "What is the capital of Australia?"}
+{"id": "fact_author", "category": "factual_qa", "prompt": "Who wrote the novel \"Pride and Prejudice\"?"}
+{"id": "fact_boiling", "category": "factual_qa", "prompt": "What is the boiling point of water at sea level in degrees Celsius?"}
+{"id": "math_mult", "category": "math_solve", "prompt": "What is 17 * 23? Reply with just the number."}
+{"id": "math_discount", "category": "math_solve", "prompt": "A shirt costs $40 and is 25% off. What is the final price?"}
+{"id": "math_linear", "category": "math_solve", "prompt": "Solve for x: 3x + 6 = 21."}
+{"id": "code_fib", "category": "code", "prompt": "Write a Python function that returns the nth Fibonacci number."}
+{"id": "code_reverse", "category": "code", "prompt": "Write a one-line Python expression to reverse the string s."}
+{"id": "code_sql", "category": "code", "prompt": "Write a SQL query to select all rows from a table called users where age is greater than 30."}
+{"id": "sum_photosynthesis", "category": "summarization", "prompt": "Summarize this in one sentence: Photosynthesis is the process by which green plants use sunlight to synthesize food from carbon dioxide and water, releasing oxygen as a byproduct."}
+{"id": "sum_romeo", "category": "summarization", "prompt": "Summarize the plot of Romeo and Juliet in two sentences."}
+{"id": "sum_watercycle", "category": "summarization", "prompt": "Give a TL;DR in one sentence: Water evaporates from oceans and lakes, condenses into clouds, falls as precipitation, and flows back to the sea, repeating continuously."}
+{"id": "reason_syllogism", "category": "reasoning", "prompt": "If all Bloops are Razzies and all Razzies are Lazzies, are all Bloops Lazzies? Explain briefly."}
+{"id": "reason_batball", "category": "reasoning", "prompt": "A bat and a ball cost $1.10 in total. The bat costs $1.00 more than the ball. How much does the ball cost?"}
+{"id": "reason_order", "category": "reasoning", "prompt": "Tom is taller than Sam. Sam is taller than Alex. Who is the shortest?"}
+{"id": "creative_poem", "category": "creative", "prompt": "Write a two-line poem about the ocean."}
+{"id": "creative_tweet", "category": "creative", "prompt": "Write a short, upbeat tweet announcing the opening of a new coffee shop."}
+{"id": "creative_names", "category": "creative", "prompt": "Give me three creative names for a bakery."}
+{"id": "edit_formal", "category": "rewriting", "prompt": "Rewrite this sentence to be more formal: \"hey can u send me that file asap\""}
+{"id": "edit_grammar", "category": "rewriting", "prompt": "Fix the grammar in this sentence: \"She don't like when it rains on the weekends.\""}
+{"id": "edit_concise", "category": "rewriting", "prompt": "Rewrite this to be more concise: \"Due to the fact that it was raining outside, we made the decision to stay inside the house.\""}
+{"id": "extract_contact", "category": "extraction", "prompt": "Extract the email address and phone number from this text: \"Reach me at jane@acme.io or 555-2020.\""}
+{"id": "extract_sentiment", "category": "extraction", "prompt": "Is this review positive or negative? \"The food was cold and the service was slow.\""}
+{"id": "extract_list", "category": "extraction", "prompt": "List only the fruits mentioned: \"I bought apples, a chair, bananas, and grapes.\""}
+{"id": "howto_omelette", "category": "howto", "prompt": "How do I make a basic omelette? List the steps."}
+{"id": "howto_sleep", "category": "howto", "prompt": "Give me three tips for sleeping better."}
+{"id": "howto_affect", "category": "howto", "prompt": "What is a simple way to remember the difference between \"affect\" and \"effect\"?"}
+{"id": "explain_prime", "category": "explanation", "prompt": "In one sentence, what is a prime number?"}
+{"id": "explain_api", "category": "explanation", "prompt": "Explain what an API is to a non-technical person in two sentences."}
+{"id": "explain_sky", "category": "explanation", "prompt": "Briefly, why is the sky blue?"}
+{"id": "constraint_capitals", "category": "constraint", "prompt": "List exactly 3 European capital cities, comma-separated, with no other text."}
+{"id": "constraint_yesno", "category": "constraint", "prompt": "Respond with only the word \"yes\" or \"no\": Is 7 a prime number?"}
+{"id": "constraint_noe", "category": "constraint", "prompt": "Write a sentence about dogs that does not contain the letter \"e\"."}
+{"id": "plan_pasta", "category": "planning", "prompt": "Make a simple 3-item grocery list for cooking pasta with tomato sauce."}
+{"id": "plan_convert", "category": "planning", "prompt": "Convert 2.5 hours into minutes and explain the calculation in one line."}
+{"id": "plan_budget", "category": "planning", "prompt": "I have $50 and want to buy notebooks that cost $4 each. How many can I buy, and how much money is left?"}

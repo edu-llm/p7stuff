@@ -1,0 +1,94 @@
+[
+  {
+    "problem_id": "GSM8K_test_768_0",
+    "problem": "In one hour, Ezra read twice as many books as Ahmed. Ezra has read 300 books this hour and decided to read 150 more. How many books have they read altogether?",
+    "final_answer": "675",
+    "candidates": [
+      {
+        "rid": "GSM8K_test_768_0__R1",
+        "response": "How many books did Ahmed read?"
+      },
+      {
+        "rid": "GSM8K_test_768_0__R2",
+        "response": "Let's break it down step by step. First, we know that Ezra has read 300 books and decided to read 150 more. So, how many books has Ezra read in total now?"
+      },
+      {
+        "rid": "GSM8K_test_768_0__R3",
+        "response": "Let's break down the problem step by step.\n\nEzra initially read 300 books and decided to read 150 more, so he will read a total of 300 + 150 = 450 books.\n\nWe know that Ezra read twice as many books as Ahmed in one hour. Let's denote the number of books Ahmed read as x. Then, we can write the equation:\n\nEzra's books = 2 * Ahmed's books\n\nSince Ezra read 450 books, we can set up the equation:\n\n450 = 2 * x\n\nSolving for x, we get:\n\nx = 450 / 2 = 225\n\nSo Ahmed read 225 books.\n\nTo find the total number of books they read altogether, we add Ezra's and Ahmed's books:\n\nTotal books = Ezra's books + Ahmed's books = 450 + 225 = 675\n\nTherefore, altogether they have read 675 books.\n\nThe answer is: \\boxed{675}"
+      },
+      {
+        "rid": "GSM8K_test_768_0__R4",
+        "response": "Let's break it down:\n\nEzra initially read 300 books and then decided to read 150 more. So, how many books did Ezra read in total this hour?\n\nEzra initially read 300 books and then read 150 more, so he read 300 + 150 = 450 books this hour.\n\nNow, we know that Ezra read twice as many books as Ahmed. So, if Ezra read 450 books, how many books did Ahmed read?\n\nIf Ezra read twice as many books as Ahmed, then Ahmed read half the number of books Ezra read. So, Ahmed read 450 / 2 = 225 books.\n\nNow, can you tell me how many books have they read altogether?\n\nEzra read 450 books and Ahmed read 225 books. So, altogether they have read 450 + 225 = 675 books.\n\nThus, they have read \\boxed{675} books altogether."
+      }
+    ]
+  },
+  {
+    "problem_id": "MAWPS_train_1093_1",
+    "problem": "Scarlett made a fruit salad with 0.25 pound of melon and 0.375 pound of berries . How many pounds of fruit did Scarlett use in all ?",
+    "final_answer": "0.625",
+    "candidates": [
+      {
+        "rid": "MAWPS_train_1093_1__R1",
+        "response": "To find the total weight of the fruit salad, we need to add the weight of the melon and the berries together. Can you do that?"
+      },
+      {
+        "rid": "MAWPS_train_1093_1__R2",
+        "response": "To find the total pounds of fruit Scarlett used, we need to add the pounds of melon and berries together.\n\nMelon: 0.25 pounds\nBerries: 0.375 pounds\n\nTotal pounds of fruit = 0.25 + 0.375 = 0.625 pounds\n\nSo Scarlett used \\boxed{0.625} pounds of fruit in all."
+      },
+      {
+        "rid": "MAWPS_train_1093_1__R3",
+        "response": "What is the total weight of the fruit salad?"
+      },
+      {
+        "rid": "MAWPS_train_1093_1__R4",
+        "response": "How much melon did Scarlett use in pounds?"
+      }
+    ]
+  },
+  {
+    "problem_id": "GSM8K_train_1512_0",
+    "problem": "In a certain company, for every customer served, an employee gets as many bonus points, as 20% of the number of customers served. On Monday, Tom served 10 customers per hour for 8 hours. How many bonus points did Tom earn that day?",
+    "final_answer": "16",
+    "candidates": [
+      {
+        "rid": "GSM8K_train_1512_0__R1",
+        "response": "How many bonus points did Tom earn on Monday?"
+      },
+      {
+        "rid": "GSM8K_train_1512_0__R2",
+        "response": "To find out how many bonus points Tom earned, we first need to calculate how many customers he served in total. \n\nTom served 10 customers per hour for 8 hours, so he served 10 * 8 = 80 customers in total.\n\nSince each customer served earns him 20% of the number of customers served, we need to calculate 20% of 80. \n\n20% of 80 is 0.20 * 80 = 16.\n\nSo, Tom earned 16 bonus points that day."
+      },
+      {
+        "rid": "GSM8K_train_1512_0__R3",
+        "response": "Tom served 10 customers per hour for 8 hours, so the total number of customers served is $10 * 8 = 80$.\nFor every customer served, an employee gets 20% of the number of customers served as bonus points.\nSo, for 80 customers, the bonus points earned by Tom is $80 * 20 / 100 = 1600 / 100 = 16$.\nThus, Tom earned \\boxed{16} bonus points that day."
+      },
+      {
+        "rid": "GSM8K_train_1512_0__R4",
+        "response": "How many customers did Tom serve?"
+      }
+    ]
+  },
+  {
+    "problem_id": "GSM8K_train_5058_0",
+    "problem": "A school does a yearly tree planting activity. This year, the 4th graders planted a total of 30 trees while 5th graders planted twice as many. The 6th graders planted 30 fewer than thrice the number of trees planted by the 5th graders. How many trees did they plant altogether?",
+    "final_answer": "240",
+    "candidates": [
+      {
+        "rid": "GSM8K_train_5058_0__R1",
+        "response": "How many trees did the 5th graders plant?"
+      },
+      {
+        "rid": "GSM8K_train_5058_0__R2",
+        "response": "Let's break down the problem step by step.\n\nThe 4th graders planted 30 trees.\n\nThe 5th graders planted twice as many trees as the 4th graders, so they planted 2 * 30 = 60 trees.\n\nThe 6th graders planted 30 fewer than thrice the number of trees planted by the 5th graders. So, they planted 3 * 60 - 30 = 180 - 30 = 150 trees.\n\nNow, let's add up the number of trees planted by each grade to find the total number of trees planted.\n\nThe 4th graders planted 30 trees, the 5th graders planted 60 trees, and the 6th graders planted 150 trees. So, the total number of trees planted is 30 + 60 + 150 = 90 + 150 = 240\n\nThus, the 4th graders, 5th graders, and 6th graders planted a total of 240 trees."
+      },
+      {
+        "rid": "GSM8K_train_5058_0__R3",
+        "response": "Let's break down the problem step by step.\n\nThe 4th graders planted 30 trees.\n\nThe 5th graders planted twice as many as the 4th graders, so they planted 2 * 30 = 60 trees.\n\nThe 6th graders planted 30 fewer than thrice the number of trees planted by the 5th graders. \nThrice the number of trees planted by the 5th graders is 3 * 60 = 180. \n30 fewer than that is 180 - 30 = 150 trees.\n\nNow, let's add up the total number of trees planted by all the grades:\n30 (4th graders) + 60 (5th graders) + 150 (6th graders) = 240.\n\nSo, they planted altogether \\boxed{240} trees."
+      },
+      {
+        "rid": "GSM8K_train_5058_0__R4",
+        "response": "Let's break it down step by step:\n\n1. The 4th graders planted 30 trees.\n2. The 5th graders planted twice as many as the 4th graders. So, how many did they plant?\n3. The 6th graders planted 30 fewer than thrice the number of trees planted by the 5th graders. First, calculate thrice the number of trees planted by the 5th graders, then subtract 30.\n\nLet's calculate these one by one using Python to ensure accuracy.\n```python\n# Step 1: Number of trees planted by the 4th graders\ntrees_by_4th_graders = 30\n\n# Step 2: Number of trees planted by the 5th graders (twice as many as the 4th graders)\ntrees_by_5th_graders = 2 * trees_by_4th_graders\n\n# Step 3: Number of trees planted by the 6th graders (thrice the number of trees planted by the"
+      }
+    ]
+  }
+]

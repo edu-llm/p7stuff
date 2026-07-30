@@ -1,0 +1,94 @@
+[
+  {
+    "problem_id": "MAWPS_train_1188_2",
+    "problem": "In a class of 25 students , 8 received a grade of A. What percent of the students received A 's ?",
+    "final_answer": "32.0",
+    "candidates": [
+      {
+        "rid": "MAWPS_train_1188_2__R1",
+        "response": "What percentage of students received A's?"
+      },
+      {
+        "rid": "MAWPS_train_1188_2__R2",
+        "response": "To find the percentage of students who received an A, we need to follow these steps:\n\n1. Determine the number of students who received an A.\n2. Calculate the percentage of students who received an A out of the total number of students.\n\nGiven:\n- Total number of students = 25\n- Number of students who received an A = 8\n\nThe formula to calculate the percentage is:\n\n\\[\n\\text{Percentage} = \\left( \\frac{\\text{Number of students who received an A}}{\\text{Total number of students}} \\right) \\times 100\n\\]\n\nSubstituting the given values:\n\n\\[\n\\text{Percentage} = \\left( \\frac{8}{25} \\right) \\times 100\n\\]\n\nLet's compute this using Python.\n```python\n# Given data\ntotal_students = 25\nstudents_with_A = 8\n\n# Calculating the percentage\npercentage_with_A = (students_with_A / total_students) * 100\nprint(percentage_with_A)\n```\n```output\n32.0"
+      },
+      {
+        "rid": "MAWPS_train_1188_2__R3",
+        "response": "How many students received an A?"
+      },
+      {
+        "rid": "MAWPS_train_1188_2__R4",
+        "response": "To find the percentage of students who received an A, we need to divide the number of students who received an A by the total number of students, and then multiply by 100. So, what is 8 divided by 25, and then multiplied by 100?"
+      }
+    ]
+  },
+  {
+    "problem_id": "GSM8K_train_1565_0",
+    "problem": "Jane is painting her fingernails. She applies a base coat that takes 2 minutes to dry, two color coats that take 3 minutes each to dry, and a clear top coat that takes 5 minutes to dry. How many minutes total does Jane spend waiting for her nail polish to dry?",
+    "final_answer": "13",
+    "candidates": [
+      {
+        "rid": "GSM8K_train_1565_0__R1",
+        "response": "How long does the base coat take to dry?"
+      },
+      {
+        "rid": "GSM8K_train_1565_0__R2",
+        "response": "How many minutes does Jane spend on the base coat?"
+      },
+      {
+        "rid": "GSM8K_train_1565_0__R3",
+        "response": "To find the total time Jane spends waiting for her nail polish to dry, we need to add up the time it takes for each coat to dry.\n\nThe base coat takes 2 minutes to dry.\nThe two color coats take 3 minutes each to dry, so that's 3 * 2 = 6 minutes in total.\nThe clear top coat takes 5 minutes to dry.\n\nSo, the total time Jane spends waiting for her nail polish to dry is 2 + 6 + 5 = 8 + 5 = 13 minutes.\n\nThus, Jane spends \\boxed{13} minutes waiting for her nail polish to dry."
+      },
+      {
+        "rid": "GSM8K_train_1565_0__R4",
+        "response": "To find the total time Jane spends waiting for her nail polish to dry, we need to add up the drying times for each coat.\n\nThe base coat takes 2 minutes to dry.\nThe two color coats take 3 minutes each, so together they take 2 * 3 = 6 minutes to dry.\nThe clear top coat takes 5 minutes to dry.\n\nSo, the total time Jane spends waiting for her nail polish to dry is 2 + 6 + 5 = 8 + 5 = 13 minutes.\n\nThus, Jane spends \\boxed{13} minutes waiting for her nail polish to dry."
+      }
+    ]
+  },
+  {
+    "problem_id": "GSM8K_train_4739_4",
+    "problem": "On a highway, the total number of vehicles passing is 300. If the number of cars on the highway is twice the number of trucks, find out the total number of trucks on the highway?",
+    "final_answer": "100",
+    "candidates": [
+      {
+        "rid": "GSM8K_train_4739_4__R1",
+        "response": "How many trucks are there?"
+      },
+      {
+        "rid": "GSM8K_train_4739_4__R2",
+        "response": "Let's denote the number of trucks as \\( T \\).\nSince the number of cars is twice the number of trucks, the number of cars is \\( 2T \\).\nThe total number of vehicles is the sum of the number of trucks and cars, which is given as 300.\nSo, we can write the equation:\n\\[ T + 2T = 300 \\]\n\\[ 3T = 300 \\]\nDividing both sides by 3, we get:\n\\[ T = 100 \\]\nThus, the total number of trucks on the highway is \\( \\boxed{100} \\)."
+      },
+      {
+        "rid": "GSM8K_train_4739_4__R3",
+        "response": "Let's say the number of trucks is x. Since the number of cars is twice the number of trucks, the number of cars is 2x. The total number of vehicles is the sum of cars and trucks, which equals 300. So, we can write the equation: x + 2x = 300. Combine like terms: 3x = 300. Divide both sides by 3: x = 100. Therefore, the total number of trucks on the highway is 100."
+      },
+      {
+        "rid": "GSM8K_train_4739_4__R4",
+        "response": "Let's denote the number of trucks on the highway as x. \nSince the number of cars is twice the number of trucks, the number of cars is 2x. \nThe total number of vehicles on the highway is the sum of the number of trucks and cars, which is x + 2x = 3x. \nAs the problem states, this total is 300. \nSo, 3x = 300. \nDividing both sides by 3, we get x = 100. \nThus, the total number of trucks on the highway is 100."
+      }
+    ]
+  },
+  {
+    "problem_id": "GSM8K_train_4493_1",
+    "problem": "Janet is getting paid to moderate social media posts. She gets paid 25 cents per post she checks. If it takes her 10 seconds to check a post, how much does she earn per hour?",
+    "final_answer": "90",
+    "candidates": [
+      {
+        "rid": "GSM8K_train_4493_1__R1",
+        "response": "How many seconds are in an hour?"
+      },
+      {
+        "rid": "GSM8K_train_4493_1__R2",
+        "response": "How many seconds are in an hour?"
+      },
+      {
+        "rid": "GSM8K_train_4493_1__R3",
+        "response": "To find out how much Janet earns per hour, we first need to find out how many posts she can check in an hour. \n\nSince it takes her 10 seconds to check a post, and there are 3600 seconds in an hour, we can divide 3600 by 10 to find out how many posts she can check in an hour. \n\n3600 / 10 = 360 posts per hour.\n\nSince Janet gets paid 25 cents per post, we can multiply the number of posts she can check in an hour by the amount she gets paid per post to find out how much she earns per hour. \n\n360 * 0.25 = 90 dollars per hour.\n\nSo Janet earns \\boxed{90} dollars per hour."
+      },
+      {
+        "rid": "GSM8K_train_4493_1__R4",
+        "response": "To determine how much Janet earns per hour, we need to calculate how many posts she can check in an hour and then multiply that by her pay per post.\n\nThere are 3600 seconds in an hour. If it takes her 10 seconds to check a post, the number of posts she can check in an hour is 3600 / 10 = 360 posts per hour.\n\nSince she earns 25 cents per post, her total earnings per hour would be 360 * 0.25 = 90 dollars per hour.\n\nThus, Janet earns \\boxed{90} dollars per hour."
+      }
+    ]
+  }
+]

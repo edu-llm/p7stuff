@@ -1,0 +1,50 @@
+{
+  "A_raw_noSI": {
+    "Revealing_of_the_Answer": 0.0625,
+    "Providing_Guidance": 0.84375,
+    "Actionability": 0.125,
+    "Coherence": 0.84375,
+    "Tutor_Tone": 0.5,
+    "Humanlikeness": 0.5625,
+    "Step_Level_Guidance": 0.0,
+    "Load_Aware_Formatting": 0.125,
+    "OVERALL": 0.3828125,
+    "n": 16
+  },
+  "B_raw_SI": {
+    "Revealing_of_the_Answer": 0.75,
+    "Providing_Guidance": 0.6875,
+    "Actionability": 0.625,
+    "Coherence": 0.9375,
+    "Tutor_Tone": 0.53125,
+    "Humanlikeness": 0.875,
+    "Step_Level_Guidance": 0.5625,
+    "Load_Aware_Formatting": 0.71875,
+    "OVERALL": 0.7109375,
+    "n": 16
+  },
+  "C_sft_noSI": {
+    "Revealing_of_the_Answer": 0.25,
+    "Providing_Guidance": 0.90625,
+    "Actionability": 0.34375,
+    "Coherence": 0.90625,
+    "Tutor_Tone": 0.5625,
+    "Humanlikeness": 0.71875,
+    "Step_Level_Guidance": 0.1875,
+    "Load_Aware_Formatting": 0.3125,
+    "OVERALL": 0.5234375,
+    "n": 16
+  },
+  "D_sft_SI": {
+    "Revealing_of_the_Answer": 1.0,
+    "Providing_Guidance": 0.65625,
+    "Actionability": 0.875,
+    "Coherence": 0.9375,
+    "Tutor_Tone": 0.5,
+    "Humanlikeness": 1.0,
+    "Step_Level_Guidance": 0.78125,
+    "Load_Aware_Formatting": 1.0,
+    "OVERALL": 0.84375,
+    "n": 16
+  }
+}

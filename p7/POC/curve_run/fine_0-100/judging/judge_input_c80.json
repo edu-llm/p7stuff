@@ -1,0 +1,370 @@
+[
+  {
+    "problem_id": "GSM8K_test_768_0",
+    "problem": "In one hour, Ezra read twice as many books as Ahmed. Ezra has read 300 books this hour and decided to read 150 more. How many books have they read altogether?",
+    "final_answer": "675",
+    "candidates": [
+      {
+        "rid": "GSM8K_test_768_0__R1",
+        "response": "How many books did Ahmed read?"
+      },
+      {
+        "rid": "GSM8K_test_768_0__R2",
+        "response": "Let's break it down step by step. First, we know that Ezra has read 300 books and decided to read 150 more. So, how many books has Ezra read in total now?"
+      },
+      {
+        "rid": "GSM8K_test_768_0__R3",
+        "response": "Let's break down the problem step by step.\n\nEzra initially read 300 books and decided to read 150 more, so he will read a total of 300 + 150 = 450 books.\n\nWe know that Ezra read twice as many books as Ahmed in one hour. Let's denote the number of books Ahmed read as x. Then, we can write the equation:\n\nEzra's books = 2 * Ahmed's books\n\nSince Ezra read 450 books, we can set up the equation:\n\n450 = 2 * x\n\nSolving for x, we get:\n\nx = 450 / 2 = 225\n\nSo Ahmed read 225 books.\n\nTo find the total number of books they read altogether, we add Ezra's and Ahmed's books:\n\nTotal books = Ezra's books + Ahmed's books = 450 + 225 = 675\n\nTherefore, altogether they have read 675 books.\n\nThe answer is: \\boxed{675}"
+      },
+      {
+        "rid": "GSM8K_test_768_0__R4",
+        "response": "Let's break it down step by step.\n\nEzra has read 300 books this hour and decided to read 150 more. So, the total number of books Ezra has read is 300 + 150 = 450.\n\nSince Ezra read twice as many books as Ahmed, we can say that Ahmed read half the number of books Ezra read. So, Ahmed read 450 / 2 = 225 books.\n\nTo find the total number of books they have read altogether, we add the number of books Ezra and Ahmed have read. That is, 450 + 225 = 675.\n\nSo, they have read altogether \\boxed{675} books."
+      }
+    ]
+  },
+  {
+    "problem_id": "GSM8K_test_768_1",
+    "problem": "In one hour, Ezra read twice as many books as Ahmed. Ezra has read 300 books this hour and decided to read 150 more. How many books have they read altogether?",
+    "final_answer": "675",
+    "candidates": [
+      {
+        "rid": "GSM8K_test_768_1__R1",
+        "response": "Let's break it down step by step. First, we know that Ezra has read 300 books and decided to read 150 more. So, how many books has Ezra read in total now?"
+      },
+      {
+        "rid": "GSM8K_test_768_1__R2",
+        "response": "Let's break it down step by step.\n\nEzra has read 300 books this hour and decided to read 150 more. So, the total number of books Ezra has read is 300 + 150 = 450.\n\nSince Ezra read twice as many books as Ahmed, we can say that Ahmed read half the number of books Ezra read. So, Ahmed read 450 / 2 = 225 books.\n\nTo find the total number of books they have read altogether, we add the number of books Ezra and Ahmed have read. That is, 450 + 225 = 675.\n\nSo, they have read altogether \\boxed{675} books."
+      },
+      {
+        "rid": "GSM8K_test_768_1__R3",
+        "response": "How many books did Ahmed read?"
+      },
+      {
+        "rid": "GSM8K_test_768_1__R4",
+        "response": "Let's break down the problem step by step.\n\nEzra initially read 300 books and decided to read 150 more, so he will read a total of 300 + 150 = 450 books.\n\nWe know that Ezra read twice as many books as Ahmed in one hour. Let's denote the number of books Ahmed read as x. Then, we can write the equation:\n\nEzra's books = 2 * Ahmed's books\n\nSince Ezra read 450 books, we can set up the equation:\n\n450 = 2 * x\n\nSolving for x, we get:\n\nx = 450 / 2 = 225\n\nSo Ahmed read 225 books.\n\nTo find the total number of books they read altogether, we add Ezra's and Ahmed's books:\n\nTotal books = Ezra's books + Ahmed's books = 450 + 225 = 675\n\nTherefore, altogether they have read 675 books.\n\nThe answer is: \\boxed{675}"
+      }
+    ]
+  },
+  {
+    "problem_id": "GSM8K_test_768_3",
+    "problem": "In one hour, Ezra read twice as many books as Ahmed. Ezra has read 300 books this hour and decided to read 150 more. How many books have they read altogether?",
+    "final_answer": "675",
+    "candidates": [
+      {
+        "rid": "GSM8K_test_768_3__R1",
+        "response": "Let's break it down step by step. First, we know that Ezra has read 300 books and decided to read 150 more. So, how many books has Ezra read in total now?"
+      },
+      {
+        "rid": "GSM8K_test_768_3__R2",
+        "response": "Let's break down the problem step by step.\n\nEzra initially read 300 books and decided to read 150 more, so he will read a total of 300 + 150 = 450 books.\n\nWe know that Ezra read twice as many books as Ahmed in one hour. Let's denote the number of books Ahmed read as x. Then, we can write the equation:\n\nEzra's books = 2 * Ahmed's books\n\nSince Ezra read 450 books, we can set up the equation:\n\n450 = 2 * x\n\nSolving for x, we get:\n\nx = 450 / 2 = 225\n\nSo Ahmed read 225 books.\n\nTo find the total number of books they read altogether, we add Ezra's and Ahmed's books:\n\nTotal books = Ezra's books + Ahmed's books = 450 + 225 = 675\n\nTherefore, altogether they have read 675 books.\n\nThe answer is: \\boxed{675}"
+      },
+      {
+        "rid": "GSM8K_test_768_3__R3",
+        "response": "How many books did Ahmed read?"
+      },
+      {
+        "rid": "GSM8K_test_768_3__R4",
+        "response": "Let's break it down step by step.\n\nEzra has read 300 books this hour and decided to read 150 more. So, the total number of books Ezra has read is 300 + 150 = 450.\n\nSince Ezra read twice as many books as Ahmed, we can say that Ahmed read half the number of books Ezra read. So, Ahmed read 450 / 2 = 225 books.\n\nTo find the total number of books they have read altogether, we add the number of books Ezra and Ahmed have read. That is, 450 + 225 = 675.\n\nSo, they have read altogether \\boxed{675} books."
+      }
+    ]
+  },
+  {
+    "problem_id": "GSM8K_test_768_4",
+    "problem": "In one hour, Ezra read twice as many books as Ahmed. Ezra has read 300 books this hour and decided to read 150 more. How many books have they read altogether?",
+    "final_answer": "675",
+    "candidates": [
+      {
+        "rid": "GSM8K_test_768_4__R1",
+        "response": "How many books did Ahmed read?"
+      },
+      {
+        "rid": "GSM8K_test_768_4__R2",
+        "response": "Let's break it down step by step.\n\nEzra has read 300 books this hour and decided to read 150 more. So, the total number of books Ezra has read is 300 + 150 = 450.\n\nSince Ezra read twice as many books as Ahmed, we can say that Ahmed read half the number of books Ezra read. So, Ahmed read 450 / 2 = 225 books.\n\nTo find the total number of books they have read altogether, we add the number of books Ezra and Ahmed have read. That is, 450 + 225 = 675.\n\nSo, they have read altogether \\boxed{675} books."
+      },
+      {
+        "rid": "GSM8K_test_768_4__R3",
+        "response": "Let's break down the problem step by step.\n\nEzra initially read 300 books and decided to read 150 more, so he will read a total of 300 + 150 = 450 books.\n\nWe know that Ezra read twice as many books as Ahmed in one hour. Let's denote the number of books Ahmed read as x. Then, we can write the equation:\n\nEzra's books = 2 * Ahmed's books\n\nSince Ezra read 450 books, we can set up the equation:\n\n450 = 2 * x\n\nSolving for x, we get:\n\nx = 450 / 2 = 225\n\nSo Ahmed read 225 books.\n\nTo find the total number of books they read altogether, we add Ezra's and Ahmed's books:\n\nTotal books = Ezra's books + Ahmed's books = 450 + 225 = 675\n\nTherefore, altogether they have read 675 books.\n\nThe answer is: \\boxed{675}"
+      },
+      {
+        "rid": "GSM8K_test_768_4__R4",
+        "response": "Let's break it down step by step. First, we know that Ezra has read 300 books and decided to read 150 more. So, how many books has Ezra read in total now?"
+      }
+    ]
+  },
+  {
+    "problem_id": "MAWPS_train_694_0",
+    "problem": "Cody had 45 dollars . For his birthday he got 9 more dollars but spent 19 on a new game . How much money does he have now ?",
+    "final_answer": "35.0",
+    "candidates": [
+      {
+        "rid": "MAWPS_train_694_0__R1",
+        "response": "Cody started with $45.\nHe received $9 for his birthday, so he now has $45 + $9 = $54.\nHowever, he spent $19 on a new game, so he now has $54 - $19 = $35.\nThus, Cody now has \\boxed{35} dollars."
+      },
+      {
+        "rid": "MAWPS_train_694_0__R2",
+        "response": "Let's break down the problem step by step:\n\nCody initially had $45.\n\nHe got 9 more dollars for his birthday, so now he has:\n$45 + 9 = $54\n\nThen, he spent 19 dollars on a new game, so now he has:\n$54 - 19 = $35\n\nTherefore, Cody now has \\boxed{35} dollars."
+      },
+      {
+        "rid": "MAWPS_train_694_0__R3",
+        "response": "How much did Cody have after receiving his birthday money?"
+      },
+      {
+        "rid": "MAWPS_train_694_0__R4",
+        "response": "How much money did Cody have after his birthday?"
+      }
+    ]
+  },
+  {
+    "problem_id": "MAWPS_train_694_1",
+    "problem": "Cody had 45 dollars . For his birthday he got 9 more dollars but spent 19 on a new game . How much money does he have now ?",
+    "final_answer": "35.0",
+    "candidates": [
+      {
+        "rid": "MAWPS_train_694_1__R1",
+        "response": "Cody started with $45.\nHe received $9 for his birthday, so he now has $45 + $9 = $54.\nHowever, he spent $19 on a new game, so he now has $54 - $19 = $35.\nThus, Cody now has \\boxed{35} dollars."
+      },
+      {
+        "rid": "MAWPS_train_694_1__R2",
+        "response": "How much money did Cody have after his birthday?"
+      },
+      {
+        "rid": "MAWPS_train_694_1__R3",
+        "response": "Let's break down the problem step by step:\n\nCody initially had $45.\n\nHe got 9 more dollars for his birthday, so now he has:\n$45 + 9 = $54\n\nThen, he spent 19 dollars on a new game, so now he has:\n$54 - 19 = $35\n\nTherefore, Cody now has \\boxed{35} dollars."
+      },
+      {
+        "rid": "MAWPS_train_694_1__R4",
+        "response": "How much did Cody have after receiving his birthday money?"
+      }
+    ]
+  },
+  {
+    "problem_id": "MAWPS_train_694_2",
+    "problem": "Cody had 45 dollars . For his birthday he got 9 more dollars but spent 19 on a new game . How much money does he have now ?",
+    "final_answer": "35.0",
+    "candidates": [
+      {
+        "rid": "MAWPS_train_694_2__R1",
+        "response": "How much did Cody have after receiving his birthday money?"
+      },
+      {
+        "rid": "MAWPS_train_694_2__R2",
+        "response": "How much money did Cody have after his birthday?"
+      },
+      {
+        "rid": "MAWPS_train_694_2__R3",
+        "response": "Cody started with $45.\nHe received $9 for his birthday, so he now has $45 + $9 = $54.\nHowever, he spent $19 on a new game, so he now has $54 - $19 = $35.\nThus, Cody now has \\boxed{35} dollars."
+      },
+      {
+        "rid": "MAWPS_train_694_2__R4",
+        "response": "Let's break down the problem step by step:\n\nCody initially had $45.\n\nHe got 9 more dollars for his birthday, so now he has:\n$45 + 9 = $54\n\nThen, he spent 19 dollars on a new game, so now he has:\n$54 - 19 = $35\n\nTherefore, Cody now has \\boxed{35} dollars."
+      }
+    ]
+  },
+  {
+    "problem_id": "MAWPS_train_694_3",
+    "problem": "Cody had 45 dollars . For his birthday he got 9 more dollars but spent 19 on a new game . How much money does he have now ?",
+    "final_answer": "35.0",
+    "candidates": [
+      {
+        "rid": "MAWPS_train_694_3__R1",
+        "response": "How much money did Cody have after his birthday?"
+      },
+      {
+        "rid": "MAWPS_train_694_3__R2",
+        "response": "Let's break down the problem step by step:\n\nCody initially had $45.\n\nHe got 9 more dollars for his birthday, so now he has:\n$45 + 9 = $54\n\nThen, he spent 19 dollars on a new game, so now he has:\n$54 - 19 = $35\n\nTherefore, Cody now has \\boxed{35} dollars."
+      },
+      {
+        "rid": "MAWPS_train_694_3__R3",
+        "response": "Cody started with $45.\nHe received $9 for his birthday, so he now has $45 + $9 = $54.\nHowever, he spent $19 on a new game, so he now has $54 - $19 = $35.\nThus, Cody now has \\boxed{35} dollars."
+      },
+      {
+        "rid": "MAWPS_train_694_3__R4",
+        "response": "How much did Cody have after receiving his birthday money?"
+      }
+    ]
+  },
+  {
+    "problem_id": "MAWPS_train_694_4",
+    "problem": "Cody had 45 dollars . For his birthday he got 9 more dollars but spent 19 on a new game . How much money does he have now ?",
+    "final_answer": "35.0",
+    "candidates": [
+      {
+        "rid": "MAWPS_train_694_4__R1",
+        "response": "How much did Cody have after receiving his birthday money?"
+      },
+      {
+        "rid": "MAWPS_train_694_4__R2",
+        "response": "Cody started with $45.\nHe received $9 for his birthday, so he now has $45 + $9 = $54.\nHowever, he spent $19 on a new game, so he now has $54 - $19 = $35.\nThus, Cody now has \\boxed{35} dollars."
+      },
+      {
+        "rid": "MAWPS_train_694_4__R3",
+        "response": "Let's break down the problem step by step:\n\nCody initially had $45.\n\nHe got 9 more dollars for his birthday, so now he has:\n$45 + 9 = $54\n\nThen, he spent 19 dollars on a new game, so now he has:\n$54 - 19 = $35\n\nTherefore, Cody now has \\boxed{35} dollars."
+      },
+      {
+        "rid": "MAWPS_train_694_4__R4",
+        "response": "How much money did Cody have after his birthday?"
+      }
+    ]
+  },
+  {
+    "problem_id": "MAWPS_train_1188_2",
+    "problem": "In a class of 25 students , 8 received a grade of A. What percent of the students received A 's ?",
+    "final_answer": "32.0",
+    "candidates": [
+      {
+        "rid": "MAWPS_train_1188_2__R1",
+        "response": "What percentage of students received A's?"
+      },
+      {
+        "rid": "MAWPS_train_1188_2__R2",
+        "response": "How many students received an A?"
+      },
+      {
+        "rid": "MAWPS_train_1188_2__R3",
+        "response": "To find the percentage of students who received an A, we need to divide the number of students who received an A by the total number of students, and then multiply by 100.\n\nSo, the percentage of students who received an A is (8 / 25) * 100 = 32%.\n\nThus, 32% of the students received an A."
+      },
+      {
+        "rid": "MAWPS_train_1188_2__R4",
+        "response": "To find the percentage of students who received an A, we need to follow these steps:\n\n1. Determine the number of students who received an A.\n2. Calculate the percentage of students who received an A out of the total number of students.\n\nGiven:\n- Total number of students = 25\n- Number of students who received an A = 8\n\nThe formula to calculate the percentage is:\n\n\\[\n\\text{Percentage} = \\left( \\frac{\\text{Number of students who received an A}}{\\text{Total number of students}} \\right) \\times 100\n\\]\n\nSubstituting the given values:\n\n\\[\n\\text{Percentage} = \\left( \\frac{8}{25} \\right) \\times 100\n\\]\n\nLet's compute this using Python.\n```python\n# Given data\ntotal_students = 25\nstudents_with_A = 8\n\n# Calculating the percentage\npercentage_with_A = (students_with_A / total_students) * 100\nprint(percentage_with_A)\n```\n```output\n32.0"
+      }
+    ]
+  },
+  {
+    "problem_id": "MAWPS_train_1188_3",
+    "problem": "In a class of 25 students , 8 received a grade of A. What percent of the students received A 's ?",
+    "final_answer": "32.0",
+    "candidates": [
+      {
+        "rid": "MAWPS_train_1188_3__R1",
+        "response": "How many students received an A?"
+      },
+      {
+        "rid": "MAWPS_train_1188_3__R2",
+        "response": "To find the percentage of students who received an A, we need to follow these steps:\n\n1. Determine the number of students who received an A.\n2. Calculate the percentage of students who received an A out of the total number of students.\n\nGiven:\n- Total number of students = 25\n- Number of students who received an A = 8\n\nThe formula to calculate the percentage is:\n\n\\[\n\\text{Percentage} = \\left( \\frac{\\text{Number of students who received an A}}{\\text{Total number of students}} \\right) \\times 100\n\\]\n\nSubstituting the given values:\n\n\\[\n\\text{Percentage} = \\left( \\frac{8}{25} \\right) \\times 100\n\\]\n\nLet's compute this using Python.\n```python\n# Given data\ntotal_students = 25\nstudents_with_A = 8\n\n# Calculating the percentage\npercentage_with_A = (students_with_A / total_students) * 100\nprint(percentage_with_A)\n```\n```output\n32.0"
+      },
+      {
+        "rid": "MAWPS_train_1188_3__R3",
+        "response": "What percentage of students received A's?"
+      },
+      {
+        "rid": "MAWPS_train_1188_3__R4",
+        "response": "To find the percentage of students who received an A, we need to divide the number of students who received an A by the total number of students, and then multiply by 100.\n\nSo, the percentage of students who received an A is (8 / 25) * 100 = 32%.\n\nThus, 32% of the students received an A."
+      }
+    ]
+  },
+  {
+    "problem_id": "MAWPS_train_1188_4",
+    "problem": "In a class of 25 students , 8 received a grade of A. What percent of the students received A 's ?",
+    "final_answer": "32.0",
+    "candidates": [
+      {
+        "rid": "MAWPS_train_1188_4__R1",
+        "response": "How many students received an A?"
+      },
+      {
+        "rid": "MAWPS_train_1188_4__R2",
+        "response": "What percentage of students received A's?"
+      },
+      {
+        "rid": "MAWPS_train_1188_4__R3",
+        "response": "To find the percentage of students who received an A, we need to divide the number of students who received an A by the total number of students, and then multiply by 100.\n\nSo, the percentage of students who received an A is (8 / 25) * 100 = 32%.\n\nThus, 32% of the students received an A."
+      },
+      {
+        "rid": "MAWPS_train_1188_4__R4",
+        "response": "To find the percentage of students who received an A, we need to follow these steps:\n\n1. Determine the number of students who received an A.\n2. Calculate the percentage of students who received an A out of the total number of students.\n\nGiven:\n- Total number of students = 25\n- Number of students who received an A = 8\n\nThe formula to calculate the percentage is:\n\n\\[\n\\text{Percentage} = \\left( \\frac{\\text{Number of students who received an A}}{\\text{Total number of students}} \\right) \\times 100\n\\]\n\nSubstituting the given values:\n\n\\[\n\\text{Percentage} = \\left( \\frac{8}{25} \\right) \\times 100\n\\]\n\nLet's compute this using Python.\n```python\n# Given data\ntotal_students = 25\nstudents_with_A = 8\n\n# Calculating the percentage\npercentage_with_A = (students_with_A / total_students) * 100\nprint(percentage_with_A)\n```\n```output\n32.0"
+      }
+    ]
+  },
+  {
+    "problem_id": "GSM8K_train_2696_0",
+    "problem": "Candice read 3 times as many books as Amanda in their school's Book Tournament. Kara read half the number of books that Amanda read, and Patricia read 7 times the number of books that Kara read. If Candice read 18 books, how many books did Patricia read?",
+    "final_answer": "21",
+    "candidates": [
+      {
+        "rid": "GSM8K_train_2696_0__R1",
+        "response": "How many books did Amanda read?"
+      },
+      {
+        "rid": "GSM8K_train_2696_0__R2",
+        "response": "If Candice read 18 books and she read 3 times as many books as Amanda, then Amanda read 18 / 3 = 6 books.\nKara read half the number of books that Amanda read, so Kara read 6 / 2 = 3 books.\nPatricia read 7 times the number of books that Kara read, so Patricia read 7 * 3 = 21 books.\nThus, Patricia read \\boxed{21} books."
+      },
+      {
+        "rid": "GSM8K_train_2696_0__R3",
+        "response": "Let's break down the information given in the problem.\n\nCandice read 18 books, and she read 3 times as many books as Amanda. So Amanda read 18 / 3 = 6 books.\n\nKara read half the number of books that Amanda read, so Kara read 6 / 2 = 3 books.\n\nPatricia read 7 times the number of books that Kara read, so Patricia read 7 * 3 = 21 books.\n\nThus, Patricia read \\boxed{21} books."
+      },
+      {
+        "rid": "GSM8K_train_2696_0__R4",
+        "response": "Let's start by figuring out how many books Amanda read. Since Candice read 3 times as many books as Amanda, and Candice read 18 books, we can set up the equation:\n\nCandice's books = 3 * Amanda's books\n\n18 = 3 * Amanda's books\n\nNow, let's solve for Amanda's books:\n\nAmanda's books = 18 / 3\nAmanda's books = 6\n\nKara read half the number of books that Amanda read, so:\n\nKara's books = Amanda's books / 2\nKara's books = 6 / 2\nKara's books = 3\n\nPatricia read 7 times the number of books that Kara read, so:\n\nPatricia's books = Kara's books * 7\nPatricia's books = 3 * 7\nPatricia's books = 21\n\nSo, Patricia read 21 books."
+      }
+    ]
+  },
+  {
+    "problem_id": "GSM8K_train_2696_2",
+    "problem": "Candice read 3 times as many books as Amanda in their school's Book Tournament. Kara read half the number of books that Amanda read, and Patricia read 7 times the number of books that Kara read. If Candice read 18 books, how many books did Patricia read?",
+    "final_answer": "21",
+    "candidates": [
+      {
+        "rid": "GSM8K_train_2696_2__R1",
+        "response": "Let's start by figuring out how many books Amanda read. Since Candice read 3 times as many books as Amanda, and Candice read 18 books, we can set up the equation:\n\nCandice's books = 3 * Amanda's books\n\n18 = 3 * Amanda's books\n\nNow, let's solve for Amanda's books:\n\nAmanda's books = 18 / 3\nAmanda's books = 6\n\nKara read half the number of books that Amanda read, so:\n\nKara's books = Amanda's books / 2\nKara's books = 6 / 2\nKara's books = 3\n\nPatricia read 7 times the number of books that Kara read, so:\n\nPatricia's books = Kara's books * 7\nPatricia's books = 3 * 7\nPatricia's books = 21\n\nSo, Patricia read 21 books."
+      },
+      {
+        "rid": "GSM8K_train_2696_2__R2",
+        "response": "How many books did Amanda read?"
+      },
+      {
+        "rid": "GSM8K_train_2696_2__R3",
+        "response": "Let's break down the information given in the problem.\n\nCandice read 18 books, and she read 3 times as many books as Amanda. So Amanda read 18 / 3 = 6 books.\n\nKara read half the number of books that Amanda read, so Kara read 6 / 2 = 3 books.\n\nPatricia read 7 times the number of books that Kara read, so Patricia read 7 * 3 = 21 books.\n\nThus, Patricia read \\boxed{21} books."
+      },
+      {
+        "rid": "GSM8K_train_2696_2__R4",
+        "response": "If Candice read 18 books and she read 3 times as many books as Amanda, then Amanda read 18 / 3 = 6 books.\nKara read half the number of books that Amanda read, so Kara read 6 / 2 = 3 books.\nPatricia read 7 times the number of books that Kara read, so Patricia read 7 * 3 = 21 books.\nThus, Patricia read \\boxed{21} books."
+      }
+    ]
+  },
+  {
+    "problem_id": "GSM8K_train_2696_3",
+    "problem": "Candice read 3 times as many books as Amanda in their school's Book Tournament. Kara read half the number of books that Amanda read, and Patricia read 7 times the number of books that Kara read. If Candice read 18 books, how many books did Patricia read?",
+    "final_answer": "21",
+    "candidates": [
+      {
+        "rid": "GSM8K_train_2696_3__R1",
+        "response": "Let's start by figuring out how many books Amanda read. Since Candice read 3 times as many books as Amanda, and Candice read 18 books, we can set up the equation:\n\nCandice's books = 3 * Amanda's books\n\n18 = 3 * Amanda's books\n\nNow, let's solve for Amanda's books:\n\nAmanda's books = 18 / 3\nAmanda's books = 6\n\nKara read half the number of books that Amanda read, so:\n\nKara's books = Amanda's books / 2\nKara's books = 6 / 2\nKara's books = 3\n\nPatricia read 7 times the number of books that Kara read, so:\n\nPatricia's books = Kara's books * 7\nPatricia's books = 3 * 7\nPatricia's books = 21\n\nSo, Patricia read 21 books."
+      },
+      {
+        "rid": "GSM8K_train_2696_3__R2",
+        "response": "How many books did Amanda read?"
+      },
+      {
+        "rid": "GSM8K_train_2696_3__R3",
+        "response": "If Candice read 18 books and she read 3 times as many books as Amanda, then Amanda read 18 / 3 = 6 books.\nKara read half the number of books that Amanda read, so Kara read 6 / 2 = 3 books.\nPatricia read 7 times the number of books that Kara read, so Patricia read 7 * 3 = 21 books.\nThus, Patricia read \\boxed{21} books."
+      },
+      {
+        "rid": "GSM8K_train_2696_3__R4",
+        "response": "Let's break down the information given in the problem.\n\nCandice read 18 books, and she read 3 times as many books as Amanda. So Amanda read 18 / 3 = 6 books.\n\nKara read half the number of books that Amanda read, so Kara read 6 / 2 = 3 books.\n\nPatricia read 7 times the number of books that Kara read, so Patricia read 7 * 3 = 21 books.\n\nThus, Patricia read \\boxed{21} books."
+      }
+    ]
+  },
+  {
+    "problem_id": "GSM8K_train_2696_4",
+    "problem": "Candice read 3 times as many books as Amanda in their school's Book Tournament. Kara read half the number of books that Amanda read, and Patricia read 7 times the number of books that Kara read. If Candice read 18 books, how many books did Patricia read?",
+    "final_answer": "21",
+    "candidates": [
+      {
+        "rid": "GSM8K_train_2696_4__R1",
+        "response": "Let's break down the information given in the problem.\n\nCandice read 18 books, and she read 3 times as many books as Amanda. So Amanda read 18 / 3 = 6 books.\n\nKara read half the number of books that Amanda read, so Kara read 6 / 2 = 3 books.\n\nPatricia read 7 times the number of books that Kara read, so Patricia read 7 * 3 = 21 books.\n\nThus, Patricia read \\boxed{21} books."
+      },
+      {
+        "rid": "GSM8K_train_2696_4__R2",
+        "response": "Let's start by figuring out how many books Amanda read. Since Candice read 3 times as many books as Amanda, and Candice read 18 books, we can set up the equation:\n\nCandice's books = 3 * Amanda's books\n\n18 = 3 * Amanda's books\n\nNow, let's solve for Amanda's books:\n\nAmanda's books = 18 / 3\nAmanda's books = 6\n\nKara read half the number of books that Amanda read, so:\n\nKara's books = Amanda's books / 2\nKara's books = 6 / 2\nKara's books = 3\n\nPatricia read 7 times the number of books that Kara read, so:\n\nPatricia's books = Kara's books * 7\nPatricia's books = 3 * 7\nPatricia's books = 21\n\nSo, Patricia read 21 books."
+      },
+      {
+        "rid": "GSM8K_train_2696_4__R3",
+        "response": "If Candice read 18 books and she read 3 times as many books as Amanda, then Amanda read 18 / 3 = 6 books.\nKara read half the number of books that Amanda read, so Kara read 6 / 2 = 3 books.\nPatricia read 7 times the number of books that Kara read, so Patricia read 7 * 3 = 21 books.\nThus, Patricia read \\boxed{21} books."
+      },
+      {
+        "rid": "GSM8K_train_2696_4__R4",
+        "response": "How many books did Amanda read?"
+      }
+    ]
+  }
+]

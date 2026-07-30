@@ -1,0 +1,794 @@
+{
+  "fact_capital__single_base": {
+    "type": "single",
+    "prompt_id": "fact_capital",
+    "model": "base"
+  },
+  "fact_capital__single_sft": {
+    "type": "single",
+    "prompt_id": "fact_capital",
+    "model": "sft"
+  },
+  "fact_capital__pw0": {
+    "type": "pairwise",
+    "prompt_id": "fact_capital",
+    "a_model": "base",
+    "b_model": "sft"
+  },
+  "fact_capital__pw1": {
+    "type": "pairwise",
+    "prompt_id": "fact_capital",
+    "a_model": "sft",
+    "b_model": "base"
+  },
+  "fact_author__single_base": {
+    "type": "single",
+    "prompt_id": "fact_author",
+    "model": "base"
+  },
+  "fact_author__single_sft": {
+    "type": "single",
+    "prompt_id": "fact_author",
+    "model": "sft"
+  },
+  "fact_author__pw0": {
+    "type": "pairwise",
+    "prompt_id": "fact_author",
+    "a_model": "base",
+    "b_model": "sft"
+  },
+  "fact_author__pw1": {
+    "type": "pairwise",
+    "prompt_id": "fact_author",
+    "a_model": "sft",
+    "b_model": "base"
+  },
+  "fact_boiling__single_base": {
+    "type": "single",
+    "prompt_id": "fact_boiling",
+    "model": "base"
+  },
+  "fact_boiling__single_sft": {
+    "type": "single",
+    "prompt_id": "fact_boiling",
+    "model": "sft"
+  },
+  "fact_boiling__pw0": {
+    "type": "pairwise",
+    "prompt_id": "fact_boiling",
+    "a_model": "base",
+    "b_model": "sft"
+  },
+  "fact_boiling__pw1": {
+    "type": "pairwise",
+    "prompt_id": "fact_boiling",
+    "a_model": "sft",
+    "b_model": "base"
+  },
+  "math_mult__single_base": {
+    "type": "single",
+    "prompt_id": "math_mult",
+    "model": "base"
+  },
+  "math_mult__single_sft": {
+    "type": "single",
+    "prompt_id": "math_mult",
+    "model": "sft"
+  },
+  "math_mult__pw0": {
+    "type": "pairwise",
+    "prompt_id": "math_mult",
+    "a_model": "base",
+    "b_model": "sft"
+  },
+  "math_mult__pw1": {
+    "type": "pairwise",
+    "prompt_id": "math_mult",
+    "a_model": "sft",
+    "b_model": "base"
+  },
+  "math_discount__single_base": {
+    "type": "single",
+    "prompt_id": "math_discount",
+    "model": "base"
+  },
+  "math_discount__single_sft": {
+    "type": "single",
+    "prompt_id": "math_discount",
+    "model": "sft"
+  },
+  "math_discount__pw0": {
+    "type": "pairwise",
+    "prompt_id": "math_discount",
+    "a_model": "base",
+    "b_model": "sft"
+  },
+  "math_discount__pw1": {
+    "type": "pairwise",
+    "prompt_id": "math_discount",
+    "a_model": "sft",
+    "b_model": "base"
+  },
+  "math_linear__single_base": {
+    "type": "single",
+    "prompt_id": "math_linear",
+    "model": "base"
+  },
+  "math_linear__single_sft": {
+    "type": "single",
+    "prompt_id": "math_linear",
+    "model": "sft"
+  },
+  "math_linear__pw0": {
+    "type": "pairwise",
+    "prompt_id": "math_linear",
+    "a_model": "base",
+    "b_model": "sft"
+  },
+  "math_linear__pw1": {
+    "type": "pairwise",
+    "prompt_id": "math_linear",
+    "a_model": "sft",
+    "b_model": "base"
+  },
+  "code_fib__single_base": {
+    "type": "single",
+    "prompt_id": "code_fib",
+    "model": "base"
+  },
+  "code_fib__single_sft": {
+    "type": "single",
+    "prompt_id": "code_fib",
+    "model": "sft"
+  },
+  "code_fib__pw0": {
+    "type": "pairwise",
+    "prompt_id": "code_fib",
+    "a_model": "base",
+    "b_model": "sft"
+  },
+  "code_fib__pw1": {
+    "type": "pairwise",
+    "prompt_id": "code_fib",
+    "a_model": "sft",
+    "b_model": "base"
+  },
+  "code_reverse__single_base": {
+    "type": "single",
+    "prompt_id": "code_reverse",
+    "model": "base"
+  },
+  "code_reverse__single_sft": {
+    "type": "single",
+    "prompt_id": "code_reverse",
+    "model": "sft"
+  },
+  "code_reverse__pw0": {
+    "type": "pairwise",
+    "prompt_id": "code_reverse",
+    "a_model": "base",
+    "b_model": "sft"
+  },
+  "code_reverse__pw1": {
+    "type": "pairwise",
+    "prompt_id": "code_reverse",
+    "a_model": "sft",
+    "b_model": "base"
+  },
+  "code_sql__single_base": {
+    "type": "single",
+    "prompt_id": "code_sql",
+    "model": "base"
+  },
+  "code_sql__single_sft": {
+    "type": "single",
+    "prompt_id": "code_sql",
+    "model": "sft"
+  },
+  "code_sql__pw0": {
+    "type": "pairwise",
+    "prompt_id": "code_sql",
+    "a_model": "base",
+    "b_model": "sft"
+  },
+  "code_sql__pw1": {
+    "type": "pairwise",
+    "prompt_id": "code_sql",
+    "a_model": "sft",
+    "b_model": "base"
+  },
+  "sum_photosynthesis__single_base": {
+    "type": "single",
+    "prompt_id": "sum_photosynthesis",
+    "model": "base"
+  },
+  "sum_photosynthesis__single_sft": {
+    "type": "single",
+    "prompt_id": "sum_photosynthesis",
+    "model": "sft"
+  },
+  "sum_photosynthesis__pw0": {
+    "type": "pairwise",
+    "prompt_id": "sum_photosynthesis",
+    "a_model": "base",
+    "b_model": "sft"
+  },
+  "sum_photosynthesis__pw1": {
+    "type": "pairwise",
+    "prompt_id": "sum_photosynthesis",
+    "a_model": "sft",
+    "b_model": "base"
+  },
+  "sum_romeo__single_base": {
+    "type": "single",
+    "prompt_id": "sum_romeo",
+    "model": "base"
+  },
+  "sum_romeo__single_sft": {
+    "type": "single",
+    "prompt_id": "sum_romeo",
+    "model": "sft"
+  },
+  "sum_romeo__pw0": {
+    "type": "pairwise",
+    "prompt_id": "sum_romeo",
+    "a_model": "base",
+    "b_model": "sft"
+  },
+  "sum_romeo__pw1": {
+    "type": "pairwise",
+    "prompt_id": "sum_romeo",
+    "a_model": "sft",
+    "b_model": "base"
+  },
+  "sum_watercycle__single_base": {
+    "type": "single",
+    "prompt_id": "sum_watercycle",
+    "model": "base"
+  },
+  "sum_watercycle__single_sft": {
+    "type": "single",
+    "prompt_id": "sum_watercycle",
+    "model": "sft"
+  },
+  "sum_watercycle__pw0": {
+    "type": "pairwise",
+    "prompt_id": "sum_watercycle",
+    "a_model": "base",
+    "b_model": "sft"
+  },
+  "sum_watercycle__pw1": {
+    "type": "pairwise",
+    "prompt_id": "sum_watercycle",
+    "a_model": "sft",
+    "b_model": "base"
+  },
+  "reason_syllogism__single_base": {
+    "type": "single",
+    "prompt_id": "reason_syllogism",
+    "model": "base"
+  },
+  "reason_syllogism__single_sft": {
+    "type": "single",
+    "prompt_id": "reason_syllogism",
+    "model": "sft"
+  },
+  "reason_syllogism__pw0": {
+    "type": "pairwise",
+    "prompt_id": "reason_syllogism",
+    "a_model": "base",
+    "b_model": "sft"
+  },
+  "reason_syllogism__pw1": {
+    "type": "pairwise",
+    "prompt_id": "reason_syllogism",
+    "a_model": "sft",
+    "b_model": "base"
+  },
+  "reason_batball__single_base": {
+    "type": "single",
+    "prompt_id": "reason_batball",
+    "model": "base"
+  },
+  "reason_batball__single_sft": {
+    "type": "single",
+    "prompt_id": "reason_batball",
+    "model": "sft"
+  },
+  "reason_batball__pw0": {
+    "type": "pairwise",
+    "prompt_id": "reason_batball",
+    "a_model": "base",
+    "b_model": "sft"
+  },
+  "reason_batball__pw1": {
+    "type": "pairwise",
+    "prompt_id": "reason_batball",
+    "a_model": "sft",
+    "b_model": "base"
+  },
+  "reason_order__single_base": {
+    "type": "single",
+    "prompt_id": "reason_order",
+    "model": "base"
+  },
+  "reason_order__single_sft": {
+    "type": "single",
+    "prompt_id": "reason_order",
+    "model": "sft"
+  },
+  "reason_order__pw0": {
+    "type": "pairwise",
+    "prompt_id": "reason_order",
+    "a_model": "base",
+    "b_model": "sft"
+  },
+  "reason_order__pw1": {
+    "type": "pairwise",
+    "prompt_id": "reason_order",
+    "a_model": "sft",
+    "b_model": "base"
+  },
+  "creative_poem__single_base": {
+    "type": "single",
+    "prompt_id": "creative_poem",
+    "model": "base"
+  },
+  "creative_poem__single_sft": {
+    "type": "single",
+    "prompt_id": "creative_poem",
+    "model": "sft"
+  },
+  "creative_poem__pw0": {
+    "type": "pairwise",
+    "prompt_id": "creative_poem",
+    "a_model": "base",
+    "b_model": "sft"
+  },
+  "creative_poem__pw1": {
+    "type": "pairwise",
+    "prompt_id": "creative_poem",
+    "a_model": "sft",
+    "b_model": "base"
+  },
+  "creative_tweet__single_base": {
+    "type": "single",
+    "prompt_id": "creative_tweet",
+    "model": "base"
+  },
+  "creative_tweet__single_sft": {
+    "type": "single",
+    "prompt_id": "creative_tweet",
+    "model": "sft"
+  },
+  "creative_tweet__pw0": {
+    "type": "pairwise",
+    "prompt_id": "creative_tweet",
+    "a_model": "base",
+    "b_model": "sft"
+  },
+  "creative_tweet__pw1": {
+    "type": "pairwise",
+    "prompt_id": "creative_tweet",
+    "a_model": "sft",
+    "b_model": "base"
+  },
+  "creative_names__single_base": {
+    "type": "single",
+    "prompt_id": "creative_names",
+    "model": "base"
+  },
+  "creative_names__single_sft": {
+    "type": "single",
+    "prompt_id": "creative_names",
+    "model": "sft"
+  },
+  "creative_names__pw0": {
+    "type": "pairwise",
+    "prompt_id": "creative_names",
+    "a_model": "base",
+    "b_model": "sft"
+  },
+  "creative_names__pw1": {
+    "type": "pairwise",
+    "prompt_id": "creative_names",
+    "a_model": "sft",
+    "b_model": "base"
+  },
+  "edit_formal__single_base": {
+    "type": "single",
+    "prompt_id": "edit_formal",
+    "model": "base"
+  },
+  "edit_formal__single_sft": {
+    "type": "single",
+    "prompt_id": "edit_formal",
+    "model": "sft"
+  },
+  "edit_formal__pw0": {
+    "type": "pairwise",
+    "prompt_id": "edit_formal",
+    "a_model": "base",
+    "b_model": "sft"
+  },
+  "edit_formal__pw1": {
+    "type": "pairwise",
+    "prompt_id": "edit_formal",
+    "a_model": "sft",
+    "b_model": "base"
+  },
+  "edit_grammar__single_base": {
+    "type": "single",
+    "prompt_id": "edit_grammar",
+    "model": "base"
+  },
+  "edit_grammar__single_sft": {
+    "type": "single",
+    "prompt_id": "edit_grammar",
+    "model": "sft"
+  },
+  "edit_grammar__pw0": {
+    "type": "pairwise",
+    "prompt_id": "edit_grammar",
+    "a_model": "base",
+    "b_model": "sft"
+  },
+  "edit_grammar__pw1": {
+    "type": "pairwise",
+    "prompt_id": "edit_grammar",
+    "a_model": "sft",
+    "b_model": "base"
+  },
+  "edit_concise__single_base": {
+    "type": "single",
+    "prompt_id": "edit_concise",
+    "model": "base"
+  },
+  "edit_concise__single_sft": {
+    "type": "single",
+    "prompt_id": "edit_concise",
+    "model": "sft"
+  },
+  "edit_concise__pw0": {
+    "type": "pairwise",
+    "prompt_id": "edit_concise",
+    "a_model": "base",
+    "b_model": "sft"
+  },
+  "edit_concise__pw1": {
+    "type": "pairwise",
+    "prompt_id": "edit_concise",
+    "a_model": "sft",
+    "b_model": "base"
+  },
+  "extract_contact__single_base": {
+    "type": "single",
+    "prompt_id": "extract_contact",
+    "model": "base"
+  },
+  "extract_contact__single_sft": {
+    "type": "single",
+    "prompt_id": "extract_contact",
+    "model": "sft"
+  },
+  "extract_contact__pw0": {
+    "type": "pairwise",
+    "prompt_id": "extract_contact",
+    "a_model": "base",
+    "b_model": "sft"
+  },
+  "extract_contact__pw1": {
+    "type": "pairwise",
+    "prompt_id": "extract_contact",
+    "a_model": "sft",
+    "b_model": "base"
+  },
+  "extract_sentiment__single_base": {
+    "type": "single",
+    "prompt_id": "extract_sentiment",
+    "model": "base"
+  },
+  "extract_sentiment__single_sft": {
+    "type": "single",
+    "prompt_id": "extract_sentiment",
+    "model": "sft"
+  },
+  "extract_sentiment__pw0": {
+    "type": "pairwise",
+    "prompt_id": "extract_sentiment",
+    "a_model": "base",
+    "b_model": "sft"
+  },
+  "extract_sentiment__pw1": {
+    "type": "pairwise",
+    "prompt_id": "extract_sentiment",
+    "a_model": "sft",
+    "b_model": "base"
+  },
+  "extract_list__single_base": {
+    "type": "single",
+    "prompt_id": "extract_list",
+    "model": "base"
+  },
+  "extract_list__single_sft": {
+    "type": "single",
+    "prompt_id": "extract_list",
+    "model": "sft"
+  },
+  "extract_list__pw0": {
+    "type": "pairwise",
+    "prompt_id": "extract_list",
+    "a_model": "base",
+    "b_model": "sft"
+  },
+  "extract_list__pw1": {
+    "type": "pairwise",
+    "prompt_id": "extract_list",
+    "a_model": "sft",
+    "b_model": "base"
+  },
+  "howto_omelette__single_base": {
+    "type": "single",
+    "prompt_id": "howto_omelette",
+    "model": "base"
+  },
+  "howto_omelette__single_sft": {
+    "type": "single",
+    "prompt_id": "howto_omelette",
+    "model": "sft"
+  },
+  "howto_omelette__pw0": {
+    "type": "pairwise",
+    "prompt_id": "howto_omelette",
+    "a_model": "base",
+    "b_model": "sft"
+  },
+  "howto_omelette__pw1": {
+    "type": "pairwise",
+    "prompt_id": "howto_omelette",
+    "a_model": "sft",
+    "b_model": "base"
+  },
+  "howto_sleep__single_base": {
+    "type": "single",
+    "prompt_id": "howto_sleep",
+    "model": "base"
+  },
+  "howto_sleep__single_sft": {
+    "type": "single",
+    "prompt_id": "howto_sleep",
+    "model": "sft"
+  },
+  "howto_sleep__pw0": {
+    "type": "pairwise",
+    "prompt_id": "howto_sleep",
+    "a_model": "base",
+    "b_model": "sft"
+  },
+  "howto_sleep__pw1": {
+    "type": "pairwise",
+    "prompt_id": "howto_sleep",
+    "a_model": "sft",
+    "b_model": "base"
+  },
+  "howto_affect__single_base": {
+    "type": "single",
+    "prompt_id": "howto_affect",
+    "model": "base"
+  },
+  "howto_affect__single_sft": {
+    "type": "single",
+    "prompt_id": "howto_affect",
+    "model": "sft"
+  },
+  "howto_affect__pw0": {
+    "type": "pairwise",
+    "prompt_id": "howto_affect",
+    "a_model": "base",
+    "b_model": "sft"
+  },
+  "howto_affect__pw1": {
+    "type": "pairwise",
+    "prompt_id": "howto_affect",
+    "a_model": "sft",
+    "b_model": "base"
+  },
+  "explain_prime__single_base": {
+    "type": "single",
+    "prompt_id": "explain_prime",
+    "model": "base"
+  },
+  "explain_prime__single_sft": {
+    "type": "single",
+    "prompt_id": "explain_prime",
+    "model": "sft"
+  },
+  "explain_prime__pw0": {
+    "type": "pairwise",
+    "prompt_id": "explain_prime",
+    "a_model": "base",
+    "b_model": "sft"
+  },
+  "explain_prime__pw1": {
+    "type": "pairwise",
+    "prompt_id": "explain_prime",
+    "a_model": "sft",
+    "b_model": "base"
+  },
+  "explain_api__single_base": {
+    "type": "single",
+    "prompt_id": "explain_api",
+    "model": "base"
+  },
+  "explain_api__single_sft": {
+    "type": "single",
+    "prompt_id": "explain_api",
+    "model": "sft"
+  },
+  "explain_api__pw0": {
+    "type": "pairwise",
+    "prompt_id": "explain_api",
+    "a_model": "base",
+    "b_model": "sft"
+  },
+  "explain_api__pw1": {
+    "type": "pairwise",
+    "prompt_id": "explain_api",
+    "a_model": "sft",
+    "b_model": "base"
+  },
+  "explain_sky__single_base": {
+    "type": "single",
+    "prompt_id": "explain_sky",
+    "model": "base"
+  },
+  "explain_sky__single_sft": {
+    "type": "single",
+    "prompt_id": "explain_sky",
+    "model": "sft"
+  },
+  "explain_sky__pw0": {
+    "type": "pairwise",
+    "prompt_id": "explain_sky",
+    "a_model": "base",
+    "b_model": "sft"
+  },
+  "explain_sky__pw1": {
+    "type": "pairwise",
+    "prompt_id": "explain_sky",
+    "a_model": "sft",
+    "b_model": "base"
+  },
+  "constraint_capitals__single_base": {
+    "type": "single",
+    "prompt_id": "constraint_capitals",
+    "model": "base"
+  },
+  "constraint_capitals__single_sft": {
+    "type": "single",
+    "prompt_id": "constraint_capitals",
+    "model": "sft"
+  },
+  "constraint_capitals__pw0": {
+    "type": "pairwise",
+    "prompt_id": "constraint_capitals",
+    "a_model": "base",
+    "b_model": "sft"
+  },
+  "constraint_capitals__pw1": {
+    "type": "pairwise",
+    "prompt_id": "constraint_capitals",
+    "a_model": "sft",
+    "b_model": "base"
+  },
+  "constraint_yesno__single_base": {
+    "type": "single",
+    "prompt_id": "constraint_yesno",
+    "model": "base"
+  },
+  "constraint_yesno__single_sft": {
+    "type": "single",
+    "prompt_id": "constraint_yesno",
+    "model": "sft"
+  },
+  "constraint_yesno__pw0": {
+    "type": "pairwise",
+    "prompt_id": "constraint_yesno",
+    "a_model": "base",
+    "b_model": "sft"
+  },
+  "constraint_yesno__pw1": {
+    "type": "pairwise",
+    "prompt_id": "constraint_yesno",
+    "a_model": "sft",
+    "b_model": "base"
+  },
+  "constraint_noe__single_base": {
+    "type": "single",
+    "prompt_id": "constraint_noe",
+    "model": "base"
+  },
+  "constraint_noe__single_sft": {
+    "type": "single",
+    "prompt_id": "constraint_noe",
+    "model": "sft"
+  },
+  "constraint_noe__pw0": {
+    "type": "pairwise",
+    "prompt_id": "constraint_noe",
+    "a_model": "base",
+    "b_model": "sft"
+  },
+  "constraint_noe__pw1": {
+    "type": "pairwise",
+    "prompt_id": "constraint_noe",
+    "a_model": "sft",
+    "b_model": "base"
+  },
+  "plan_pasta__single_base": {
+    "type": "single",
+    "prompt_id": "plan_pasta",
+    "model": "base"
+  },
+  "plan_pasta__single_sft": {
+    "type": "single",
+    "prompt_id": "plan_pasta",
+    "model": "sft"
+  },
+  "plan_pasta__pw0": {
+    "type": "pairwise",
+    "prompt_id": "plan_pasta",
+    "a_model": "base",
+    "b_model": "sft"
+  },
+  "plan_pasta__pw1": {
+    "type": "pairwise",
+    "prompt_id": "plan_pasta",
+    "a_model": "sft",
+    "b_model": "base"
+  },
+  "plan_convert__single_base": {
+    "type": "single",
+    "prompt_id": "plan_convert",
+    "model": "base"
+  },
+  "plan_convert__single_sft": {
+    "type": "single",
+    "prompt_id": "plan_convert",
+    "model": "sft"
+  },
+  "plan_convert__pw0": {
+    "type": "pairwise",
+    "prompt_id": "plan_convert",
+    "a_model": "base",
+    "b_model": "sft"
+  },
+  "plan_convert__pw1": {
+    "type": "pairwise",
+    "prompt_id": "plan_convert",
+    "a_model": "sft",
+    "b_model": "base"
+  },
+  "plan_budget__single_base": {
+    "type": "single",
+    "prompt_id": "plan_budget",
+    "model": "base"
+  },
+  "plan_budget__single_sft": {
+    "type": "single",
+    "prompt_id": "plan_budget",
+    "model": "sft"
+  },
+  "plan_budget__pw0": {
+    "type": "pairwise",
+    "prompt_id": "plan_budget",
+    "a_model": "base",
+    "b_model": "sft"
+  },
+  "plan_budget__pw1": {
+    "type": "pairwise",
+    "prompt_id": "plan_budget",
+    "a_model": "sft",
+    "b_model": "base"
+  }
+}

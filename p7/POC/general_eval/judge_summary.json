@@ -1,0 +1,11 @@
+{
+  "single_base": 6.75,
+  "single_sft": 6.75,
+  "pairwise": {
+    "sft_wins": 9,
+    "base_wins": 11,
+    "ties": 16,
+    "n": 36,
+    "sft_win_rate": 0.4722222222222222
+  }
+}

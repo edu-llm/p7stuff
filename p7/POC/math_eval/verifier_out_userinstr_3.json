@@ -1,0 +1,14 @@
+[
+  {"task_id": "math500_test_algebra_733.json__base", "verdict": "incorrect"},
+  {"task_id": "math500_test_geometry_686.json__base", "verdict": "correct"},
+  {"task_id": "math500_test_intermediate_algebra_232.json__base", "verdict": "incorrect"},
+  {"task_id": "math500_test_algebra_776.json__base", "verdict": "incorrect"},
+  {"task_id": "math500_test_number_theory_838.json__base", "verdict": "incorrect"},
+  {"task_id": "math500_test_algebra_1031.json__base", "verdict": "incorrect"},
+  {"task_id": "math500_test_precalculus_675.json__base", "verdict": "incorrect"},
+  {"task_id": "math500_test_intermediate_algebra_1408.json__base", "verdict": "incorrect"},
+  {"task_id": "math500_test_prealgebra_2066.json__base", "verdict": "incorrect"},
+  {"task_id": "math500_test_intermediate_algebra_1508.json__sft", "verdict": "incorrect"},
+  {"task_id": "math500_test_number_theory_13.json__sft", "verdict": "incorrect"},
+  {"task_id": "math500_test_algebra_1282.json__sft", "verdict": "incorrect"}
+]

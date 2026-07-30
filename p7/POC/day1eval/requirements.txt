@@ -1,0 +1,15 @@
+# day1 MRBench tutor-generation eval — GPU (EC2) dependencies.
+# vLLM pulls in a compatible torch build, so we don't pin torch directly here.
+# Qwen3 requires transformers>=4.51; OLMo-2 requires >=4.48.
+
+vllm>=0.9.0
+transformers>=4.51.0
+huggingface_hub>=0.24.0
+
+# --- Scoring (LLM-as-a-judge via PromptLens gateway) ---
+# These are light and can run anywhere (no GPU needed) — e.g. score.py locally.
+requests>=2.31.0
+python-dotenv>=1.0.0
+
+# Optional: uncomment to pull gated/faster downloads.
+# hf_transfer>=0.1.6

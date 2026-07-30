@@ -1,0 +1,834 @@
+[
+  {
+    "rid": "GSM8K_test_768_0__R1",
+    "scores": {
+      "Revealing_of_the_Answer": 1.0,
+      "Providing_Guidance": 1.0,
+      "Actionability": 1.0,
+      "Coherence": 1.0,
+      "Tutor_Tone": 0.5,
+      "Humanlikeness": 1.0,
+      "Step_Level_Guidance": 1.0,
+      "Load_Aware_Formatting": 1.0
+    }
+  },
+  {
+    "rid": "GSM8K_test_768_0__R2",
+    "scores": {
+      "Revealing_of_the_Answer": 1.0,
+      "Providing_Guidance": 1.0,
+      "Actionability": 1.0,
+      "Coherence": 1.0,
+      "Tutor_Tone": 1.0,
+      "Humanlikeness": 1.0,
+      "Step_Level_Guidance": 1.0,
+      "Load_Aware_Formatting": 1.0
+    }
+  },
+  {
+    "rid": "GSM8K_test_768_0__R3",
+    "scores": {
+      "Revealing_of_the_Answer": 0.0,
+      "Providing_Guidance": 1.0,
+      "Actionability": 0.5,
+      "Coherence": 1.0,
+      "Tutor_Tone": 0.5,
+      "Humanlikeness": 0.5,
+      "Step_Level_Guidance": 0.0,
+      "Load_Aware_Formatting": 0.0
+    }
+  },
+  {
+    "rid": "GSM8K_test_768_0__R4",
+    "scores": {
+      "Revealing_of_the_Answer": 0.0,
+      "Providing_Guidance": 1.0,
+      "Actionability": 0.5,
+      "Coherence": 1.0,
+      "Tutor_Tone": 0.5,
+      "Humanlikeness": 0.5,
+      "Step_Level_Guidance": 0.0,
+      "Load_Aware_Formatting": 0.5
+    }
+  },
+  {
+    "rid": "GSM8K_test_768_1__R1",
+    "scores": {
+      "Revealing_of_the_Answer": 1.0,
+      "Providing_Guidance": 1.0,
+      "Actionability": 1.0,
+      "Coherence": 1.0,
+      "Tutor_Tone": 1.0,
+      "Humanlikeness": 1.0,
+      "Step_Level_Guidance": 1.0,
+      "Load_Aware_Formatting": 1.0
+    }
+  },
+  {
+    "rid": "GSM8K_test_768_1__R2",
+    "scores": {
+      "Revealing_of_the_Answer": 0.0,
+      "Providing_Guidance": 1.0,
+      "Actionability": 0.5,
+      "Coherence": 1.0,
+      "Tutor_Tone": 0.5,
+      "Humanlikeness": 0.5,
+      "Step_Level_Guidance": 0.0,
+      "Load_Aware_Formatting": 0.5
+    }
+  },
+  {
+    "rid": "GSM8K_test_768_1__R3",
+    "scores": {
+      "Revealing_of_the_Answer": 1.0,
+      "Providing_Guidance": 1.0,
+      "Actionability": 1.0,
+      "Coherence": 1.0,
+      "Tutor_Tone": 0.5,
+      "Humanlikeness": 1.0,
+      "Step_Level_Guidance": 1.0,
+      "Load_Aware_Formatting": 1.0
+    }
+  },
+  {
+    "rid": "GSM8K_test_768_1__R4",
+    "scores": {
+      "Revealing_of_the_Answer": 0.0,
+      "Providing_Guidance": 1.0,
+      "Actionability": 0.5,
+      "Coherence": 1.0,
+      "Tutor_Tone": 0.5,
+      "Humanlikeness": 0.5,
+      "Step_Level_Guidance": 0.0,
+      "Load_Aware_Formatting": 0.0
+    }
+  },
+  {
+    "rid": "GSM8K_test_768_3__R1",
+    "scores": {
+      "Revealing_of_the_Answer": 1.0,
+      "Providing_Guidance": 1.0,
+      "Actionability": 1.0,
+      "Coherence": 1.0,
+      "Tutor_Tone": 1.0,
+      "Humanlikeness": 1.0,
+      "Step_Level_Guidance": 1.0,
+      "Load_Aware_Formatting": 1.0
+    }
+  },
+  {
+    "rid": "GSM8K_test_768_3__R2",
+    "scores": {
+      "Revealing_of_the_Answer": 0.0,
+      "Providing_Guidance": 1.0,
+      "Actionability": 0.5,
+      "Coherence": 1.0,
+      "Tutor_Tone": 0.5,
+      "Humanlikeness": 0.5,
+      "Step_Level_Guidance": 0.0,
+      "Load_Aware_Formatting": 0.0
+    }
+  },
+  {
+    "rid": "GSM8K_test_768_3__R3",
+    "scores": {
+      "Revealing_of_the_Answer": 1.0,
+      "Providing_Guidance": 1.0,
+      "Actionability": 1.0,
+      "Coherence": 1.0,
+      "Tutor_Tone": 0.5,
+      "Humanlikeness": 1.0,
+      "Step_Level_Guidance": 1.0,
+      "Load_Aware_Formatting": 1.0
+    }
+  },
+  {
+    "rid": "GSM8K_test_768_3__R4",
+    "scores": {
+      "Revealing_of_the_Answer": 0.0,
+      "Providing_Guidance": 1.0,
+      "Actionability": 0.5,
+      "Coherence": 1.0,
+      "Tutor_Tone": 0.5,
+      "Humanlikeness": 0.5,
+      "Step_Level_Guidance": 0.0,
+      "Load_Aware_Formatting": 0.5
+    }
+  },
+  {
+    "rid": "GSM8K_test_768_4__R1",
+    "scores": {
+      "Revealing_of_the_Answer": 1.0,
+      "Providing_Guidance": 1.0,
+      "Actionability": 1.0,
+      "Coherence": 1.0,
+      "Tutor_Tone": 0.5,
+      "Humanlikeness": 1.0,
+      "Step_Level_Guidance": 1.0,
+      "Load_Aware_Formatting": 1.0
+    }
+  },
+  {
+    "rid": "GSM8K_test_768_4__R2",
+    "scores": {
+      "Revealing_of_the_Answer": 0.0,
+      "Providing_Guidance": 1.0,
+      "Actionability": 0.5,
+      "Coherence": 1.0,
+      "Tutor_Tone": 0.5,
+      "Humanlikeness": 0.5,
+      "Step_Level_Guidance": 0.0,
+      "Load_Aware_Formatting": 0.5
+    }
+  },
+  {
+    "rid": "GSM8K_test_768_4__R3",
+    "scores": {
+      "Revealing_of_the_Answer": 0.0,
+      "Providing_Guidance": 1.0,
+      "Actionability": 0.5,
+      "Coherence": 1.0,
+      "Tutor_Tone": 0.5,
+      "Humanlikeness": 0.5,
+      "Step_Level_Guidance": 0.0,
+      "Load_Aware_Formatting": 0.0
+    }
+  },
+  {
+    "rid": "GSM8K_test_768_4__R4",
+    "scores": {
+      "Revealing_of_the_Answer": 1.0,
+      "Providing_Guidance": 1.0,
+      "Actionability": 1.0,
+      "Coherence": 1.0,
+      "Tutor_Tone": 1.0,
+      "Humanlikeness": 1.0,
+      "Step_Level_Guidance": 1.0,
+      "Load_Aware_Formatting": 1.0
+    }
+  },
+  {
+    "rid": "MAWPS_train_694_0__R1",
+    "scores": {
+      "Revealing_of_the_Answer": 0.0,
+      "Providing_Guidance": 1.0,
+      "Actionability": 0.5,
+      "Coherence": 1.0,
+      "Tutor_Tone": 0.5,
+      "Humanlikeness": 0.5,
+      "Step_Level_Guidance": 0.0,
+      "Load_Aware_Formatting": 0.5
+    }
+  },
+  {
+    "rid": "MAWPS_train_694_0__R2",
+    "scores": {
+      "Revealing_of_the_Answer": 0.0,
+      "Providing_Guidance": 1.0,
+      "Actionability": 0.5,
+      "Coherence": 1.0,
+      "Tutor_Tone": 0.5,
+      "Humanlikeness": 0.5,
+      "Step_Level_Guidance": 0.0,
+      "Load_Aware_Formatting": 0.5
+    }
+  },
+  {
+    "rid": "MAWPS_train_694_0__R3",
+    "scores": {
+      "Revealing_of_the_Answer": 1.0,
+      "Providing_Guidance": 1.0,
+      "Actionability": 1.0,
+      "Coherence": 1.0,
+      "Tutor_Tone": 0.5,
+      "Humanlikeness": 1.0,
+      "Step_Level_Guidance": 1.0,
+      "Load_Aware_Formatting": 1.0
+    }
+  },
+  {
+    "rid": "MAWPS_train_694_0__R4",
+    "scores": {
+      "Revealing_of_the_Answer": 1.0,
+      "Providing_Guidance": 1.0,
+      "Actionability": 1.0,
+      "Coherence": 1.0,
+      "Tutor_Tone": 0.5,
+      "Humanlikeness": 1.0,
+      "Step_Level_Guidance": 1.0,
+      "Load_Aware_Formatting": 1.0
+    }
+  },
+  {
+    "rid": "MAWPS_train_694_1__R1",
+    "scores": {
+      "Revealing_of_the_Answer": 0.0,
+      "Providing_Guidance": 1.0,
+      "Actionability": 0.5,
+      "Coherence": 1.0,
+      "Tutor_Tone": 0.5,
+      "Humanlikeness": 0.5,
+      "Step_Level_Guidance": 0.0,
+      "Load_Aware_Formatting": 0.5
+    }
+  },
+  {
+    "rid": "MAWPS_train_694_1__R2",
+    "scores": {
+      "Revealing_of_the_Answer": 1.0,
+      "Providing_Guidance": 1.0,
+      "Actionability": 1.0,
+      "Coherence": 1.0,
+      "Tutor_Tone": 0.5,
+      "Humanlikeness": 1.0,
+      "Step_Level_Guidance": 1.0,
+      "Load_Aware_Formatting": 1.0
+    }
+  },
+  {
+    "rid": "MAWPS_train_694_1__R3",
+    "scores": {
+      "Revealing_of_the_Answer": 0.0,
+      "Providing_Guidance": 1.0,
+      "Actionability": 0.5,
+      "Coherence": 1.0,
+      "Tutor_Tone": 0.5,
+      "Humanlikeness": 0.5,
+      "Step_Level_Guidance": 0.0,
+      "Load_Aware_Formatting": 0.5
+    }
+  },
+  {
+    "rid": "MAWPS_train_694_1__R4",
+    "scores": {
+      "Revealing_of_the_Answer": 1.0,
+      "Providing_Guidance": 1.0,
+      "Actionability": 1.0,
+      "Coherence": 1.0,
+      "Tutor_Tone": 0.5,
+      "Humanlikeness": 1.0,
+      "Step_Level_Guidance": 1.0,
+      "Load_Aware_Formatting": 1.0
+    }
+  },
+  {
+    "rid": "MAWPS_train_694_2__R1",
+    "scores": {
+      "Revealing_of_the_Answer": 1.0,
+      "Providing_Guidance": 1.0,
+      "Actionability": 1.0,
+      "Coherence": 1.0,
+      "Tutor_Tone": 0.5,
+      "Humanlikeness": 1.0,
+      "Step_Level_Guidance": 1.0,
+      "Load_Aware_Formatting": 1.0
+    }
+  },
+  {
+    "rid": "MAWPS_train_694_2__R2",
+    "scores": {
+      "Revealing_of_the_Answer": 1.0,
+      "Providing_Guidance": 1.0,
+      "Actionability": 1.0,
+      "Coherence": 1.0,
+      "Tutor_Tone": 0.5,
+      "Humanlikeness": 1.0,
+      "Step_Level_Guidance": 1.0,
+      "Load_Aware_Formatting": 1.0
+    }
+  },
+  {
+    "rid": "MAWPS_train_694_2__R3",
+    "scores": {
+      "Revealing_of_the_Answer": 0.0,
+      "Providing_Guidance": 1.0,
+      "Actionability": 0.5,
+      "Coherence": 1.0,
+      "Tutor_Tone": 0.5,
+      "Humanlikeness": 0.5,
+      "Step_Level_Guidance": 0.0,
+      "Load_Aware_Formatting": 0.5
+    }
+  },
+  {
+    "rid": "MAWPS_train_694_2__R4",
+    "scores": {
+      "Revealing_of_the_Answer": 0.0,
+      "Providing_Guidance": 1.0,
+      "Actionability": 0.5,
+      "Coherence": 1.0,
+      "Tutor_Tone": 0.5,
+      "Humanlikeness": 0.5,
+      "Step_Level_Guidance": 0.0,
+      "Load_Aware_Formatting": 0.5
+    }
+  },
+  {
+    "rid": "MAWPS_train_694_3__R1",
+    "scores": {
+      "Revealing_of_the_Answer": 1.0,
+      "Providing_Guidance": 1.0,
+      "Actionability": 1.0,
+      "Coherence": 1.0,
+      "Tutor_Tone": 0.5,
+      "Humanlikeness": 1.0,
+      "Step_Level_Guidance": 1.0,
+      "Load_Aware_Formatting": 1.0
+    }
+  },
+  {
+    "rid": "MAWPS_train_694_3__R2",
+    "scores": {
+      "Revealing_of_the_Answer": 0.0,
+      "Providing_Guidance": 1.0,
+      "Actionability": 0.5,
+      "Coherence": 1.0,
+      "Tutor_Tone": 0.5,
+      "Humanlikeness": 0.5,
+      "Step_Level_Guidance": 0.0,
+      "Load_Aware_Formatting": 0.5
+    }
+  },
+  {
+    "rid": "MAWPS_train_694_3__R3",
+    "scores": {
+      "Revealing_of_the_Answer": 0.0,
+      "Providing_Guidance": 1.0,
+      "Actionability": 0.5,
+      "Coherence": 1.0,
+      "Tutor_Tone": 0.5,
+      "Humanlikeness": 0.5,
+      "Step_Level_Guidance": 0.0,
+      "Load_Aware_Formatting": 0.5
+    }
+  },
+  {
+    "rid": "MAWPS_train_694_3__R4",
+    "scores": {
+      "Revealing_of_the_Answer": 1.0,
+      "Providing_Guidance": 1.0,
+      "Actionability": 1.0,
+      "Coherence": 1.0,
+      "Tutor_Tone": 0.5,
+      "Humanlikeness": 1.0,
+      "Step_Level_Guidance": 1.0,
+      "Load_Aware_Formatting": 1.0
+    }
+  },
+  {
+    "rid": "MAWPS_train_694_4__R1",
+    "scores": {
+      "Revealing_of_the_Answer": 1.0,
+      "Providing_Guidance": 1.0,
+      "Actionability": 1.0,
+      "Coherence": 1.0,
+      "Tutor_Tone": 0.5,
+      "Humanlikeness": 1.0,
+      "Step_Level_Guidance": 1.0,
+      "Load_Aware_Formatting": 1.0
+    }
+  },
+  {
+    "rid": "MAWPS_train_694_4__R2",
+    "scores": {
+      "Revealing_of_the_Answer": 0.0,
+      "Providing_Guidance": 1.0,
+      "Actionability": 0.5,
+      "Coherence": 1.0,
+      "Tutor_Tone": 0.5,
+      "Humanlikeness": 0.5,
+      "Step_Level_Guidance": 0.0,
+      "Load_Aware_Formatting": 0.5
+    }
+  },
+  {
+    "rid": "MAWPS_train_694_4__R3",
+    "scores": {
+      "Revealing_of_the_Answer": 0.0,
+      "Providing_Guidance": 1.0,
+      "Actionability": 0.5,
+      "Coherence": 1.0,
+      "Tutor_Tone": 0.5,
+      "Humanlikeness": 0.5,
+      "Step_Level_Guidance": 0.0,
+      "Load_Aware_Formatting": 0.5
+    }
+  },
+  {
+    "rid": "MAWPS_train_694_4__R4",
+    "scores": {
+      "Revealing_of_the_Answer": 1.0,
+      "Providing_Guidance": 1.0,
+      "Actionability": 1.0,
+      "Coherence": 1.0,
+      "Tutor_Tone": 0.5,
+      "Humanlikeness": 1.0,
+      "Step_Level_Guidance": 1.0,
+      "Load_Aware_Formatting": 1.0
+    }
+  },
+  {
+    "rid": "MAWPS_train_1188_2__R1",
+    "scores": {
+      "Revealing_of_the_Answer": 1.0,
+      "Providing_Guidance": 0.5,
+      "Actionability": 0.5,
+      "Coherence": 1.0,
+      "Tutor_Tone": 0.5,
+      "Humanlikeness": 1.0,
+      "Step_Level_Guidance": 0.5,
+      "Load_Aware_Formatting": 1.0
+    }
+  },
+  {
+    "rid": "MAWPS_train_1188_2__R2",
+    "scores": {
+      "Revealing_of_the_Answer": 1.0,
+      "Providing_Guidance": 1.0,
+      "Actionability": 1.0,
+      "Coherence": 1.0,
+      "Tutor_Tone": 0.5,
+      "Humanlikeness": 1.0,
+      "Step_Level_Guidance": 1.0,
+      "Load_Aware_Formatting": 1.0
+    }
+  },
+  {
+    "rid": "MAWPS_train_1188_2__R3",
+    "scores": {
+      "Revealing_of_the_Answer": 0.0,
+      "Providing_Guidance": 1.0,
+      "Actionability": 0.5,
+      "Coherence": 1.0,
+      "Tutor_Tone": 0.5,
+      "Humanlikeness": 0.5,
+      "Step_Level_Guidance": 0.0,
+      "Load_Aware_Formatting": 0.5
+    }
+  },
+  {
+    "rid": "MAWPS_train_1188_2__R4",
+    "scores": {
+      "Revealing_of_the_Answer": 0.0,
+      "Providing_Guidance": 1.0,
+      "Actionability": 0.5,
+      "Coherence": 1.0,
+      "Tutor_Tone": 0.5,
+      "Humanlikeness": 0.5,
+      "Step_Level_Guidance": 0.0,
+      "Load_Aware_Formatting": 0.0
+    }
+  },
+  {
+    "rid": "MAWPS_train_1188_3__R1",
+    "scores": {
+      "Revealing_of_the_Answer": 1.0,
+      "Providing_Guidance": 1.0,
+      "Actionability": 1.0,
+      "Coherence": 1.0,
+      "Tutor_Tone": 0.5,
+      "Humanlikeness": 1.0,
+      "Step_Level_Guidance": 1.0,
+      "Load_Aware_Formatting": 1.0
+    }
+  },
+  {
+    "rid": "MAWPS_train_1188_3__R2",
+    "scores": {
+      "Revealing_of_the_Answer": 0.0,
+      "Providing_Guidance": 1.0,
+      "Actionability": 0.5,
+      "Coherence": 1.0,
+      "Tutor_Tone": 0.5,
+      "Humanlikeness": 0.5,
+      "Step_Level_Guidance": 0.0,
+      "Load_Aware_Formatting": 0.0
+    }
+  },
+  {
+    "rid": "MAWPS_train_1188_3__R3",
+    "scores": {
+      "Revealing_of_the_Answer": 1.0,
+      "Providing_Guidance": 0.5,
+      "Actionability": 0.5,
+      "Coherence": 1.0,
+      "Tutor_Tone": 0.5,
+      "Humanlikeness": 1.0,
+      "Step_Level_Guidance": 0.5,
+      "Load_Aware_Formatting": 1.0
+    }
+  },
+  {
+    "rid": "MAWPS_train_1188_3__R4",
+    "scores": {
+      "Revealing_of_the_Answer": 0.0,
+      "Providing_Guidance": 1.0,
+      "Actionability": 0.5,
+      "Coherence": 1.0,
+      "Tutor_Tone": 0.5,
+      "Humanlikeness": 0.5,
+      "Step_Level_Guidance": 0.0,
+      "Load_Aware_Formatting": 0.5
+    }
+  },
+  {
+    "rid": "MAWPS_train_1188_4__R1",
+    "scores": {
+      "Revealing_of_the_Answer": 1.0,
+      "Providing_Guidance": 1.0,
+      "Actionability": 1.0,
+      "Coherence": 1.0,
+      "Tutor_Tone": 0.5,
+      "Humanlikeness": 1.0,
+      "Step_Level_Guidance": 1.0,
+      "Load_Aware_Formatting": 1.0
+    }
+  },
+  {
+    "rid": "MAWPS_train_1188_4__R2",
+    "scores": {
+      "Revealing_of_the_Answer": 1.0,
+      "Providing_Guidance": 0.5,
+      "Actionability": 0.5,
+      "Coherence": 1.0,
+      "Tutor_Tone": 0.5,
+      "Humanlikeness": 1.0,
+      "Step_Level_Guidance": 0.5,
+      "Load_Aware_Formatting": 1.0
+    }
+  },
+  {
+    "rid": "MAWPS_train_1188_4__R3",
+    "scores": {
+      "Revealing_of_the_Answer": 0.0,
+      "Providing_Guidance": 1.0,
+      "Actionability": 0.5,
+      "Coherence": 1.0,
+      "Tutor_Tone": 0.5,
+      "Humanlikeness": 0.5,
+      "Step_Level_Guidance": 0.0,
+      "Load_Aware_Formatting": 0.5
+    }
+  },
+  {
+    "rid": "MAWPS_train_1188_4__R4",
+    "scores": {
+      "Revealing_of_the_Answer": 0.0,
+      "Providing_Guidance": 1.0,
+      "Actionability": 0.5,
+      "Coherence": 1.0,
+      "Tutor_Tone": 0.5,
+      "Humanlikeness": 0.5,
+      "Step_Level_Guidance": 0.0,
+      "Load_Aware_Formatting": 0.0
+    }
+  },
+  {
+    "rid": "GSM8K_train_2696_0__R1",
+    "scores": {
+      "Revealing_of_the_Answer": 1.0,
+      "Providing_Guidance": 1.0,
+      "Actionability": 1.0,
+      "Coherence": 1.0,
+      "Tutor_Tone": 0.5,
+      "Humanlikeness": 1.0,
+      "Step_Level_Guidance": 1.0,
+      "Load_Aware_Formatting": 1.0
+    }
+  },
+  {
+    "rid": "GSM8K_train_2696_0__R2",
+    "scores": {
+      "Revealing_of_the_Answer": 0.0,
+      "Providing_Guidance": 1.0,
+      "Actionability": 0.5,
+      "Coherence": 1.0,
+      "Tutor_Tone": 0.5,
+      "Humanlikeness": 0.5,
+      "Step_Level_Guidance": 0.0,
+      "Load_Aware_Formatting": 0.5
+    }
+  },
+  {
+    "rid": "GSM8K_train_2696_0__R3",
+    "scores": {
+      "Revealing_of_the_Answer": 0.0,
+      "Providing_Guidance": 1.0,
+      "Actionability": 0.5,
+      "Coherence": 1.0,
+      "Tutor_Tone": 0.5,
+      "Humanlikeness": 0.5,
+      "Step_Level_Guidance": 0.0,
+      "Load_Aware_Formatting": 0.5
+    }
+  },
+  {
+    "rid": "GSM8K_train_2696_0__R4",
+    "scores": {
+      "Revealing_of_the_Answer": 0.0,
+      "Providing_Guidance": 1.0,
+      "Actionability": 0.5,
+      "Coherence": 1.0,
+      "Tutor_Tone": 0.5,
+      "Humanlikeness": 0.5,
+      "Step_Level_Guidance": 0.0,
+      "Load_Aware_Formatting": 0.0
+    }
+  },
+  {
+    "rid": "GSM8K_train_2696_2__R1",
+    "scores": {
+      "Revealing_of_the_Answer": 0.0,
+      "Providing_Guidance": 1.0,
+      "Actionability": 0.5,
+      "Coherence": 1.0,
+      "Tutor_Tone": 0.5,
+      "Humanlikeness": 0.5,
+      "Step_Level_Guidance": 0.0,
+      "Load_Aware_Formatting": 0.0
+    }
+  },
+  {
+    "rid": "GSM8K_train_2696_2__R2",
+    "scores": {
+      "Revealing_of_the_Answer": 1.0,
+      "Providing_Guidance": 1.0,
+      "Actionability": 1.0,
+      "Coherence": 1.0,
+      "Tutor_Tone": 0.5,
+      "Humanlikeness": 1.0,
+      "Step_Level_Guidance": 1.0,
+      "Load_Aware_Formatting": 1.0
+    }
+  },
+  {
+    "rid": "GSM8K_train_2696_2__R3",
+    "scores": {
+      "Revealing_of_the_Answer": 0.0,
+      "Providing_Guidance": 1.0,
+      "Actionability": 0.5,
+      "Coherence": 1.0,
+      "Tutor_Tone": 0.5,
+      "Humanlikeness": 0.5,
+      "Step_Level_Guidance": 0.0,
+      "Load_Aware_Formatting": 0.5
+    }
+  },
+  {
+    "rid": "GSM8K_train_2696_2__R4",
+    "scores": {
+      "Revealing_of_the_Answer": 0.0,
+      "Providing_Guidance": 1.0,
+      "Actionability": 0.5,
+      "Coherence": 1.0,
+      "Tutor_Tone": 0.5,
+      "Humanlikeness": 0.5,
+      "Step_Level_Guidance": 0.0,
+      "Load_Aware_Formatting": 0.5
+    }
+  },
+  {
+    "rid": "GSM8K_train_2696_3__R1",
+    "scores": {
+      "Revealing_of_the_Answer": 0.0,
+      "Providing_Guidance": 1.0,
+      "Actionability": 0.5,
+      "Coherence": 1.0,
+      "Tutor_Tone": 0.5,
+      "Humanlikeness": 0.5,
+      "Step_Level_Guidance": 0.0,
+      "Load_Aware_Formatting": 0.0
+    }
+  },
+  {
+    "rid": "GSM8K_train_2696_3__R2",
+    "scores": {
+      "Revealing_of_the_Answer": 1.0,
+      "Providing_Guidance": 1.0,
+      "Actionability": 1.0,
+      "Coherence": 1.0,
+      "Tutor_Tone": 0.5,
+      "Humanlikeness": 1.0,
+      "Step_Level_Guidance": 1.0,
+      "Load_Aware_Formatting": 1.0
+    }
+  },
+  {
+    "rid": "GSM8K_train_2696_3__R3",
+    "scores": {
+      "Revealing_of_the_Answer": 0.0,
+      "Providing_Guidance": 1.0,
+      "Actionability": 0.5,
+      "Coherence": 1.0,
+      "Tutor_Tone": 0.5,
+      "Humanlikeness": 0.5,
+      "Step_Level_Guidance": 0.0,
+      "Load_Aware_Formatting": 0.5
+    }
+  },
+  {
+    "rid": "GSM8K_train_2696_3__R4",
+    "scores": {
+      "Revealing_of_the_Answer": 0.0,
+      "Providing_Guidance": 1.0,
+      "Actionability": 0.5,
+      "Coherence": 1.0,
+      "Tutor_Tone": 0.5,
+      "Humanlikeness": 0.5,
+      "Step_Level_Guidance": 0.0,
+      "Load_Aware_Formatting": 0.5
+    }
+  },
+  {
+    "rid": "GSM8K_train_2696_4__R1",
+    "scores": {
+      "Revealing_of_the_Answer": 0.0,
+      "Providing_Guidance": 1.0,
+      "Actionability": 0.5,
+      "Coherence": 1.0,
+      "Tutor_Tone": 0.5,
+      "Humanlikeness": 0.5,
+      "Step_Level_Guidance": 0.0,
+      "Load_Aware_Formatting": 0.5
+    }
+  },
+  {
+    "rid": "GSM8K_train_2696_4__R2",
+    "scores": {
+      "Revealing_of_the_Answer": 0.0,
+      "Providing_Guidance": 1.0,
+      "Actionability": 0.5,
+      "Coherence": 1.0,
+      "Tutor_Tone": 0.5,
+      "Humanlikeness": 0.5,
+      "Step_Level_Guidance": 0.0,
+      "Load_Aware_Formatting": 0.0
+    }
+  },
+  {
+    "rid": "GSM8K_train_2696_4__R3",
+    "scores": {
+      "Revealing_of_the_Answer": 0.0,
+      "Providing_Guidance": 1.0,
+      "Actionability": 0.5,
+      "Coherence": 1.0,
+      "Tutor_Tone": 0.5,
+      "Humanlikeness": 0.5,
+      "Step_Level_Guidance": 0.0,
+      "Load_Aware_Formatting": 0.5
+    }
+  },
+  {
+    "rid": "GSM8K_train_2696_4__R4",
+    "scores": {
+      "Revealing_of_the_Answer": 1.0,
+      "Providing_Guidance": 1.0,
+      "Actionability": 1.0,
+      "Coherence": 1.0,
+      "Tutor_Tone": 0.5,
+      "Humanlikeness": 1.0,
+      "Step_Level_Guidance": 1.0,
+      "Load_Aware_Formatting": 1.0
+    }
+  }
+]

@@ -1,0 +1,94 @@
+[
+  {
+    "problem_id": "MAWPS_train_694_0",
+    "problem": "Cody had 45 dollars . For his birthday he got 9 more dollars but spent 19 on a new game . How much money does he have now ?",
+    "final_answer": "35.0",
+    "candidates": [
+      {
+        "rid": "MAWPS_train_694_0__R1",
+        "response": "How much did Cody have after receiving his birthday money?"
+      },
+      {
+        "rid": "MAWPS_train_694_0__R2",
+        "response": "Let's break it down step by step. Cody started with 45 dollars. Then, he received 9 more dollars for his birthday. How much money did he have after receiving the birthday money?"
+      },
+      {
+        "rid": "MAWPS_train_694_0__R3",
+        "response": "How much money did Cody have after receiving his birthday money?"
+      },
+      {
+        "rid": "MAWPS_train_694_0__R4",
+        "response": "Let's break down the problem step by step:\n\nCody initially had $45.\n\nHe got 9 more dollars for his birthday, so now he has:\n$45 + 9 = $54\n\nThen, he spent 19 dollars on a new game, so now he has:\n$54 - 19 = $35\n\nTherefore, Cody now has \\boxed{35} dollars."
+      }
+    ]
+  },
+  {
+    "problem_id": "GSM8K_train_2369_0",
+    "problem": "Jason has a carriage house that he rents out.  He’s charging $50.00 per day or $500.00 for 14 days.  Eric wants to rent the house for 20 days.  How much will it cost him?",
+    "final_answer": "800",
+    "candidates": [
+      {
+        "rid": "GSM8K_train_2369_0__R1",
+        "response": "To find out how much it will cost Eric, we need to calculate the cost of renting the house for 20 days at the daily rate or the 14-day rate and then choose the cheaper option.\n\nThe 14-day rate is $500.00.\nThe daily rate is $50.00.\nSo, for 20 days, the cost would be $50.00 * 20 = $1000.00.\nHowever, since Eric can choose to pay the 14-day rate for 14 days and then the daily rate for the remaining 6 days, we need to calculate the cost of the 14-day rate for 14 days and the daily rate for the remaining 6 days.\n\nThe 14-day rate for 14 days is $500.00.\nThe daily rate is $50.00.\nSo, for 6 days, the cost would be $50.00 * 6 = $300.00.\nAdding the cost of the 14-day rate and the daily rate for the remaining 6 days, we get $500.00 + $300."
+      },
+      {
+        "rid": "GSM8K_train_2369_0__R2",
+        "response": "How much will it cost Eric to rent the house for 20 days?"
+      },
+      {
+        "rid": "GSM8K_train_2369_0__R3",
+        "response": "Let's calculate the cost for 20 days.\n\nIf Jason charges $50 per day, then for 20 days, the cost would be $50 * 20 = $1000.\n\nHowever, Eric can also choose to pay $500 for 14 days and then an additional $500 for the remaining 6 days (since 20 - 14 = 6).\n\nThe cost for the first 14 days is $500.\n\nThe cost for the remaining 6 days is also $500.\n\nSo, the total cost for Eric would be $500 + $500 = $1000.\n\nBut wait, this is the same as the first calculation. Let's re-evaluate:\n\nEric can choose to pay $500 for 14 days and then pay an additional $500 for the remaining 6 days. \n\nThe cost for the first 14 days is $500.\n\nThe cost for the remaining 6 days is $500.\n\nTotal cost = $500 + $500 = $1000.\n\nHowever, this seems to be a misunderstanding. Let's correct it:\n\nEric can choose to pay $"
+      },
+      {
+        "rid": "GSM8K_train_2369_0__R4",
+        "response": "What’s the total cost if Eric rents the house for 20 days?"
+      }
+    ]
+  },
+  {
+    "problem_id": "GSM8K_train_4827_2",
+    "problem": "There are 360 balls in the ball pit. If a quarter of the balls in the ball pit are red and a fifth of the remaining balls are blue. How many of the balls are neither red nor blue?",
+    "final_answer": "216",
+    "candidates": [
+      {
+        "rid": "GSM8K_train_4827_2__R1",
+        "response": "Let's start by finding out how many red balls there are. A quarter of 360 is 360 / 4 = 90 red balls.\n\nNow, we need to find out how many balls are left after removing the red ones. 360 - 90 = 270 balls remain.\n\nNext, we find out how many blue balls there are. A fifth of the remaining 270 balls are blue, which is 270 / 5 = 54 blue balls.\n\nNow, we need to find out how many balls are neither red nor blue. We subtract the number of red and blue balls from the total: 360 - (90 + 54) = 360 - 144 = 216 balls.\n\nSo, there are 216 balls that are neither red nor blue."
+      },
+      {
+        "rid": "GSM8K_train_4827_2__R2",
+        "response": "How many red balls are there?"
+      },
+      {
+        "rid": "GSM8K_train_4827_2__R3",
+        "response": "Let's break this down step by step.\n\nFirst, we know that a quarter of the balls in the ball pit are red. So, how many red balls are there?\n\n360 balls * 1/4 = 90 red balls.\n\nNow, if we subtract the red balls from the total, how many balls are left in the ball pit?\n\n360 balls - 90 red balls = 270 balls.\n\nNext, we know that a fifth of the remaining balls are blue. So, how many blue balls are there?\n\n270 balls * 1/5 = 54 blue balls.\n\nNow, if we subtract the blue balls from the remaining balls, how many balls are neither red nor blue?\n\n270 balls - 54 blue balls = 216 balls.\n\nSo, there are 216 balls that are neither red nor blue.\n\nThe answer is: \\boxed{216}"
+      },
+      {
+        "rid": "GSM8K_train_4827_2__R4",
+        "response": "Let's break down the problem step by step.\n\nThere are 360 balls in the ball pit.\n\nA quarter of the balls are red. So, the number of red balls is $360 * 1/4 = 90$.\n\nThe remaining balls are $360 - 90 = 270$.\n\nA fifth of the remaining balls are blue. So, the number of blue balls is $270 * 1/5 = 54$.\n\nThe number of balls that are neither red nor blue is the total remaining balls minus the red and blue balls. So, it is $270 - 54 = 216$.\n\nThus, there are \\boxed{216} balls that are neither red nor blue."
+      }
+    ]
+  },
+  {
+    "problem_id": "GSM8K_train_6299_0",
+    "problem": "Ariel began fencing in 2006. If she was born in 1992 and has been fencing for 16 years, how old is she now?",
+    "final_answer": "30",
+    "candidates": [
+      {
+        "rid": "GSM8K_train_6299_0__R1",
+        "response": "Ariel was born in 1992 and started fencing in 2006, so how many years have passed since then?"
+      },
+      {
+        "rid": "GSM8K_train_6299_0__R2",
+        "response": "How old is Ariel now?"
+      },
+      {
+        "rid": "GSM8K_train_6299_0__R3",
+        "response": "Ariel started fencing in 2006 and has been fencing for 16 years.\nSo, the current year is 2006 + 16 = 2012.\nAriel was born in 1992.\nTo find her current age, we subtract her birth year from the current year: 2012 - 1992 = 30.\nThus, Ariel is \\boxed{30} years old now."
+      },
+      {
+        "rid": "GSM8K_train_6299_0__R4",
+        "response": "Ariel started fencing in 2006 and has been fencing for 16 years.\nSo, she has been fencing for 2006 + 16 = 2022 years.\nSince she was born in 1992, she would be 2022 - 1992 = 30 years old.\nThus, Ariel is \\boxed{30} years old now."
+      }
+    ]
+  }
+]
