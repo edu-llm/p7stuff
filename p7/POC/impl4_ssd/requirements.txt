@@ -1,0 +1,16 @@
+# Impl 4 dependencies. Matches ORCD-SFT/setup_orcd_env.sh; the >=4.48 pin on
+# transformers is load-bearing (PLAN §5: the gradient-accumulation loss fix).
+torch
+transformers>=4.48.0
+datasets>=2.19.0
+accelerate>=0.34.0
+peft>=0.13.0
+numpy
+
+# Generation. Optional: build_general_slot.py falls back to batched HF `generate`.
+# vllm>=0.6.0
+
+# Deliberately NOT required:
+#   rouge-score / nltk  -> B2's ROUGE-L lives in impl4/gate.py (LCS, ~30 lines)
+#   any n-gram library  -> decontamination lives in impl4/ngram.py
+#   requests            -> SuperNI is fetched with urllib from the stdlib

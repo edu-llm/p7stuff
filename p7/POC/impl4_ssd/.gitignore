@@ -1,0 +1,23 @@
+# Generated artifacts. Everything here is reproducible from the scripts in this
+# directory plus the seeds recorded in each runs/<arm>/manifest.json.
+
+# Shared pools (regenerable: build_pedagogy_pool.py, build_prompt_pool.py)
+data/pedagogy_pool/
+data/superni_cache/
+data/superni_pool.jsonl
+
+# Per-arm outputs (regenerable: build_general_slot.py, mix_and_order.py, train_sft_impl4.py)
+runs/*/general_slot.jsonl
+runs/*/socrateach_sft_*.jsonl
+runs/*/ckpt-*/
+runs/*/checkpoint-*/
+runs/*/train.log
+
+# Keep the manifests and the shared handoff files — those ARE the deliverable index.
+!runs/*/manifest.json
+!runs/*/checkpoint_index.json
+!shared/
+
+logs/
+__pycache__/
+*.pyc
