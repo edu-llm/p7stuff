@@ -475,14 +475,35 @@ def main():
     }
 
     if n_gold and arm.gold_source == "tulu":
-        print(f"Loading {n_gold} Tulu-3 gold conversations ...")
-        gold = tulu.load_tulu_slot(n_gold, args.seed)
+        # Over-request, then drop the conversations whose prompt consumes the whole
+        # max_len budget and leaves no assistant turn, then trim back to n_gold.
+        #
+        # The SuperNI paths have always done this (drop_unlabelled); the Tulu path did
+        # not, so A1's slot could contain records that train on nothing while still
+        # occupying one of the 8 general slots in a block — diluting the replay stream.
+        # mix_and_order.py refuses such a mix, which is how this surfaced: 34 of 504
+        # Tulu conversations hit it at max_len=1024.
+        #
+        # Trimming *after* the filter keeps A4's prefix property intact: both arms filter
+        # the same seed-deterministic sequence the same way, so A4's half is still exactly
+        # the first half of A1's.
+        want = int(math.ceil(n_gold * args.overgenerate))
+        print(f"Loading {want} Tulu-3 gold conversations for a {n_gold}-example slot ...")
+        gold = tulu.load_tulu_slot(want, args.seed)
         gold_counts = chat.label_token_counts(tok_fn, gold)
+        gold, gold_counts, n_gold_unlabelled = drop_unlabelled(gold, gold_counts, "Tulu-gold")
+        if len(gold) < n_gold:
+            raise SystemExit(
+                f"only {len(gold)} Tulu conversations carry any label tokens at "
+                f"max_len={MAX_LEN} (need {n_gold}). Raise --overgenerate.")
+        gold, gold_counts = gold[:n_gold], gold_counts[:n_gold]
         parts += gold
         section["gold"] = {
             "source": tulu.TULU_ID,
             "kind": tulu.KIND,
             "n": len(gold),
+            "n_requested": want,
+            "n_dropped_zero_label_tokens": n_gold_unlabelled,
             "total_label_tokens": sum(gold_counts),
             "mean_label_tokens": round(sum(gold_counts) / max(1, len(gold)), 1),
             "note": ("Seed-deterministic ordering, so A4's Tulu half is exactly the first "
