@@ -6,6 +6,10 @@ data/pedagogy_pool/
 data/superni_cache/
 data/superni_pool.jsonl
 
+# The Impl-3 compat workdir is assembled from their bundle by setup_compat.py, so it is
+# reproducible and does not belong in git. The shims, bridge and comparison tool DO.
+impl3_compat/work/
+
 # Per-arm outputs (regenerable: build_general_slot.py, mix_and_order.py, train_sft_impl4.py)
 runs/*/general_slot.jsonl
 runs/*/socrateach_sft_*.jsonl

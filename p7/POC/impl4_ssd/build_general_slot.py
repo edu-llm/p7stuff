@@ -140,7 +140,11 @@ def superni_record(item: dict, assistant: str, kind: str, sampling=None,
         "dialogue_id": item.get("instance_id"),
         "answer": item.get("gold"),
         "source": SUPERNI_SOURCE_ID,
-        "kind": kind,
+        # `kind` is the coarse stream label Impl 3's tagging uses ("pedagogy" / "general"),
+        # so a train file from either project reads the same way. Impl 4's own provenance —
+        # which replay source this row came from — moves to `replay_kind`.
+        "kind": "general",
+        "replay_kind": kind,
         "superni_task_id": item["superni_task_id"],
         "sample_T": sc.temperature if sc else None,
         "sample_top_k": sc.top_k if sc else None,
@@ -559,6 +563,7 @@ def main():
         "example_ratio_to_A1": round(len(parts) / max(1, reference["n"]), 4) if reference else 1.0,
         "within_token_tolerance": abs(total - ref_total) / ref_total <= 0.05 if ref_total else None,
         "kinds": dict(Counter(r["kind"] for r in parts)),
+        "replay_kinds": dict(Counter(r.get("replay_kind") for r in parts)),
     })
 
     manifest.write_jsonl(slot_path, parts)

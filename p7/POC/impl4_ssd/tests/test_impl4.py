@@ -32,8 +32,8 @@ class TestArmRegistry(unittest.TestCase):
             config.resolve_arm("A9")
 
     def test_sigma_splits_the_slot(self):
-        cases = {"A1": (7496, 0), "A2": (7496, 0), "A3": (0, 7496),
-                 "A4": (3748, 3748), "T4": (0, 7496), "B2": (0, 7496)}
+        cases = {"A1": (7384, 0), "A2": (7384, 0), "A3": (0, 7384),
+                 "A4": (3692, 3692), "T4": (0, 7384), "B2": (0, 7384)}
         for name, (gold, ssd) in cases.items():
             arm = config.resolve_arm(name)
             self.assertEqual((arm.n_gold, arm.n_ssd), (gold, ssd), name)
@@ -44,10 +44,12 @@ class TestArmRegistry(unittest.TestCase):
             self.assertEqual(arm.delta, 0.0, arm.name)
 
     def test_priority_checkpoints(self):
-        # All 11 for Block S; {20,160,937} for Blocks T and G.
+        # Every grid point for Block S; a comparable early/middle/end triple for T and G,
+        # all three drawn from Impl 3's log grid so they need no interpolation.
         self.assertEqual(config.resolve_arm("A3").priority_checkpoints, config.CKPT_GRID)
-        self.assertEqual(config.resolve_arm("T4").priority_checkpoints, (20, 160, 937))
-        self.assertEqual(config.resolve_arm("B2").priority_checkpoints, (20, 160, 937))
+        self.assertEqual(config.resolve_arm("T4").priority_checkpoints, (16, 128, 923))
+        self.assertEqual(config.resolve_arm("B2").priority_checkpoints, (16, 128, 923))
+        self.assertTrue(set(config.PRIORITY_CKPTS_BLOCK_TG) <= set(config.IMPL3_LOG_GRID))
 
     def test_priority_checkpoints_stay_inside_the_poc_grid(self):
         for name in config.ALL_ARMS:
@@ -61,11 +63,24 @@ class TestArmRegistry(unittest.TestCase):
                 self.assertIn(grid[-1], pri, f"{name} poc={poc} drops the final step")
 
     def test_mix_arithmetic_matches_the_plan(self):
-        self.assertEqual(config.N_PED, 22488)
-        self.assertEqual(config.N_GEN, 7496)
-        self.assertEqual(config.N_TRAIN, 29984)
-        self.assertEqual(config.N_TRAIN // config.BLOCK_SIZE, 937)
+        # 923 blocks, not PLAN §6's 937, so step numbers line up with Impl 3's checkpoints.
+        self.assertEqual(config.N_PED, 22152)
+        self.assertEqual(config.N_GEN, 7384)
+        self.assertEqual(config.N_TRAIN, 29536)
+        self.assertEqual(config.N_TRAIN // config.BLOCK_SIZE, 923)
         self.assertAlmostEqual(config.N_GEN / config.N_TRAIN, 0.25, places=4)
+
+    def test_grid_covers_both_source_grids(self):
+        """The union grid is what makes per-checkpoint comparison possible at all.
+
+        Dropping a point from either source grid silently turns a comparison into an
+        interpolation, so assert containment rather than the literal 22-point list.
+        """
+        self.assertTrue(set(config.IMPL3_LOG_GRID) <= set(config.CKPT_GRID))
+        self.assertTrue(set(config.PLAN7_GRID) <= set(config.CKPT_GRID))
+        self.assertEqual(config.CKPT_GRID[-1], config.N_BLOCKS)
+        self.assertEqual(config.IMPL3_LOG_GRID[-1], config.N_BLOCKS)
+        self.assertEqual(list(config.CKPT_GRID), sorted(set(config.CKPT_GRID)))
 
     def test_sampling_grid(self):
         self.assertFalse(config.SAMPLING["T1"].truncated)

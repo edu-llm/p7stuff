@@ -29,11 +29,18 @@ GENERAL_FRAC = 0.25          # φ. Not swept (PLAN §9).
 BLOCK_SIZE = 32              # per_device_batch 8 × grad_accum 4
 PED_PER_BLOCK = 24
 GEN_PER_BLOCK = 8
-N_BLOCKS = 937
-N_PED = N_BLOCKS * PED_PER_BLOCK      # 22,488
-N_GEN = N_BLOCKS * GEN_PER_BLOCK      # 7,496
-N_TRAIN = N_PED + N_GEN               # 29,984
-PED_POOL_TARGET = 22500               # what prepare_socrateach_sft.py is asked for
+
+# 923, not PLAN §6's 937, so step numbers line up with Impl 3's checkpoints exactly.
+# Impl 3 trains 29,509 usable rows at effective batch 32 -> 923 steps; whole 32-example
+# blocks put us at 29,536 rows for the same 923 steps (+0.09% of rows, identical 75/25
+# ratio). Comparing per-checkpoint curves is worth more than the 14 extra steps, and a
+# step-923 point that means the same thing on both sides is the whole objective.
+# See impl3_compat/README.md; PLAN §6's arithmetic is otherwise unchanged.
+N_BLOCKS = 923
+N_PED = N_BLOCKS * PED_PER_BLOCK      # 22,152
+N_GEN = N_BLOCKS * GEN_PER_BLOCK      # 7,384
+N_TRAIN = N_PED + N_GEN               # 29,536
+PED_POOL_TARGET = 22500               # the Hub dataset's pedagogy row count
 
 # Over-generate so the degeneracy filter cannot shrink the slot below N_GEN.
 OVERGENERATE = 1.15
@@ -50,12 +57,21 @@ TOKEN_MATCH_TOLERANCE = 0.05
 # pipeline always re-measures and writes data/tulu_reference.json.
 TULU_MEAN_LABEL_TOKENS_OBSERVED = 80.1
 
-# --- Checkpoint grid (PLAN §7). -----------------------------------------------
-CKPT_GRID = (5, 10, 20, 40, 80, 160, 320, 480, 640, 800, 937)
-# Steps inside warmup (warmup_ratio 0.03 × 937 ≈ 28), flagged in the manifest.
+# --- Checkpoint grid (PLAN §7 ∪ Impl 3's log grid). ---------------------------
+# The union of two grids, because they answer different questions and the points are
+# ~25 MB each:
+#   PLAN §7 (dense early):  5,10,20,40,80,160,320,480,640,800,923
+#   Impl 3 (log-spaced):    1,2,3,4,8,16,32,64,128,256,512,923
+# Every Impl 3 checkpoint therefore has an exactly matching point here, and PLAN §7's
+# grid survives so these runs still line up with curve_run's Impl 2 curve.
+IMPL3_LOG_GRID = (1, 2, 3, 4, 8, 16, 32, 64, 128, 256, 512, 923)
+PLAN7_GRID = (5, 10, 20, 40, 80, 160, 320, 480, 640, 800, 923)
+CKPT_GRID = tuple(sorted(set(IMPL3_LOG_GRID) | set(PLAN7_GRID)))   # 22 points
+# Steps inside warmup (warmup_ratio 0.03 × 923 ≈ 28), flagged in the manifest.
 WARMUP_STEPS_APPROX = 28
-# PLAN §9: Blocks T and G only need "where does this arm land".
-PRIORITY_CKPTS_BLOCK_TG = (20, 160, 937)
+# PLAN §9: Blocks T and G only need "where does this arm land". Chosen from
+# IMPL3_LOG_GRID so the priority points are directly comparable rather than interpolated.
+PRIORITY_CKPTS_BLOCK_TG = (16, 128, 923)
 
 # --poc smoke run (PLAN §11.7): ~2,000 examples = 63 blocks.
 POC_N_BLOCKS = 63

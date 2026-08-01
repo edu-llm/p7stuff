@@ -55,7 +55,9 @@ def load_tulu_slot(n: int, seed: int) -> list[dict]:
             "dialogue_id": r["dialogue_id"],
             "answer": None,
             "source": TULU_ID,
-            "kind": KIND,
+            # Coarse stream label matching Impl 3's tagging; Impl 4's provenance in replay_kind.
+            "kind": "general",
+            "replay_kind": KIND,
             "superni_task_id": None,
             "sample_T": None,
             "sample_top_k": None,
