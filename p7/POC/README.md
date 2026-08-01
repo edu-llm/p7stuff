@@ -31,6 +31,8 @@ that are each evaluated *and* KL-measured.
 | `llm_judge/` | Pedagogy quality eval — blind LLM-as-judge, 8-dim rubric (`PEDAGOGY_EVAL_REPORT.md`) |
 | `math_eval/` | Old-task retention — math/logic final-answer accuracy (`MATH_LOGIC_REPORT.md`) |
 | `general_eval/` | General instruction-following — MT-Bench-style, no system prompt (`GENERAL_EVAL_REPORT.md`) |
+| `atlas_cat/` | Old-task ability, adaptively — ATLAS CAT (`atlas_arc`): ARC-Challenge `theta ± SE` per checkpoint, fully automated. **Additional** to the three evals above, not a replacement (`score_checkpoints.sh` sweeps a run's `ckpt-*` grid) |
+| `impl4_ssd/` | Impl 4 — self-distilled replay: data build, training, checkpoint grid (`PLAN.md`, `RUNBOOK.md`, `impl4_ssd_colab.ipynb`) |
 | `tutor-eval-suite/` | Additional tutor-eval scaffolding |
 | `kl_analysis/` | Forward-KL demo / setup (`kl_forgetting_demo_colab.ipynb`) |
 | `curve_run/` | The KL↔forgetting POC: per-checkpoint KL, math grading, pedagogy judging, figures (`Report_KL_POC.md`) |
