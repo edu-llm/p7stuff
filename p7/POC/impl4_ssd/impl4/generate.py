@@ -140,9 +140,31 @@ def _generate_vllm(prompt_ids: Sequence[Sequence[int]], sampling: SamplingConfig
 # ---------------------------------------------------------------------------
 # HF fallback
 # ---------------------------------------------------------------------------
+def _token_budget_batches(order, prompt_ids, batch_size: int,
+                          max_batch_tokens: int) -> list[list[int]]:
+    """Group a length-ascending ``order`` into batches bounded by rows *and* padded tokens.
+
+    ``order`` is ascending by length, so the padded width of a batch is the length of its
+    last member — which makes the padded-token count simply ``len(batch) * width``. A batch
+    is closed when adding the next prompt would exceed either bound.
+    """
+    batches: list[list[int]] = []
+    cur: list[int] = []
+    for i in order:
+        L = len(prompt_ids[i])
+        if cur and (len(cur) + 1 > batch_size or (len(cur) + 1) * L > max_batch_tokens):
+            batches.append(cur)
+            cur = []
+        cur.append(i)
+    if cur:
+        batches.append(cur)
+    return batches
+
+
 def _generate_hf(prompt_ids: Sequence[Sequence[int]], sampling: SamplingConfig,
                  max_tokens: int, model_id: str, seed: int, batch_size: int,
-                 model=None, tokenizer=None, log=print) -> list[str]:
+                 model=None, tokenizer=None, log=print,
+                 max_batch_tokens: int = 32768) -> list[str]:
     import torch
     from transformers import AutoModelForCausalLM
 
@@ -160,12 +182,19 @@ def _generate_hf(prompt_ids: Sequence[Sequence[int]], sampling: SamplingConfig,
     torch.manual_seed(seed)
 
     # Sort by length so each batch pads little, then restore the original order.
+    #
+    # Sorting alone is not enough: it *concentrates* the longest prompts into one batch,
+    # which is the worst case for attention memory. SDPA with an explicit (left-padded)
+    # mask can materialise a [B, heads, L, L] score tensor, so cost grows as B·L² — at
+    # B=32 and a 6k-token SuperNI passage that is ~39 GiB and OOMs an 80 GB A100 on a 1B
+    # model. Batching to a *token budget* instead of a row count keeps B·L bounded, so
+    # long prompts automatically travel in small batches and short ones still batch wide.
     order = sorted(range(len(prompt_ids)), key=lambda i: len(prompt_ids[i]))
     texts: list[Optional[str]] = [None] * len(prompt_ids)
-    n_batches = math.ceil(len(order) / batch_size)
+    batches = _token_budget_batches(order, prompt_ids, batch_size, max_batch_tokens)
+    n_batches = len(batches)
 
-    for b in range(n_batches):
-        idxs = order[b * batch_size:(b + 1) * batch_size]
+    for b, idxs in enumerate(batches):
         chunk = [list(prompt_ids[i]) for i in idxs]
         width = max(len(c) for c in chunk)
         # Left padding: decoder-only generation must have the prompt flush right.
@@ -209,8 +238,14 @@ def generate_targets(
     model=None,
     engine: "Engine | None" = None,
     log=print,
+    max_batch_tokens: int = 32768,
 ) -> GenerationResult:
-    """One sample per prompt (N=1; PLAN §4: "the paper shows one sample suffices")."""
+    """One sample per prompt (N=1; PLAN §4: "the paper shows one sample suffices").
+
+    ``batch_size`` caps rows per batch and ``max_batch_tokens`` caps padded tokens per
+    batch; the HF backend honours both, so a long-prompt batch shrinks automatically
+    instead of OOMing (see :func:`_token_budget_batches`).
+    """
     if engine is not None:
         backend, llm, model = engine.backend, engine.llm, engine.model
         tokenizer = tokenizer or engine.tokenizer
@@ -226,7 +261,8 @@ def generate_targets(
                                gpu_memory_utilization, llm=llm, log=log)
     elif chosen == "hf":
         texts = _generate_hf(prompt_ids, sampling, max_tokens, model_id, seed,
-                             batch_size, model=model, tokenizer=tok, log=log)
+                             batch_size, model=model, tokenizer=tok, log=log,
+                             max_batch_tokens=max_batch_tokens)
     else:
         raise ValueError(f"unknown backend {chosen!r} (use vllm|hf|auto)")
 

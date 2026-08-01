@@ -66,7 +66,16 @@ def parse_args():
     p.add_argument("--runs_root", default=None)
     p.add_argument("--base_model", default=BASE_MODEL)
     p.add_argument("--backend", choices=["auto", "vllm", "hf"], default="auto")
-    p.add_argument("--batch_size", type=int, default=32, help="HF backend only.")
+    p.add_argument("--batch_size", type=int, default=32,
+                   help="HF backend only: max rows per generation batch.")
+    p.add_argument("--max_batch_tokens", type=int, default=32768,
+                   help="HF backend only: max padded tokens per generation batch. Attention "
+                        "memory grows as rows x length^2, so a row cap alone lets a batch of "
+                        "long prompts OOM; this bounds it. Raise on a big GPU for speed.")
+    p.add_argument("--max_prompt_tokens", type=int, default=MAX_LEN - 128,
+                   help="Drop pool prompts longer than this. A prompt near max_len leaves no "
+                        "room for the assistant turn, so the record trains on nothing and is "
+                        "discarded anyway — this just avoids generating it first.")
     p.add_argument("--gpu_memory_utilization", type=float, default=0.85, help="vLLM only.")
     p.add_argument("--seed", type=int, default=SEED)
     p.add_argument("--poc", action="store_true", help="63-block smoke slot instead of 937.")
@@ -157,6 +166,48 @@ def superni_record(item: dict, assistant: str, kind: str, sampling=None,
     }
 
 
+def filter_by_prompt_tokens(pool, tokenizer, max_prompt_tokens: int, log=print):
+    """Drop pool prompts too long to leave room for a target at ``MAX_LEN``.
+
+    This is not a new restriction — it is :func:`drop_unlabelled` moved earlier. A prompt
+    longer than ``MAX_LEN`` consumes the whole sequence, ``make_tokenize_fn`` truncates the
+    assistant turn away, and the record trains on nothing, so it was always going to be
+    discarded. Doing it before generation instead of after means we do not pay to sample
+    ~1.4k tokens of output for a record that gets thrown away, and it removes the
+    batch-memory blowup that a 6k-token prompt causes.
+
+    Applied to the *shared* pool, so A2 (gold) and the SSD arms still draw from an
+    identical prompt set at identical counts — the paired control PLAN §5 depends on.
+
+    The drop is task-correlated (long-passage summarization and contract QA lose the most),
+    which shifts the replay slot's task mix. The retained/dropped counts per task are
+    returned and recorded in the manifest so that shift is visible rather than implicit.
+    """
+    kept, dropped = [], Counter()
+    for item in pool:
+        n = len(chat.generation_prompt_ids(
+            tokenizer, [{"role": "user", "content": superni.user_message(item)}]))
+        if n <= max_prompt_tokens:
+            kept.append(item)
+        else:
+            dropped[item["superni_task_id"]] += 1
+    n_drop = sum(dropped.values())
+    if n_drop:
+        log(f"  prompt-length filter (<= {max_prompt_tokens} tokens, so a target fits within "
+            f"max_len={MAX_LEN}): kept {len(kept)}/{len(pool)}, dropped {n_drop}")
+        for task, c in dropped.most_common(5):
+            log(f"    -{c:>5}  {task}")
+        if len(dropped) > 5:
+            log(f"    ... and {len(dropped) - 5} more tasks")
+        gone = {t for t in dropped} - {i["superni_task_id"] for i in kept}
+        if gone:
+            log(f"    WARNING: {len(gone)} task(s) removed entirely: {sorted(gone)}")
+    return kept, {"max_prompt_tokens": max_prompt_tokens, "n_before": len(pool),
+                  "n_kept": len(kept), "n_dropped": n_drop,
+                  "dropped_by_task": dict(dropped),
+                  "n_tasks_after": len({i["superni_task_id"] for i in kept})}
+
+
 def drop_unlabelled(records, counts, what: str, log=print):
     """Remove records that contribute zero unmasked label tokens.
 
@@ -180,6 +231,7 @@ def gen_round(items, sampling, max_tokens, engine, args, seed, log=print) -> lis
         msgs, sampling, max_tokens, model_id=args.base_model,
         backend=args.backend, seed=seed, batch_size=args.batch_size,
         gpu_memory_utilization=args.gpu_memory_utilization, engine=engine, log=log,
+        max_batch_tokens=args.max_batch_tokens,
     )
     return res.texts
 
@@ -467,10 +519,19 @@ def main():
         pool = manifest.read_jsonl(pool_path)
         print(f"SuperNI pool: {len(pool)} prompts from "
               f"{len({p['superni_task_id'] for p in pool})} tasks")
+        n_raw = len(pool)
+        pool, lenstats = filter_by_prompt_tokens(pool, tokenizer, args.max_prompt_tokens)
+        if len(pool) < n_gen:
+            raise SystemExit(
+                f"only {len(pool)} prompts survive the <= {args.max_prompt_tokens}-token "
+                f"filter, need at least {n_gen} (plus over-generation). Raise "
+                f"--max_prompt_tokens (at the cost of records that train on nothing) or "
+                f"enlarge the pool with build_prompt_pool.py --n_prompts.")
         section["prompt_pool"] = {
-            "path": str(pool_path), "n": len(pool),
+            "path": str(pool_path), "n_raw": n_raw, "n": len(pool),
             "n_tasks": len({p["superni_task_id"] for p in pool}),
             "source": SUPERNI_SOURCE_ID,
+            "prompt_length_filter": lenstats,
         }
 
     if n_gold and arm.gold_source == "superni":
