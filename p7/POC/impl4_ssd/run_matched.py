@@ -153,9 +153,17 @@ def main():
     if "deps" in want:
         banner("deps")
         sh(f"{sys.executable} -m pip -q install " + " ".join(shlex.quote(p) for p in PINS))
-        sh(f'{sys.executable} -c "import torchao" 2>/dev/null && echo '
-           f'"WARNING: torchao present; Impl 3 reports 0.10 breaking peft.get_peft_model" '
-           f'|| echo "torchao absent (good)"', check=False)
+        # Impl 3's environment note: do NOT have torchao around, an old version breaks
+        # peft.get_peft_model. Colab preinstalls 0.10.0, and peft 0.20.0 hard-raises on
+        # anything below 0.16 from inside its LoRA dispatcher — so training dies at
+        # get_peft_model and the loss-norm probe silently falls back to an unwrapped model,
+        # which is the one configuration whose verdict does not answer PLAN §5. Warning
+        # about it was not enough; remove it.
+        sh(f"{sys.executable} -m pip -q uninstall -y torchao", check=False)
+        sh(f'{sys.executable} -c "'
+           f'import importlib.util as u;'
+           f'print(\'torchao still present -- training will fail\' if u.find_spec(\'torchao\') '
+           f'else \'torchao absent (good)\')"')
     gpu_report(required=bool(want & GPU_STAGES))
 
     if "bundle" in want:
