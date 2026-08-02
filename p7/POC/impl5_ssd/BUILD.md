@@ -110,6 +110,55 @@ from PLAN §3.2 and is recorded in `distill_meta.json` and every arm manifest. B
   fallback rate should be read against that floor — 1.38% of it is the thresholds, not the
   rewrites.
 
+## What the distillation pass actually produced
+
+| | |
+|---|---|
+| turn-level keep rate | **47.4%** of 118,870 tutor turns |
+| realised δ, dialogues | 1.00 (every dialogue has some rewritten content) |
+| **realised δ, label tokens** | **0.368** |
+| tutor words | 3,603,889 gold → 3,286,161 distilled (0.912×) |
+| pedagogy label tokens | 4,579,557 gold → 4,206,645 (0.919×) |
+| ped:gen token ratio vs D0 | **+8.9% — outside the ±5% tolerance** |
+| decontamination reverts | 1 dialogue (`GSM8K_test_439_0`) |
+| replay slot | reproduces impl4-A1 exactly (7,384 / 631,395 tokens) |
+
+Rejections by stage: `intent_match` 50,290 · `answer_leak` 6,350 · `degeneracy` 4,721 ·
+`one_step` 1,126 · `decontamination` 4.
+
+**Call this arm δ=0.37, not δ=1.** Nominal δ is 1.0 — every dialogue was put through the
+rewriter — but gate fallbacks put gold turns back, and 47.4% of *turns* kept becomes only
+36.8% of *label tokens* because accepted rewrites are systematically shorter than the gold
+turns they replace. In effective strength that sits between PLAN §8's D1 and D2. It is still
+a substantial intervention (37% of the pedagogy gradient is self-distilled against 0% for
+D0), but "full SDFT" would be the wrong description and the manifest reports the realised
+figure everywhere.
+
+### Fallback rate climbs with turn index, as §13 predicted
+
+| round | 1 | 2 | 3 | 4 | 5 | 6 | 7 |
+|---|---|---|---|---|---|---|---|
+| fallback | 30% | 53% | 53% | 58% | 61% | 66% | 74% |
+
+This is the coherence risk made visible: gold student turns were written in response to gold
+tutor turns, so as the rewritten prefix drifts from gold the later turns fit worse and are
+rejected more. It caps realised δ, and it is the reason the token-weighted figure is what
+gets reported.
+
+### The stream-weight confound, and why it was not corrected
+
+Rewrites are ~8% shorter, so pedagogy carries fewer label tokens and the general stream's
+relative weight rises **8.9%** — past PLAN §5's ±5% tolerance. Part of any D4-vs-D0
+difference is therefore a stream-weight difference, and more replay weight should push D4's
+`ped_nll` slightly *worse* and its forgetting slightly *better*.
+
+It was left uncorrected deliberately. The drift is a **consequence** of the intervention —
+self-distilled targets are shorter — not an independent variable. PLAN §5's fix (choose
+different Tülu conversations to rebalance) is right when comparing D arms to each other,
+where δ must be the only axis; here it would compensate for a downstream effect of the
+intervention by perturbing the one stream that is currently byte-identical to the baseline's.
+Reporting it is the more honest option. `--token_match` restores §5's behaviour.
+
 ## Acceptance checks (§9)
 
 Split into two stages, because a broken invariant found *after* a 90-minute rewriting pass is
