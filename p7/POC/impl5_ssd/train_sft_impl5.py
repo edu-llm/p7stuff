@@ -38,8 +38,7 @@ from pathlib import Path
 import numpy as np
 import torch
 
-from impl5._impl4 import config4, manifest
-from impl5._impl4.chat import impl2_trainer_module          # noqa: F401  (re-export path)
+from impl5._impl4 import chat as chat4, config4, manifest
 from impl5.config5 import (
     ARM_CHOICES,
     BASE_MODEL,
@@ -49,8 +48,7 @@ from impl5.config5 import (
 )
 from impl5.paths5 import run_dir
 
-# impl4.chat / impl4.trainer, reached through the path bridge.
-from impl4.chat import impl2_trainer_module as _ref_module   # noqa: E402
+# impl4.trainer, reachable because importing impl5._impl4 installs the sys.path bridge.
 from impl4.trainer import checkpoint_grid_callback, sequential_trainer_cls  # noqa: E402
 
 IGNORE = -100
@@ -98,7 +96,7 @@ def build_ordered_datasets(args, block: int):
     """Load the ordered mix **without reshuffling or capping** — the order is the point."""
     from datasets import Dataset
 
-    ref = _ref_module()
+    ref = chat4.impl2_trainer_module()
     need = {k: os.path.join(args.data_dir, f"socrateach_sft_{k}.jsonl")
             for k in ("train", "val", "test")}
     missing = [p for p in need.values() if not os.path.exists(p)]
@@ -146,7 +144,7 @@ def main():
     print(f"  checkpoint grid: {list(grid)}")
     print("=" * 74, flush=True)
 
-    ref = _ref_module()
+    ref = chat4.impl2_trainer_module()
     train_ds, eval_ds, kinds = build_ordered_datasets(args, block)
     model, tokenizer, bf16, fp16 = ref.load_model_and_tokenizer(args)
 
