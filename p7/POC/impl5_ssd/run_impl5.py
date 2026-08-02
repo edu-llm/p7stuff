@@ -235,11 +235,16 @@ def main():
            log_path=out_dir / "train.log")
         if not args.skip_package:
             # Immediately, and uncompressed. See the module docstring.
+            #
+            # `cd` into the runs root rather than using `tar -C <root> D4/ckpt-*`: the shell
+            # expands the glob in the *current* directory, not in -C's, so the pattern would
+            # not match, tar would be handed the literal string, and the tarball would come
+            # out holding the manifest and nothing else.
             tarball = art / f"impl5_{args.arm}.tar"
-            sh(f"tar cf {shlex.quote(str(tarball))} -C {rr} "
-               f"{shlex.quote(args.arm)}/ckpt-* {shlex.quote(args.arm)}/manifest.json "
-               f"{shlex.quote(args.arm)}/checkpoint_index.json "
-               f"{shlex.quote(args.arm)}/train.log", check=False)
+            sh(f"cd {rr} && tar cf {shlex.quote(str(tarball))} "
+               f"--exclude='checkpoint-*' --exclude='*.jsonl' {shlex.quote(args.arm)}",
+               check=False)
+            sh(f"ls -la {shlex.quote(str(tarball))}", check=False)
             print(f"  packaged -> {tarball}", flush=True)
 
     if "bridge" in want:
