@@ -3,6 +3,29 @@
 `PLAN.md` is the full spec. This file records what was built, what was cut, and every place
 the build knowingly departs from the plan. Read it before quoting a number from `runs/`.
 
+## Run status: STOPPED — compute units exhausted, no ped_nll numbers
+
+The implementation is complete and validated. **The training run did not finish.** The
+distillation pass completed (118,870 rewrites, 47.4% keep), the mix and all acceptance checks
+passed, training started and reached ~step 20 of 923 — and then the Colab runtime was
+reclaimed because compute units ran out. A100, L4 and T4 are all now refused for this account.
+
+Lost with the runtime: `data/distilled_pool.jsonl`, the nine round caches, the mix, and the
+handful of early checkpoints. **None of it was downloaded first, which was my error** — see
+`stash_pool` in `run_impl5.py`, added afterwards, which packages the pool the moment it exists
+and prints the download command. Everything else survives in git.
+
+To finish, on any GPU runtime:
+
+```bash
+colab upload impl3_handoff.tar.gz /content/impl3_handoff.tar.gz
+colab exec -f colab_bootstrap5.py          # IMPL5_STAGES defaults to all
+```
+
+Cost is ~90 accelerator-minutes to regenerate the pool, ~45 for training, ~25 for ped_nll.
+The `probe` stage now fails fast if the rewriter's keep rate is unusable, so a bad template
+costs two minutes rather than ninety.
+
 ## The one-line version
 
 **D4** (δ = 1.0, every tutor turn rewritten by π₀, Tülu-3 gold replay) trained for 923 steps
