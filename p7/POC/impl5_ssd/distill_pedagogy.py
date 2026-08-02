@@ -40,8 +40,10 @@ from impl5.config5 import (
     DEFAULT_THRESHOLDS,
     MAX_NEW_TOKENS,
     PED_POOL_EXPECTED,
+    REWRITE_TEMPLATES,
     SAMPLING_DEFAULT,
     SEED,
+    TEMPLATE_DEFAULT,
 )
 from impl5.distill import SAMPLING
 from impl5.paths5 import (
@@ -63,6 +65,9 @@ def parse_args():
     p.add_argument("--meta", default=str(DISTILL_META))
     p.add_argument("--base_model", default=BASE_MODEL)
     p.add_argument("--sampling", default=SAMPLING_DEFAULT, choices=sorted(SAMPLING))
+    p.add_argument("--template", default=TEMPLATE_DEFAULT, choices=sorted(REWRITE_TEMPLATES),
+                   help="Rewriting template. 'plan' is PLAN 3.2 verbatim and yields a 2%% "
+                        "keep rate on this model -- see impl5/config5.py.")
     p.add_argument("--max_new_tokens", type=int, default=MAX_NEW_TOKENS)
     p.add_argument("--batch_size", type=int, default=128)
     p.add_argument("--max_batch_tokens", type=int, default=262144)
@@ -112,6 +117,7 @@ def main():
     print(f"Impl 5 distillation pass | {len(dias)} dialogues | {n_gen} tutor turns")
     print(f"  sampling: {SAMPLING[args.sampling].as_dict()} | max_new_tokens="
           f"{args.max_new_tokens}")
+    print(f"  template: {args.template}")
     print(f"  reference in context: {not args.no_reference}"
           + ("  (R4: strict §4 invariant)" if args.no_reference else "  (PLAN §3.2)"))
     print(f"  gate: {th.as_dict()}")
@@ -140,7 +146,7 @@ def main():
                 model = distill.load_hf_model(args.base_model)
             build = ((lambda d: d.training_messages(rewritten[d.dialogue_id], r))
                      if args.no_reference
-                     else (lambda d: d.distill_messages(rewritten[d.dialogue_id], r)))
+                     else (lambda d: d.distill_messages(rewritten[d.dialogue_id], r, args.template)))
             prompts = [build(d) for d in participants]
             print(f"[round {r}] {len(participants)} dialogues — generating ...", flush=True)
             samples = distill.generate_samples(
@@ -204,6 +210,8 @@ def main():
         "sampling": SAMPLING[args.sampling].as_dict(),
         "max_new_tokens": args.max_new_tokens,
         "reference_in_context": not args.no_reference,
+        "template": args.template,
+        "template_text": REWRITE_TEMPLATES[args.template],
         "reference_note": (
             "PLAN §3.2: the distillation prompt appends the gold turn as a reference to the "
             "content of the last user message, so it is strictly longer than the training "

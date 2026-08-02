@@ -45,7 +45,64 @@ The last row is the one that matters, and it is *more* lopsided than the plan's 
 measured on the 1,724-example val split). An unconditional answer-leak rule would fall back
 to gold on two thirds of all final turns.
 
-Two facts the plan does not have:
+### The rewriter does not write gold-shaped turns, and that breaks PLAN §3.4
+
+The single biggest finding of the build, discovered on the first round of the real pass.
+
+PLAN §3.4 sets `max_tokens = 128`, justified as "covers ~p99 of gold turn length at ~1.35
+tok/word", and states: *"No length-calibration loop: the problem impl4 §4 had to solve does
+not arise here, because gold and rewrite are the same kind of object."*
+
+They are not the same kind of object. Round 1 under PLAN §3.2's template:
+
+| | value |
+|---|---|
+| keep rate | **2.1%** |
+| rejected `unterminated` | **89.1%** |
+| median generated tokens | 128 — i.e. the cap |
+| mean rewrite length | **108 words** (gold: 8.7) |
+
+Handed a math problem and a reference, the 1B model writes a *worked explanation*, not a
+Socratic prompt. At a 2.1% keep rate the distilled pool is 98% gold and D4 collapses onto D0,
+so the pass was stopped rather than run to completion.
+
+Crucially, **the cap was not the binding constraint.** Re-running the plan's template at
+`max_tokens = 160` moved the keep rate only from 2.1% to 2.5% — it buys longer essays, not
+more terminations. The fix is register, not budget: the template now states the target
+register (ask, don't explain), the prohibition the gate checks, and gold's own word count so
+the target scales with the turn (gold runs 8.7 words at round 1 and 35.8 by round 4).
+
+Measured keep rate by template (240 dialogues per cell, `max_tokens = 160`):
+
+| template | r1 | r4 | r7 | weighted | words @r1 (gold 8.7) |
+|---|---|---|---|---|---|
+| `plan` (PLAN §3.2 verbatim) | 2.5% | 11.7% | — | ~7% | 107.9 |
+| `mirror` **(default)** | 71.5% | 48.0% | 25.5% | **56.8%** | 14.4 |
+| `brief` | 56.0% | 48.0% | 28.5% | 49.8% | 28.8 |
+| `cover` | 33.0% | 39.5% | 40.5% | 36.5% | 21.0 |
+
+Weighted by real round sizes (round 1 runs 22,500 dialogues, round 7 runs 4,930). The
+ranking is not what reading the templates suggests — `cover`, which presses hardest on
+covering the reference, is the *worst* overall: it draws the model back toward explaining and
+its answer-leak rejections run 2-4x the others'. `mirror` wins early rounds decisively and
+loses late ones; since most turns are early, it wins.
+
+**The dominant rejection reason after the fix is `low_rouge`**, not length — the ROUGE-L
+floor of 0.25 (PLAN §4 Stage 3, provisional). Lowering it would buy keep rate directly, and
+it was deliberately left alone: that threshold is precisely what Stage 4 exists to calibrate,
+and tuning it against the keep rate rather than against the judge would be trading a
+measurable δ for an unmeasured pedagogy risk.
+
+`max_tokens` is kept at 160 so that "unterminated" now means the model rambled rather than
+that the budget was short.
+
+**What this costs conceptually.** SDFT's premise is that targets are "what π₀ would say".
+The targets are now what π₀ says *when told how long to be and to ask rather than explain* —
+still the model's own distribution, but a conditioned slice of it. That is a real departure
+from PLAN §3.2 and is recorded in `distill_meta.json` and every arm manifest. Block R's `R4`
+(reference-free) is what would price it, and it did not run.
+
+### Two more facts the plan does not have:
 
 - **Reference-block overhead**: mean 84 tokens, max 160, appended to the last user message.
 - **Gate strictness floor**: running the whole gate with `t̃ := t_gold` rejects **1.38%** of

@@ -18,7 +18,7 @@ from __future__ import annotations
 from dataclasses import dataclass
 from typing import Iterable, Sequence
 
-from .config5 import reference_block
+from .config5 import TEMPLATE_DEFAULT, reference_block
 
 
 @dataclass
@@ -57,7 +57,8 @@ class Dialogue:
             msgs.append({"role": "user", "content": self.student[k]})
         return msgs
 
-    def distill_messages(self, rewritten: Sequence[str], upto: int) -> list[dict]:
+    def distill_messages(self, rewritten: Sequence[str], upto: int,
+                         template: str = TEMPLATE_DEFAULT) -> list[dict]:
         """The **distillation** prompt for round ``upto``: training prefix + reference.
 
         PLAN §3.2 — the reference is appended to the content of the *last user message*
@@ -67,7 +68,7 @@ class Dialogue:
         msgs = self.training_messages(rewritten, upto)
         tail = dict(msgs[-1])
         assert tail["role"] == "user", "the distillation prompt must end on a user turn"
-        tail["content"] = tail["content"] + reference_block(self.tutor[upto - 1])
+        tail["content"] = tail["content"] + reference_block(self.tutor[upto - 1], template)
         msgs[-1] = tail
         return msgs
 
