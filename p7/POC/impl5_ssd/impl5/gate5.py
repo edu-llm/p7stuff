@@ -34,7 +34,10 @@ _LIST_LINE = re.compile(r"^\s*(?:\d+[.)]|[-*])\s")
 #: Sentence terminators. Crude on purpose — this is a heuristic, not a parser.
 _SENT = re.compile(r"[.!?]+(?:\s|$)")
 
-STAGES = ("degeneracy", "answer_leak", "one_step", "intent_match")
+#: "decontamination" is not a per-turn stage — it is a whole-dialogue revert applied
+#: after the pass (see distill_pedagogy.py) — but it lands in the same verdict stream,
+#: so it belongs in the summary or its fallbacks vanish from by_stage.
+STAGES = ("degeneracy", "answer_leak", "one_step", "intent_match", "decontamination")
 
 
 @dataclass(frozen=True)

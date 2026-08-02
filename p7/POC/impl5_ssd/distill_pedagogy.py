@@ -34,7 +34,7 @@ from collections import Counter, defaultdict
 from pathlib import Path
 
 from impl5 import chat5, dialogue, distill, gate5
-from impl5._impl4 import manifest
+from impl5._impl4 import manifest, ngram
 from impl5.config5 import (
     BASE_MODEL,
     DEFAULT_THRESHOLDS,
@@ -48,6 +48,8 @@ from impl5.config5 import (
 from impl5.distill import SAMPLING
 from impl5.paths5 import (
     DISTILL_DIR,
+    GENERAL_EVAL_PROMPTS,
+    MATH_EVAL_PROMPTS,
     DISTILL_META,
     DISTILLED_POOL,
     PEDAGOGY_POOL,
@@ -188,10 +190,40 @@ def main():
         out_rows.append(d.with_rewritten(rw))
         kept_tokens_proxy += sum(len(t.split()) for t, v in zip(rw, verdicts[d.dialogue_id])
                                  if v.passed)
+    # -- decontamination fallback (PLAN §9 check 7) ---------------------------
+    #
+    # Told to match gold's length, the rewriter sometimes restates the problem back to the
+    # student — and for a SocraTeach dialogue built on a GSM8K item, that problem statement
+    # IS an eval prompt. So a rewrite can introduce a 13-gram overlap with math_eval that
+    # the gold turn did not have.
+    #
+    # The rule PLAN §9 check 7 sets is "overlap unchanged, not zero": whatever SocraTeach
+    # inherited from Impl 2 must stay, and distillation must add none of its own. The
+    # remedy is the one the gate already uses everywhere else — fall back to gold — applied
+    # to the whole dialogue, which keeps the pool count and the A1 pairing exact at a cost
+    # of a few thousandths of realised δ.
+    idx = ngram.build_eval_index([MATH_EVAL_PROMPTS, GENERAL_EVAL_PROMPTS])
+
+    def _overlaps(rec) -> bool:
+        text = " ".join(m["content"] for m in rec["messages"] if m["role"] == "assistant")
+        return idx.hit(text) is not None
+
+    reverted = []
+    for i, d in enumerate(dias):
+        if _overlaps(out_rows[i]) and not _overlaps(d.record):
+            out_rows[i] = d.with_rewritten(d.tutor)
+            verdicts[d.dialogue_id] = [gate5.Verdict(False, "decontamination_revert",
+                                                     "decontamination", 0.0)
+                                       for _ in d.tutor]
+            reverted.append(d.dialogue_id)
+    if reverted:
+        print(f"\ndecontamination: reverted {len(reverted)} dialogue(s) to gold because the "
+              f"rewrite introduced an eval-prompt overlap: {reverted[:5]}")
+
     manifest.write_jsonl(args.out, out_rows)
 
     # -- meta ----------------------------------------------------------------
-    all_v = [v for vs in verdicts.values() for v in vs]
+    all_v = [v for vs in verdicts.values() for v in vs]   # post-revert
     per_round = {r: gate5.summarize(vs) for r, vs in
                  ((r, [verdicts[d.dialogue_id][r - 1] for d in dias if d.n_turns >= r])
                   for r in sorted(schedule))}
@@ -221,6 +253,12 @@ def main():
         ) if not args.no_reference else "R4: no reference; the §4 invariant holds strictly.",
         "gate": th.as_dict(),
         "gate_overall": gate5.summarize(all_v),
+        "decontamination_reverted": reverted,
+        "decontamination_note": (
+            "PLAN §9 check 7 requires overlap with the eval prompt sets to be UNCHANGED, "
+            "not zero: SocraTeach is built on GSM8K/MAWPS so some overlap is inherited "
+            "from Impl 2 and must not be altered. Dialogues whose rewrite introduced a "
+            "NEW overlap are reverted to gold in full."),
         "gate_by_round": per_round,
         "fallback_rate_by_turn_index": {r: per_round[r]["fallback_rate"]
                                         for r in sorted(per_round)},
