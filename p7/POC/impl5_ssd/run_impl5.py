@@ -7,13 +7,24 @@ Mirrors ``impl4_ssd/run_matched.py``, with two differences that matter operation
 ~40 s; the distillation pass needs a GPU and over an hour. Ordering them the other way round
 means a broken prefix invariant is discovered after the hour, not before it.
 
+**The generation probe gates the expensive pass.** ``checks_fast`` validates plumbing —
+prefix invariants, masking, δ arithmetic — and all of it passed while the rewriting pass was
+producing a 2% keep rate, because none of it looks at what the model actually writes.
+``probe`` rewrites 300 dialogues (~2 GPU-minutes) and aborts if the gate keep rate is under
+``--min_keep``. Validate the output, not just the pipe.
+
+**The distilled pool is packaged the instant it exists** (``stash_pool``), because it is the
+only artefact here that cannot be rebuilt without another ~90 accelerator-minutes. This was
+learned by losing one.
+
 **Checkpoints are packaged per-arm the moment training ends**, with ``tar cf`` rather than
 ``tar czf``. Gzipping 1.1 GB of adapter safetensors takes ~15 minutes and compresses them by
 almost nothing, and a runtime reclaimed during that window takes the whole run with it.
 
 Stages, in order::
 
-    deps, bundle, pool, checks_fast, distill, slot, mix, checks_full, train, bridge, eval
+    deps, bundle, pool, checks_fast, probe, distill, slot, mix, checks_full, train,
+    bridge, eval
 
 ``eval`` is **pedagogy-NLL only** — ``impl3_compat/nll_only.py``, ~40 s per checkpoint. The
 math and KL axes are deliberately not run here; they are ~4 min per checkpoint and this run
@@ -47,9 +58,9 @@ PINS = ["transformers==5.14.1", "datasets==5.0.1", "accelerate==1.14.0", "peft==
         "huggingface_hub==1.25.1", "numpy==2.4.6", "langdetect==1.0.9",
         "pyarrow==25.0.0", "matplotlib==3.11.1"]
 
-ALL_STAGES = ("deps", "bundle", "pool", "checks_fast", "distill", "slot", "mix",
-              "checks_full", "train", "bridge", "eval")
-GPU_STAGES = {"distill", "slot", "mix", "train", "eval"}
+ALL_STAGES = ("deps", "bundle", "pool", "checks_fast", "probe", "distill", "slot",
+              "mix", "checks_full", "train", "bridge", "eval")
+GPU_STAGES = {"probe", "distill", "slot", "mix", "train", "eval"}
 
 
 def parse_args():
@@ -68,6 +79,10 @@ def parse_args():
     p.add_argument("--grad_accum", type=int, default=4)
     p.add_argument("--artifacts_dir", default="/content")
     p.add_argument("--skip_package", action="store_true")
+    p.add_argument("--min_keep", type=float, default=0.25,
+                   help="Abort before the full pass if the probe's gate keep rate is "
+                        "below this. Below ~25%% the pool is mostly gold and the arm "
+                        "collapses onto D0.")
     return p.parse_args()
 
 
@@ -144,6 +159,35 @@ def sizes_for(gib: int, args) -> tuple[int, int]:
     return args.batch_size or b, args.max_batch_tokens or t
 
 
+def stash_pool(here: Path, art: Path, args) -> None:
+    """Package the distilled pool the instant it exists, and say so loudly.
+
+    Learned the hard way. The rewriting pass is ~90 GPU-minutes and produces the only
+    artefact in this pipeline that cannot be re-derived on a CPU. On the first full run it
+    completed, the driver moved straight on to slot/mix/train, and the runtime was reclaimed
+    (compute units exhausted) 40 minutes later — taking the pool with it. Nothing else was
+    lost, because everything else is either in git or cheap to recompute.
+
+    So: as soon as the pass finishes, tar the pool plus the per-round caches into the
+    artifacts dir and print the download command. ~25 MB compressed. Fetching it is what
+    makes a later resume cost nothing, on any accelerator, with no regeneration.
+    """
+    if args.skip_package:
+        return
+    tarball = art / "impl5_pool.tar.gz"
+    sh(f"cd {shlex.quote(str(here))} && tar czf {shlex.quote(str(tarball))} "
+       f"data/distilled_pool.jsonl data/distill_meta.json data/distill "
+       f"data/acceptance_fast.json", check=False)
+    sh(f"ls -la {shlex.quote(str(tarball))}", check=False)
+    print("\n" + "!" * 74)
+    print("!! DOWNLOAD THIS NOW — it is the only GPU-expensive artefact in the run and it")
+    print("!! cannot be rebuilt without another ~90 accelerator-minutes:")
+    print(f"!!     colab download {tarball} .")
+    print("!! With it, --stages slot,mix,checks_full,train,bridge,eval resumes from scratch")
+    print("!! on any runtime. Without it, the rewriting pass has to run again.")
+    print("!" * 74 + "\n", flush=True)
+
+
 def main():
     args = parse_args()
     want = set(ALL_STAGES) if args.stages == "all" else {
@@ -204,6 +248,28 @@ def main():
         sh(f"{sys.executable} acceptance_checks5.py --stage fast "
            f"--out {shlex.quote(str(HERE / 'data/acceptance_fast.json'))}")
 
+    if "probe" in want:
+        # The fast checks validate the plumbing — prefixes, masking, δ arithmetic — and all
+        # of it passed while the pass was producing a 2% keep rate, because none of it looks
+        # at what the model actually writes. 300 dialogues is ~2 GPU-minutes and answers the
+        # only question that decides whether the 90-minute pass is worth starting.
+        banner("stage 1b — generation probe (is the keep rate usable at all?)")
+        sh(f"{sys.executable} distill_pedagogy.py --limit 300 --batch_size {batch} "
+           f"--max_batch_tokens {max_batch_tokens} "
+           f"--distill_dir {shlex.quote(str(HERE / 'data/probe_distill'))} "
+           f"--out {shlex.quote(str(HERE / 'data/probe_pool.jsonl'))} "
+           f"--meta {shlex.quote(str(HERE / 'data/probe_meta.json'))}")
+        pm = json.loads((HERE / "data/probe_meta.json").read_text())
+        keep = pm["gate_overall"]["keep_rate"]
+        print(f"\nprobe keep rate: {keep:.1%}")
+        if keep < args.min_keep:
+            raise SystemExit(
+                f"probe keep rate {keep:.1%} is below --min_keep {args.min_keep:.0%}. At this "
+                f"rate the distilled pool is mostly gold and the arm collapses onto D0, so "
+                f"the full pass would spend ~90 accelerator-minutes measuring nothing. Fix "
+                f"the template (impl5/config5.py REWRITE_TEMPLATES) before continuing.")
+        print(f"  above the {args.min_keep:.0%} floor — proceeding to the full pass")
+
     if "distill" in want:
         banner(f"stage 2 — the distillation pass (batch {batch}, "
                f"{max_batch_tokens} padded tokens)")
@@ -211,6 +277,7 @@ def main():
         sh(f"{sys.executable} distill_pedagogy.py --batch_size {batch} "
            f"--max_batch_tokens {max_batch_tokens} {lim}",
            log_path=HERE / "data/distill.log")
+        stash_pool(HERE, art, args)
 
     if "slot" in want:
         banner("stage 3 — replay slot (Tulu-3 gold, reproducing impl4-A1)")
