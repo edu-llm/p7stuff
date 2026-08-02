@@ -1,0 +1,17 @@
+# Built artefacts. Everything here is reproducible from the pinned Hub revision, the
+# seed, and the scripts — and the distilled pool alone is ~90 MB.
+data/distill/
+data/distilled_pool.jsonl
+data/distill.log
+runs/
+runs_poc/
+
+# Small provenance files ARE tracked, because they are the run's evidence.
+!data/distill_meta.json
+!data/acceptance_fast.json
+!data/acceptance_full.json
+!data/pedagogy_reference.json
+
+__pycache__/
+*.pyc
+.pytest_cache/
